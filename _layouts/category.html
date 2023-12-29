@@ -2,6 +2,12 @@
 layout: default
 ---
 
+<ul>
+{% for category in site.categories %}
+<li><a href="{{ site.url }}/category/{{ category | first | slugify }}/index.html">{{ category | first }}</a></li>
+{% endfor %}
+</ul>
+
 <section class="section bg-secondary">
   <div class="container">
     <div class="row">
