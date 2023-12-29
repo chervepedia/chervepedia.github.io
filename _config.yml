@@ -7,7 +7,7 @@ url: "" # The base hostname & protocol for your site, e.g. http://example.com
 title: Червепедия | Официальный сайт Черветреда
 logo: /assets/images/logo.png # You can add own logo
 description: Червепедия - официальный сайт Черветреда - людей, которых объединяет русофобия.
-copyright: Червепедия. Based on [Parsa Jekyll](https://themefisher.com). The fixes & additional scripts by Дрюнька столичный.
+copyright: Червепедия. 
 # Preloader
 preloader: false # To disable preloader change value to false
 
@@ -40,7 +40,7 @@ menu:
 #       url: /peru/
 # ----------------------------------
 
-layout_home_page: false # Homepage layout ( two layout is available, you can set the another layout by change the value of layout_home_page "true" to "false")
+layout_home_page: true # Homepage layout ( two layout is available, you can set the another layout by change the value of layout_home_page "true" to "false")
 
 featured-post-slider: false # You can enable or disable the featured-post-slider using true or false values.
 
