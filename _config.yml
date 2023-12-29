@@ -98,6 +98,7 @@ plugins:
   - jekyll/tagging
   - jekyll-archives
   - jekyll-feed
+  - jekyll-category-pages
 
 paginate: 10
 paginate_path: "/page/:num"
