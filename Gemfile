@@ -1,16 +1,11 @@
 source 'https://rubygems.org'
-gem "bundler"
-gem "jekyll"
-gem "jekyll-paginate"
-gem 'jekyll-tagging'
-gem "jekyll-sitemap"
-gem 'jekyll-archives'
-gem 'wdm', '>= 0.1.0'
-gem "kramdown", ">= 2.3.0"
-
-gem "webrick", "~> 1.7"
-
+gem 'wdm', '>= 0.1.0' if Gem.win_platform?
 group :jekyll_plugins do
-  gem "jekyll-paginate"
-  gem "jekyll-category-pages"
+    gem 'jekyll-feed'
+    gem 'jekyll-sitemap'
+    gem 'jekyll-paginate'
+    gem 'jekyll-seo-tag'
+    gem 'jekyll-archives'
+    gem 'kramdown'
+    gem 'rouge'
 end
