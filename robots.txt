@@ -1,51 +1,59 @@
+# Googlebot
 User-agent: Googlebot
-Disallow: 
-User-agent: googlebot-image
-Disallow: 
-User-agent: googlebot-mobile
-Disallow: 
-User-agent: MSNBot
-Disallow: 
-User-agent: Slurp
-Disallow: 
-User-agent: Teoma
-Disallow: 
-User-agent: Gigabot
-Disallow: 
-User-agent: Robozilla
-Disallow: 
-User-agent: Nutch
-Disallow: 
-User-agent: ia_archiver
-Disallow: 
-User-agent: baiduspider
-Disallow: 
-User-agent: naverbot
-Disallow: 
-User-agent: yeti
-Disallow: 
-User-agent: yahoo-mmcrawler
-Disallow: 
-User-agent: psbot
-Disallow: 
-User-agent: yahoo-blogs/v3.9
-Disallow: 
-
-User-agent: *
 Allow: /
 Sitemap: https://chervepedia.github.io/sitemap.xml
 
-User-agent: Mozilla/5.0 (compatible; YandexImages/3.0; +http://yandex.com/bots)
-User-agent: Mozilla/5.0 (compatible; YandexMedia/3.0; +http://yandex.com/bots)
-User-agent: Mozilla/5.0 (compatible; YandexMetrika/2.0; +http://yandex.com/bots)
-User-agent: Mozilla/5.0 (compatible; YandexMetrika/3.0; +http://yandex.com/bots)
-User-agent: Mozilla/5.0 (compatible; YandexMetrika/4.0; +http://yandex.com/bots)
-User-agent: Mozilla/5.0 (compatible; YandexRCA/1.0; +http://yandex.com/bots)
-User-agent: Mozilla/5.0 (compatible; YandexUserproxy; robot; +http://yandex.com/bots)
-User-agent: Mozilla/5.0 (compatible; YandexVideo/3.0; +http://yandex.com/bots)
-User-agent: Mozilla/5.0 (compatible; YandexVideoParser/1.0; +http://yandex.com/bots)
-User-agent: Yandex.RBot
-Allow: /feed.xml
-User-agent: Yandex.RBot
-Disallow:
+# Google Images
+User-agent: Googlebot-Image
 Allow: /
+Sitemap: https://chervepedia.github.io/sitemap.xml
+
+# Google News
+User-agent: Googlebot-News
+Allow: /
+Sitemap: https://chervepedia.github.io/sitemap.xml
+
+# Google Video
+User-agent: Googlebot-Video
+Allow: /
+Sitemap: https://chervepedia.github.io/sitemap.xml
+
+# Bingbot
+User-agent: bingbot
+Allow: /
+Sitemap: https://chervepedia.github.io/sitemap.xml
+
+# Bing Images
+User-agent: msnbot-media
+Allow: /
+Sitemap: https://chervepedia.github.io/sitemap.xml
+
+# Bing News
+User-agent: msnbot-news
+Allow: /
+Sitemap: https://chervepedia.github.io/sitemap.xml
+
+# Yahoo! Slurp
+User-agent: Slurp
+Allow: /
+Sitemap: https://chervepedia.github.io/sitemap.xml
+
+# Yandex
+User-agent: Yandex
+Allow: /
+Sitemap: https://chervepedia.github.io/sitemap.xml
+
+# DuckDuckBot
+User-agent: DuckDuckBot
+Allow: /
+Sitemap: https://chervepedia.github.io/sitemap.xml
+
+# Baidu
+User-agent: Baiduspider
+Allow: /
+Sitemap: https://chervepedia.github.io/sitemap.xml
+
+# All other robots
+User-agent: *
+Allow: /
+Sitemap: https://chervepedia.github.io/sitemap.xml
