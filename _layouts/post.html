@@ -17,7 +17,8 @@ layout: default
             </div>
         {% elsif page.twitter %}
             <div class="embed-wrapper">
-                <blockquote class="twitter-tweet"><a href="{{ page.twitter }}"></a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                <blockquote class="twitter-tweet"><a href="{{ page.twitter }}"></a></blockquote> 
+                <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
             </div>
         {% else %}
             <div class="post-image-wrapper">
@@ -31,4 +32,4 @@ layout: default
     </div>
     {% endunless %}
     {% include comments.html %}
-</div>
+    </div>
