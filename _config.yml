@@ -1,7 +1,7 @@
 title: ЧЕРВЕПЕДИЯ
 description: Черветред - антироссиянский тред на Дваче
 baseurl: "" # использовать /если/этот/сайт/вложен
-url: "https://chervepediya.github.io"
+url: "https://chervepedia.github.io"
 
 # Настройки permalink
 permalink: /:categories/:year/:month/:day/:title/
@@ -17,7 +17,7 @@ menu:
       - title: Обр на Тучаннел
         url: http://www1.2channel.moe/pol
         target: _blank
-      - title: Обо мне
+      - title: Черветред
         url: /about
       - title: Контакты
         url: /contact
