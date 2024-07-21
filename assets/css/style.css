@@ -258,6 +258,22 @@ body {
     font-size: 12px;
 }
 
+  /* Стили для виджета Telegram */
+.telegram-widget-container {
+  position: fixed;
+  bottom: 20px; /* Отступ от нижнего края */
+  left: 540px; /* Отступ слева */
+  z-index: 1000; /* Чтобы виджет был выше других элементов */
+  display: none; /* Скрыть по умолчанию, будет отображаться только на больших экранах */
+}
+
+/* Показ виджета только на экранах больше 768px (пример для десктопов) */
+@media (min-width: 768px) {
+  .telegram-widget-container {
+    display: block; /* Показываем виджет на больших экранах */
+  }
+}  
+
 /* Стили для футера */
 .footer {
     display: flex;
