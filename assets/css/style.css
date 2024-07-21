@@ -429,12 +429,6 @@ background: #222;
 
 /* Медиа-запрос для устройств с шириной экрана до 767px */
 @media (max-width: 767px) {
-    body {
-        background-image: url('https://svgshare.com/i/18Td.svg');
-        background-attachment: fixed; /* Фиксируем фон относительно окна просмотра */
-        background-position: center; /* Центрируем фон по горизонтали и вертикали */
-        background-repeat: repeat; /* Фон будет повторяться */
-    }
 
     .sidebar {
         width: 100%;
