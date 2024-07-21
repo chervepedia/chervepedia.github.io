@@ -5,20 +5,20 @@ pagination:
 ---
 
 <style>
-  .no-background {
+  .post-media-wrapper.transparent-background {
       background-color: transparent;
   }
 </style>
 
 <div class="content">
     {% for post in paginator.posts %}
-    <div class="post{% if post.telegram %} no-background{% endif %}">
+    <div class="post">
         <div class="post-header">
             <div class="post-title">
                 {{ post.title }}
             </div>
         </div>
-        <div class="post-media-wrapper">
+        <div class="post-media-wrapper{% if post.telegram %} transparent-background{% endif %}">
             {% if post.video %}
                 <div class="video-wrapper">
                     <iframe src="{{ post.video }}" frameborder="0" allowfullscreen></iframe>
