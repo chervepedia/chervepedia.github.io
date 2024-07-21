@@ -2,7 +2,8 @@
 layout: default
 title: "Обо мне"
 permalink: /about/
-image: "assets/images/русофобия.jpg"
+image: "assets/images/f59968a03da667d25af0c2c447905982.png
+"
 ---
 
 <div class="about-page post">
