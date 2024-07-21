@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Обо мне"
+title: "ЧЕРВЕТРЕД"
 permalink: /about/
 image: "assets/images/f59968a03da667d25af0c2c447905982.png
 "
