@@ -9,7 +9,7 @@ permalink: /about/
         <h1 class="post-title">Черветред</h1>
     </div>
     <div class="post-image-wrapper">
-        <img src="assets/images/f59968a03da667d25af0c2c447905982.png" width=" alt="Черветред-червепедия">
+        <img src="assets/images/f59968a03da667d25af0c2c447905982.png" alt="Черветред-червепедия">
     </div>
     <div class="post-content">
         <p>**Черветред - это проукраинская ветка тредов на "Дваче" Наримана Намазова.**</p>
