@@ -5,7 +5,7 @@ pagination:
 ---
 
 <style>
-  .post-media-wrapper.transparent-background {
+  .embed-wrapper.transparent-background {
       background-color: transparent;
   }
 </style>
@@ -18,13 +18,13 @@ pagination:
                 {{ post.title }}
             </div>
         </div>
-        <div class="post-media-wrapper{% if post.telegram %} transparent-background{% endif %}">
+        <div class="post-media-wrapper">
             {% if post.video %}
                 <div class="video-wrapper">
                     <iframe src="{{ post.video }}" frameborder="0" allowfullscreen></iframe>
                 </div>
             {% elsif post.telegram %}
-                <div class="embed-wrapper">
+                <div class="embed-wrapper transparent-background">
                     <script async src="https://telegram.org/js/telegram-widget.js?22" data-telegram-post="{{ post.telegram | replace: 'https://t.me/', '' }}" data-width="100%" data-userpic="false" data-color="FFB0E2" data-dark="1"></script>
                 </div>
             {% elsif post.twitter %}
@@ -69,4 +69,4 @@ pagination:
     {% if paginator.next_page %}
         <a href="{{ paginator.next_page_path | absolute_url }}" class="fas fa-chevron-right"></a>
     {% endif %}
-</div>
+              </div>
