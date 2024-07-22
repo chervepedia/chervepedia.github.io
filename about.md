@@ -4,6 +4,7 @@ title: "ЧЕРВЕТРЕД"
 image: "assets/images/f59968a03da667d25af0c2c447905982.png"
 permalink: /about/
 except: "Черветред - это русофобский тред на дваче"
+CSS: "about.css"
 ---
 
 <div class="about-page post">
