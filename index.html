@@ -4,12 +4,6 @@ pagination:
   enabled: true
 ---
 
-<style>
-  .post-image-wrapper.transparent-background {
-      background-color: transparent;
-  }
-</style>
-
 <div class="content">
     {% for post in paginator.posts %}
     <div class="post">
@@ -24,7 +18,7 @@ pagination:
                     <iframe src="{{ post.video }}" frameborder="0" allowfullscreen></iframe>
                 </div>
             {% elsif post.telegram %}
-                <div class="post-image-wrapper transparent-background">
+                <div class="post-image-wrapper">
                     <div class="embed-wrapper">
                         <script async src="https://telegram.org/js/telegram-widget.js?22" data-telegram-post="{{ post.telegram | replace: 'https://t.me/', '' }}" data-width="100%" data-userpic="false" data-color="FFB0E2" data-dark="1"></script>
                     </div>
@@ -71,4 +65,4 @@ pagination:
     {% if paginator.next_page %}
         <a href="{{ paginator.next_page_path | absolute_url }}" class="fas fa-chevron-right"></a>
     {% endif %}
-              </div>
+</div>
