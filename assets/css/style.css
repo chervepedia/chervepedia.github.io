@@ -101,7 +101,7 @@ body {
     color: var(--main-color);
     text-decoration: none;
     padding: 10px;
-    background-color: #222;
+    background-color: ;
     text-align: center;
     transition: background-color 0.3s, transform 0.1s, box-shadow 0.1s;
     border: none;
