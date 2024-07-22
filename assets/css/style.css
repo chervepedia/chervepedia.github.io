@@ -247,6 +247,7 @@ body {
     display: flex;
     align-items: center;
     cursor: pointer;
+transition: color 0.3s; /* Плавный переход для цвета */
 }
 
 .read-more:hover {
@@ -375,7 +376,6 @@ background: #222;
     margin-right: auto;
     border-radius: 10px; /* Закругление краёв */
 box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* тень */
-}
 }
 
 .pagination a.fas {
