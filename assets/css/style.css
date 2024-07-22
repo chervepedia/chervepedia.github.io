@@ -140,7 +140,7 @@ body {
 /* Подменю ссылки */
 .sub-menu a {
     display: block;
-    color: #ffffff;
+    color: #888;
     text-decoration: none;
     padding: 10px;
     position: relative; /* Для позиционирования псевдо-элемента */
@@ -277,7 +277,8 @@ body {
     bottom: 0;
     left: 0;
     z-index: 1000;
-    border-top: 1px groove #ffb0e2;
+    border-top: 1px groove transparent;
+    border-image: linear-gradient(to right, var(--main-color), var(--main-color-dark)) 1;
 }
 
 /* Стили для изображений в футере */
@@ -422,7 +423,7 @@ background: #222;
     }
 
     .content {
-        max-width: 540px;
+        max-width: 300px;
         margin-top: 0;
         margin-left: auto;
         margin-right: auto;
