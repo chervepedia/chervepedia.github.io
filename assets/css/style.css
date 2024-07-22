@@ -57,7 +57,7 @@ body {
     border-radius: 50%;
     display: block;
     margin: 0 auto;
-    border: 1px groove #ffb0e2;
+    
 }
 
 /* Стили для заголовка */
@@ -257,6 +257,13 @@ body {
     color: #888;
     font-size: 12px;
 }
+
+/*Стили телеграм виджета*/
+.telegram-discussion {
+      width: 100%;
+      max-width: 540px;
+      margin: 0 auto;
+    }
 
 /* Стили для футера */
 .footer {
