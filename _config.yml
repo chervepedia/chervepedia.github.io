@@ -23,7 +23,13 @@ menu:
         url: /contact
       - title: test
         url: /test
- 
+
+# Социальные сети и контакты
+social:
+  tumblr: "https://tumblr.com"
+  telegram: "https://telegram.org"
+  youtube: "https://youtube.com"
+phone: "+7 (495) 123-45-67"
 
 # Плагины
 plugins:
@@ -42,5 +48,5 @@ seo:
   title: true
   description: true
   url: true
-  image: true  # Добавлено для обработки Open Graph изображений
+  image: true  # для обработки Open Graph изображений
   twitter: true # Для Twitter Cards
