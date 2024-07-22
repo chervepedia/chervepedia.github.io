@@ -1,3 +1,28 @@
+window.onload = function() {
+    if (window.innerWidth <= 767) {
+        Twallpaper.init({
+            fps: 60,
+            tails: 90,
+            animate: true,
+            scrollAnimate: true,
+            colors: [
+                "#ffb0e2",
+                "#ffb0e2",
+                "#e699c7",
+                "#e699c7"
+            ],
+            pattern: {
+                image: "https://twallpaper.js.org/patterns/underwater_world.svg",
+                background: "#222222",
+                blur: 0,
+                size: "420px",
+                opacity: 1,
+                mask: true
+            }
+        });
+    }
+};
+
 $(document).ready(function() {
     // Настройки увеличения изображений с Medium Zoom
     mediumZoom('.post-image-wrapper img', {
