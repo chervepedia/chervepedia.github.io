@@ -126,20 +126,30 @@
   </div>
   
   <div class="footer">
-    <div class="left-footer">
-      <img src="{{ '/assets/images/logo.png' | absolute_url }}" alt="Логотип">
-      <span class="site-name">{{ site.title }}</span>
-    </div>
-    <div class="social-icons">
-      <a href="https://tumblr.com" target="_blank"><i class="fab fa-tumblr"></i></a>
-      <a href="https://telegram.org" target="_blank"><i class="fab fa-telegram"></i></a>
-      <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
-    </div>
-    <div class="contact-info">
-      <i class="fas fa-phone-alt"></i> +7 (495) 123-45-67
-      <i class="fas fa-map-marker-alt" style="margin-left: 20px;"></i> Россия, Москва
-    </div>
+  <div class="left-footer">
+    <img src="{{ '/assets/images/logo.png' | absolute_url }}" alt="Логотип">
+    <span class="site-name">{{ site.title }}</span>
   </div>
+  <div class="social-icons">
+    {% if site.social.tumblr %}
+      <a href="{{ site.social.tumblr }}" target="_blank"><i class="fab fa-tumblr"></i></a>
+    {% endif %}
+    {% if site.social.telegram %}
+      <a href="{{ site.social.telegram }}" target="_blank"><i class="fab fa-telegram"></i></a>
+    {% endif %}
+    {% if site.social.youtube %}
+      <a href="{{ site.social.youtube }}" target="_blank"><i class="fab fa-youtube"></i></a>
+    {% endif %}
+  </div>
+  <div class="contact-info">
+    {% if site.phone %}
+      <i class="fas fa-phone-alt"></i> {{ site.phone }}
+    {% endif %}
+    {% if site.phone %}
+      <i class="fas fa-map-marker-alt" style="margin-left: 20px;"></i> Россия, Москва
+    {% endif %}
+  </div>
+</div>
 
   <div class="back-to-top">
     <i class="fas fa-chevron-up"></i>
