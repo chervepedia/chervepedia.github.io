@@ -2,6 +2,7 @@
 layout: default
 title: "Контакты"
 permalink: /test/
+CSS: "about.css"
 ---
 
 <div class="post">
