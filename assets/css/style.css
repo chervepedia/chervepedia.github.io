@@ -109,13 +109,13 @@ body {
 }
 
 .menu-link:hover {
-    background-color: #222;
+    background-color: ;
     color: var(--highlight-color);
 }
 
 .menu-link:active {
-    transform: ;
-    box-shadow: ;
+    transform: translateY(2px);
+    box-shadow: inset 0 4px 6px rgba(0, 0, 0, 0.3);
 }
 
 .menu-link.has-submenu::after {
