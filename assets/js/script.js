@@ -1,7 +1,5 @@
-//бекграунд
 document.addEventListener('DOMContentLoaded', function() {
     function applyTwallpaper() {
-        // Проверьте ширину экрана
         if (window.matchMedia("(max-width: 767px)").matches) {
             const options = {
                 fps: 60,
@@ -25,7 +23,11 @@ document.addEventListener('DOMContentLoaded', function() {
             };
 
             // Инициализация twallpaper с указанными опциями
-            twallpaper.init(options);
+            if (typeof twallpaper !== 'undefined') {
+                twallpaper.init(options);
+            } else {
+                console.error('twallpaper не загружен');
+            }
         }
     }
 
@@ -34,41 +36,42 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Также добавляем обработчик событий на изменение размера окна
     window.addEventListener('resize', applyTwallpaper);
-});
 
     // Плавная прокрутка наверх при клике на стрелку
-    $('.back-to-top').click(function() {
-        $('html, body').animate({ scrollTop: 0 }, 'slow');
+    document.querySelector('.back-to-top').addEventListener('click', function() {
+        document.documentElement.scrollTop = 0;
         return false;
     });
 
     // Показать/скрыть стрелку прокрутки наверх в зависимости от положения прокрутки
-    $(window).scroll(function() {
-        if ($(this).scrollTop() > 100) {
-            $('.back-to-top').fadeIn();
+    window.addEventListener('scroll', function() {
+        const backToTop = document.querySelector('.back-to-top');
+        if (window.scrollY > 100) {
+            backToTop.style.display = 'block';
         } else {
-            $('.back-to-top').fadeOut();
+            backToTop.style.display = 'none';
         }
     });
 
     // Открытие поста при клике на "читать далее"
-    $('.post-footer .read-more').click(function() {
-        var postUrl = $(this).data('url');
-        window.open(postUrl, '_blank');
+    document.querySelectorAll('.post-footer .read-more').forEach(function(element) {
+        element.addEventListener('click', function() {
+            var postUrl = this.getAttribute('data-url');
+            window.open(postUrl, '_blank');
+        });
     });
 
     // Показать/скрыть подменю при клике на пункт меню
-    $('.menu-link.has-submenu').click(function(e) {
-        e.preventDefault(); // Предотвращаем переход по ссылке
+    document.querySelectorAll('.menu-link.has-submenu').forEach(function(element) {
+        element.addEventListener('click', function(e) {
+            e.preventDefault(); // Предотвращаем переход по ссылке
 
-        var $submenu = $(this).siblings('.sub-menu');
-
-        if ($submenu.is(':visible')) {
-            // Если подменю видно, скрываем его
-            $submenu.slideUp(); // Используем slideUp для скрытия
-        } else {
-            // Если подменю скрыто, показываем его
-            $submenu.slideDown(); // Используем slideDown для показа
-        }
+            var submenu = this.nextElementSibling;
+            if (submenu.style.display === 'block') {
+                submenu.style.display = 'none';
+            } else {
+                submenu.style.display = 'block';
+            }
+        });
     });
 });
