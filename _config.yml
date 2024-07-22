@@ -50,11 +50,6 @@ plugins:
   - jekyll-admin
   - jekyll-paginate
   - jekyll-loading-lazy
-  - jekyll-assets
-
-assets:
-  compression: true
-  digest: true
 
 # Настройки пагинации
 paginate: 5
