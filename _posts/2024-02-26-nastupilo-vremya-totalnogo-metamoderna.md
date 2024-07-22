@@ -1,5 +1,6 @@
 ---
 title: "Наступило время тотального метамодерна"
+layout: post
 date: 2024-02-26
 image: "assets/images/bRn2dgjVYpw.jpg"
 description: "размышления о метамодерне и манипуляциях"
