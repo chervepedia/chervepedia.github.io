@@ -277,8 +277,12 @@ body {
     bottom: 0;
     left: 0;
     z-index: 1000;
-    border-top: 1px groove transparent;
-    border-image: linear-gradient(to right, var(--main-color), var(--main-color-dark)) 1;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Добавлена тень */
+    border-top: 1px solid transparent; /* Основной цвет градиента будет виден */
+    background-image: linear-gradient(to right, var(--main-color) 0%, var(--main-color) 50%, rgba(0, 0, 0, 0) 100%),
+                      linear-gradient(to right, #222, #222); /* Второй градиент для фона */
+    background-origin: border-box;
+    background-clip: content-box, border-box;
 }
 
 /* Стили для изображений в футере */
