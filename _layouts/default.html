@@ -42,14 +42,10 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.2/css/hover-min.css" rel="stylesheet">
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | absolute_url }}">
+    {% if page.css %}
+        <link rel="stylesheet" href="{{ base_url }}/assets/css/{{ page.css }}">
+    {% endif %}
   
-  <style>
-    .telegram-discussion {
-      width: 100%;
-      max-width: 540px;
-      margin: 0 auto; /* Centering the widget horizontally */
-    }
-  </style>
 </head>
 <body>
   <div class="container">
