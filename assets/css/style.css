@@ -277,12 +277,7 @@ body {
     bottom: 0;
     left: 0;
     z-index: 1000;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Добавлена тень */
-    border-top: 1px solid transparent; /* Основной цвет градиента будет виден */
-    background-image: linear-gradient(to right, var(--main-color) 0%, var(--main-color) 50%, rgba(0, 0, 0, 0) 100%),
-                      linear-gradient(to right, #222, #222); /* Второй градиент для фона */
-    background-origin: border-box;
-    background-clip: content-box, border-box;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* тень */
 }
 
 /* Стили для изображений в футере */
@@ -379,6 +374,8 @@ background: #222;
     margin-left: auto;
     margin-right: auto;
     border-radius: 10px; /* Закругление краёв */
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* тень */
+}
 }
 
 .pagination a.fas {
