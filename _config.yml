@@ -1,3 +1,8 @@
+# Конфигурация Markdown
+markdown: kramdown
+kramdown:
+  input: GFM
+
 title: ЧЕРВЕПЕДИЯ
 description: Черветред - антироссиянский тред на Дваче
 baseurl: "" # использовать /если/этот/сайт/вложен
