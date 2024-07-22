@@ -442,16 +442,17 @@ box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* тень */
 /* Медиа-запрос для устройств с шириной экрана до 767px */
 @media (max-width: 767px) {
     body {
-        background-color: #222; /* Цвет фона */
+        background-color: #222222; /* Цвет фона */
         background-image: url('https://twallpaper.js.org/patterns/underwater_world.svg'); /* Фоновое изображение */
-        background-size: 420px; /* Размер фона */
-        background-attachment: fixed; /* Фон фиксирован */
+        background-size: cover; /* Покрывает весь экран */
+        background-attachment: fixed; /* Фон фиксирован, не скроллится */
         background-repeat: no-repeat; /* Без повторения фона */
         background-position: center; /* Центрирование фона */
+        margin: 0; /* Удаляем стандартные отступы у body */
+        height: 100vh; /* Высота на весь экран */
+        overflow: hidden; /* Скрыть скролл, если он появляется */
     }
 }
-
-    
 
     .sidebar {
         width: 100%;
