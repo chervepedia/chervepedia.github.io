@@ -26,10 +26,19 @@ menu:
 
 # Социальные сети и контакты
 social:
-  tumblr: "https://tumblr.com"
-  telegram: "https://telegram.org"
-  youtube: "https://youtube.com"
-phone: "+79228292098"
+  facebook: ""
+  twitter: "x.com/chervethread"
+  instagram: ""
+  linkedin: ""
+  pinterest: ""
+  tumblr: ""
+  telegram: "t.me/s3t_s3t"
+  youtube: ""
+  github: ""
+  vkontakte: "vk.com/s3ts3ts3t"
+  snapchat: ""
+  reddit: ""
+  phone: "+79228292098"
 
 # Плагины
 plugins:
