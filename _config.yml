@@ -21,6 +21,8 @@ menu:
         url: /about
       - title: Контакты
         url: /contact
+      - title: test
+        url: /test
  
 
 # Плагины
