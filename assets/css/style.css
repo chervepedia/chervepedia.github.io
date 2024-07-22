@@ -264,6 +264,8 @@ transition: color 0.3s; /* Плавный переход для цвета */
     width: 100%;
     max-width: 540px;
     margin: 10px auto 0 auto; /* Отступ сверху на 10 пикселей */
+    border-top: 1px groove transparent;
+    border-image: linear-gradient(to right, var(--main-color), var(--main-color-dark)) 1;
 }
 
 /* Стили для футера */
