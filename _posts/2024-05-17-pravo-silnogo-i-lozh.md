@@ -1,5 +1,6 @@
 ---
 title: "Право сильного и ложь"
+layout: post
 date: 2024-05-17
 image: "assets/images/-RugI-9Kaoo.jpg"
 description: "о праве сильного и правде по-русски"
