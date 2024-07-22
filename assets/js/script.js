@@ -1,4 +1,10 @@
-// Плавная прокрутка наверх при клике на стрелку
+$(document).ready(function() {
+    // Настройки увеличения изображений с Medium Zoom
+    mediumZoom('.post-image-wrapper img', {
+        background: 'rgba(0, 0, 0, 0.7)'
+    });
+
+    // Плавная прокрутка наверх при клике на стрелку
     $('.back-to-top').click(function() {
         $('html, body').animate({ scrollTop: 0 }, 'slow');
         return false;
