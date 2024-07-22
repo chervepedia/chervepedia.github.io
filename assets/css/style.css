@@ -250,7 +250,7 @@ body {
 }
 
 .read-more:hover {
-    color: var(--main-color-dark);
+    color: #888;
 }
 
 .post-date {
@@ -387,7 +387,7 @@ box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* тень */
 }
 
 .pagination a.fas:hover {
-    color: #e699c7;
+    color: #888;
 }
 
 .page-numbers {
