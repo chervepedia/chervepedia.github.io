@@ -42,15 +42,12 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.2/css/hover-min.css" rel="stylesheet">
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | absolute_url }}">
-
+  
   <style>
-    .telegram-widget-container {
+    .telegram-discussion {
       width: 100%;
       max-width: 540px;
       margin: 0 auto; /* Centering the widget horizontally */
-      background-color: #222; /* Ensures background color */
-      padding: 16px; /* Add padding if needed */
-      border-radius: 10px; /* Optional: Round the corners */
     }
   </style>
 </head>
@@ -138,10 +135,5 @@
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.6/dist/medium-zoom.min.js"></script>
   <script src="{{ '/assets/js/script.js' | absolute_url }}"></script>
-
-  <!-- Embed the Telegram Widget in an Isolated Container -->
-  <div class="telegram-widget-container">
-    <script async src="https://telegram.org/js/telegram-widget.js?15" data-telegram-post="{{ page.telegram | replace: 'https://t.me/', '' }}" data-width="100%"></script>
-  </div>
 </body>
 </html>
