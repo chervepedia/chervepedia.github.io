@@ -50,6 +50,7 @@ plugins:
   - jekyll-admin
   - jekyll-paginate
   - jekyll-loading-lazy
+  - jekyll-urls
 
 # Настройки пагинации
 paginate: 5
