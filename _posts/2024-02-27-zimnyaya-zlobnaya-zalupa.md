@@ -1,5 +1,6 @@
 ---
 title: "Зимняя злобная залупа"
+layout: post
 date: 2024-02-27
 image: "assets/images/CCmLhVSpYj4.jpg"
 description: "сказание о ночном наступлении и защите земель"
