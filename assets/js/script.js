@@ -1,33 +1,40 @@
-window.onload = function() {
-    if (window.innerWidth <= 767) {
-        Twallpaper.init({
-            fps: 60,
-            tails: 90,
-            animate: true,
-            scrollAnimate: true,
-            colors: [
-                "#ffb0e2",
-                "#ffb0e2",
-                "#e699c7",
-                "#e699c7"
-            ],
-            pattern: {
-                image: "https://twallpaper.js.org/patterns/underwater_world.svg",
-                background: "#222222",
-                blur: 0,
-                size: "420px",
-                opacity: 1,
-                mask: true
-            }
-        });
-    }
-};
+//бекграунд
+document.addEventListener('DOMContentLoaded', function() {
+    function applyTwallpaper() {
+        // Проверьте ширину экрана
+        if (window.matchMedia("(max-width: 767px)").matches) {
+            const options = {
+                fps: 60,
+                tails: 90,
+                animate: true,
+                scrollAnimate: true,
+                colors: [
+                    "#ffb0e2",
+                    "#ffb0e2",
+                    "#df36a1",
+                    "#560739"
+                ],
+                pattern: {
+                    image: "https://twallpaper.js.org/patterns/space.svg",
+                    background: "#000",
+                    blur: 0,
+                    size: "420px",
+                    opacity: 0.5,
+                    mask: true
+                }
+            };
 
-$(document).ready(function() {
-    // Настройки увеличения изображений с Medium Zoom
-    mediumZoom('.post-image-wrapper img', {
-        background: 'rgba(0, 0, 0, 0.7)'
-    });
+            // Инициализация twallpaper с указанными опциями
+            twallpaper.init(options);
+        }
+    }
+
+    // Применяем фон сразу после загрузки
+    applyTwallpaper();
+
+    // Также добавляем обработчик событий на изменение размера окна
+    window.addEventListener('resize', applyTwallpaper);
+});
 
     // Плавная прокрутка наверх при клике на стрелку
     $('.back-to-top').click(function() {
