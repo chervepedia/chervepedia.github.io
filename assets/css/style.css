@@ -437,6 +437,11 @@ background: #222;
 /* Медиа-запрос для устройств с шириной экрана до 767px */
 @media (max-width: 767px) {
 
+    body {
+        background: url('https://blog.1a23.com/wp-content/uploads/sites/2/2020/02/pattern-4.svg') no-repeat center center fixed;
+        background-size: cover;
+    }
+
     .sidebar {
         width: 100%;
         position: relative;
@@ -461,4 +466,4 @@ background: #222;
     .footer {
         display: none;
     }
-  }
+}
