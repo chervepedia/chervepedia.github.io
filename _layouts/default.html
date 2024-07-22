@@ -169,11 +169,11 @@
     {% endif %}
   </div>
   <div class="contact-info">
-    {% if site.phone %}
-      <i class="fas fa-phone-alt"></i> {{ site.phone }}
+    {% if site.contact.phone %}
+      <i class="fas fa-phone-alt"></i> {{ site.contact.phone }}
     {% endif %}
-    {% if site.phone %}
-      <i class="fas fa-map-marker-alt" style="margin-left: 20px;"></i> Россия, Москва
+    {% if site.contact.address %}
+      <i class="fas fa-map-marker-alt" style="margin-left: 20px;"></i> {{ site.contact.address }}
     {% endif %}
   </div>
 </div>
