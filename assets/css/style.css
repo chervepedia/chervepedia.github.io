@@ -22,7 +22,6 @@ body {
     padding: 0 15px;
     width: 100%;
     max-width: 500px;
-    max-height: 770px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -189,6 +188,7 @@ body {
     width: 100%;
     position: relative;
     max-width: 500px;
+    max-height: 720px;
     border-radius: 15px; /* Закругление краёв постов */
 }
 
