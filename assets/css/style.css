@@ -1,4 +1,4 @@
-:root {
+.:root {
     --main-color: #ffb0e2;
     --main-color-dark: #e699c7;
 }
@@ -21,7 +21,8 @@ body {
     margin-top: 20px;
     padding: 0 15px;
     width: 100%;
-    max-width: 1000px;
+    max-width: 540px;
+max-height: 810px;
     margin-left: auto;
     margin-right: auto;
 }
