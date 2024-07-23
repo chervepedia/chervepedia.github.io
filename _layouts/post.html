@@ -27,16 +27,14 @@ layout: default
                 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
             </div>
         {% else %}
-            <div class="post-image-wrapper">
-                <img src="{{ page.image | absolute_url }}" alt="{{ page.title }}">
-            </div>
-        {% endif %}
-    </div>
-    {% unless page.telegram or page.twitter %}
-    <div class="post-content">
-        {{ content }}
-    </div>
-    {% endunless %}
+<div class="post-image-wrapper{% if page.telegram %} telegram-transparent{% endif %}">
+    <img src="{{ page.image | absolute_url }}" alt="{{ page.title }}">
+</div>
+{% unless page.telegram or page.twitter %}
+<div class="post-content">
+    {{ content }}
+</div>
+{% endunless %}
     
     {% include comments.html %}
 </div>
