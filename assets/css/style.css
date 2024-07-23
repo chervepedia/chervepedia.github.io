@@ -1,6 +1,6 @@
 :root {
-    --main-color: #fdb8d6; /* Осветлённый розовый */
-    --main-color-dark: #f69ab5; /* Осветлённый розовый */
+    --main-color: #ffb0e2; /* Цвет изменен на более светлый */
+    --main-color-dark: #e699c7; /* Цвет изменен на более светлый */
 }
 
 /* Общие стили для страницы */
@@ -31,11 +31,11 @@ body {
     background-color: #222;
     text-align: center;
     padding: 15px;
-    margin-bottom: 30px; /* Изменено на 30px */
+    margin-bottom: 20px;
     position: sticky;
     top: 20px;
     width: 100%;
-    max-width: 250px; /* Изменено на 250px */
+    max-width: 250px; /* Ширина сайдбара установлена на 250px */
     margin-left: auto;
     margin-right: auto;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
@@ -76,7 +76,7 @@ body {
 /* Стили для меню */
 .menu-container {
     width: 100%;
-    max-width: 250px; /* Изменено на 250px */
+    max-width: 250px; /* Ширина меню установлена на 250px */
     border-top: 1px groove transparent;
     border-image: linear-gradient(to right, var(--main-color), var(--main-color-dark)) 1;
 }
@@ -90,7 +90,7 @@ body {
 }
 
 .menu-item {
-    position: relative; /* что родитель имеет позиционирование */
+    position: relative; /* Родитель имеет позиционирование */
 }
 
 /* Ссылки меню */
@@ -99,7 +99,6 @@ body {
     color: var(--main-color);
     text-decoration: none;
     padding: 10px;
-    background-color: ;
     text-align: center;
     transition: background-color 0.3s, transform 0.1s, box-shadow 0.1s;
     border: none;
@@ -107,8 +106,8 @@ body {
 }
 
 .menu-link:hover {
-    background-color: ;
-    color: var(--highlight-color);
+    background-color: #333; /* Цвет фона при наведении */
+    color: #fff; /* Цвет текста при наведении */
 }
 
 .menu-link:active {
@@ -144,7 +143,7 @@ body {
     position: relative; /* Для позиционирования псевдо-элемента */
     transition: background-color 0.3s;
 }
-    
+
 /* Эффект подчеркивания */
 .sub-menu a::before {
     content: '';
@@ -164,8 +163,8 @@ body {
 
 /* Подменю ссылки при наведении */
 .sub-menu a:hover {
-    background-color: #222;
-    color: var(--highlight-color);
+    background-color: #333; /* Цвет фона при наведении */
+    color: #fff; /* Цвет текста при наведении */
 }
 
 /* Стили для контента */
@@ -175,7 +174,7 @@ body {
     flex-direction: column;
     align-items: center;
     width: 100%;
-    max-width: 500px; /* Изменено на 500px */
+    max-width: 500px; /* Ширина контента установлена на 500px */
     padding-bottom: 100px;
     margin-top: 24px;
     margin-left: auto;
@@ -185,15 +184,13 @@ body {
 /* Стили для постов */
 .post {
     background-color: #222;
-    margin-bottom: 40px; /* Изменено на 40px */
+    margin-bottom: 40px; /* Отступ между постами 40px */
     padding: 0;
     width: 100%;
     position: relative;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
-    max-width: 500px; /* Изменено на 500px */
-    max-height: 720px; /* Максимальная высота постов */
+    max-width: 500px; /* Ширина постов установлена на 500px */
     border-radius: 15px; /* Закругление краёв постов */
-    overflow: hidden; /* Обрезка содержимого, если оно превышает максимальную высоту */
 }
 
 /* Заголовок поста */
@@ -212,14 +209,12 @@ body {
 /* Обёртка для изображения в посте */
 .post-image-wrapper {
     margin-top: 16px;
-    max-height: 720px; /* Максимальная высота для изображений в постах */
 }
 
 .post-image-wrapper img {
     width: 100%;
-    height: auto; /* Подгонка изображения по ширине, сохранение пропорций */
-    max-height: 720px; /* Максимальная высота для изображений в постах */
-    object-fit: cover; /* Обрезка изображения, чтобы оно заполняло контейнер */
+    max-width: 720px; /* Максимальная ширина изображения в контейнере */
+    height: auto;
     display: block;
     background: transparent;
 }
@@ -267,11 +262,12 @@ body {
 /* Стили телеграм виджета */
 .telegram-discussion {
     width: 100%;
-    max-width: 250px; /* Изменено на 250px */
+    max-width: 500px; /* Ширина виджета установлена на 500px */
     margin: 10px auto 0 auto; /* Отступ сверху на 10 пикселей */
     border-top: 1px groove transparent;
     border-image: linear-gradient(to right, var(--main-color), var(--main-color-dark)) 1;
 }
+
 .telegram-transparent {
     opacity: 1;
 }
@@ -288,12 +284,12 @@ body {
     bottom: 0;
     left: 0;
     z-index: 1000;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* тень */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Тень */
 }
 
 /* Стили для изображений в футере */
 .footer img {
-width: 40px;
+    width: 40px;
     height: 40px;
     border-radius: 50%;
 }
@@ -379,13 +375,13 @@ width: 40px;
     background-color: #222;
     padding: 14px; /* Уменьшено с 28px до 14px */
     margin-top: 28px;
-    margin-bottom: 40px; /* Изменено на 40px */
+    margin-bottom: 40px; /* Отступ между пагинацией и нижним краем страницы 40px */
     width: 100%;
-    max-width: 250px; /* Изменено на 250px */
+    max-width: 500px; /* Ширина пагинации установлена на 500px */
     margin-left: auto;
     margin-right: auto;
     border-radius: 10px; /* Закругление краёв */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* тень */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Тень */
 }
 
 .pagination a.fas {
@@ -428,17 +424,15 @@ width: 40px;
     }
 
     .sidebar {
-        margin-right: 30px; /* Изменено на 30px */
+        margin-right: 30px; /* Отступ между сайдбаром и постами 30px */
         top: 0;
         width: 100%;
-        max-width: 250px; /* Изменено на 250px */
+        max-width: 250px; /* Ширина сайдбара установлена на 250px */
     }
 
     .content {
-        max-width: 500px; /* Изменено на 500px */
+        max-width: 500px; /* Ширина контента установлена на 500px */
         margin-top: 0;
-        margin-left: auto;
-        margin-right: auto;
     }
 
     .back-to-top {
@@ -453,7 +447,7 @@ width: 40px;
         width: 100%;
         position: relative;
         top: 0;
-        max-width: 250px; /* Изменено на 250px */
+        max-width: 250px; /* Ширина сайдбара установлена на 250px */
         margin-left: auto;
         margin-right: auto;
     }
