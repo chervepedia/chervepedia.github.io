@@ -1,3 +1,4 @@
+
 :root {
     --main-color: #ffb0e2;
     --main-color-dark: #e699c7;
@@ -28,7 +29,7 @@ body {
 
 /* Стили для сайдбара */
 .sidebar {
-    background-color: #333333;
+    background-color: #222;
     text-align: center;
     padding: 15px;
     margin-bottom: 20px;
@@ -39,8 +40,7 @@ body {
     margin-left: auto;
     margin-right: auto;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
-    border-radius: 15px;
-    border: 1px solid #444444;
+    border-radius: 15px; /* Закругление краёв */
 }
 
 /* Стили для контейнеров логотипа, заголовка, описания и меню */
@@ -58,6 +58,7 @@ body {
     border-radius: 50%;
     display: block;
     margin: 0 auto;
+    
 }
 
 /* Стили для заголовка */
@@ -73,6 +74,7 @@ body {
     color: #888;
     font-style: italic;
 }
+
 
 /* Стили для меню */
 .menu-container {
@@ -91,7 +93,7 @@ body {
 }
 
 .menu-item {
-    position: relative;
+    position: relative; /* что родитель имеет позиционирование */
 }
 
 /* Ссылки меню */
@@ -100,15 +102,15 @@ body {
     color: var(--main-color);
     text-decoration: none;
     padding: 10px;
-    background-color: #444444;
+    background-color: ;
     text-align: center;
     transition: background-color 0.3s, transform 0.1s, box-shadow 0.1s;
     border: none;
-    border-radius: 10px;
+    border-radius: 10px; /* Закругление краёв ссылок */
 }
 
 .menu-link:hover {
-    background-color: #555555;
+    background-color: ;
     color: var(--highlight-color);
 }
 
@@ -127,13 +129,13 @@ body {
     position: absolute;
     top: 100%;
     left: 0;
-    background-color: #333333;
-    width: auto;
-    min-width: 150px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    padding: 0;
-    z-index: 1000;
+    background-color: #222;
+    width: auto; /* Автоматическая ширина подменю под содержимое */
+    min-width: 150px; /* Минимальная ширина, чтобы избежать слишком узкого подменю */
+    border-radius: 10px; /* Закругление краёв подменю */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Тень для подменю */
+    padding: 0; /* Убираем отступы по умолчанию */
+    z-index: 1000; /* Устанавливаем z-index, чтобы подменю было поверх других элементов */
 }
 
 /* Подменю ссылки */
@@ -142,10 +144,11 @@ body {
     color: #888;
     text-decoration: none;
     padding: 10px;
-    position: relative;
+    position: relative; /* Для позиционирования псевдо-элемента */
     transition: background-color 0.3s;
 }
-
+    
+/* Эффект подчеркивания */
 .sub-menu a::before {
     content: '';
     position: absolute;
@@ -162,6 +165,7 @@ body {
     transform: scaleX(1);
 }
 
+/* Подменю ссылки при наведении */
 .sub-menu a:hover {
     background-color: #222;
     color: var(--highlight-color);
@@ -183,15 +187,14 @@ body {
 
 /* Стили для постов */
 .post {
-    background-color: #1a1a1a;
-    margin-bottom: 30px;
-    padding: 20px;
+    background-color: #222;
+    margin-bottom: 24px;
+    padding: 0;
     width: 100%;
     position: relative;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
     max-width: 540px;
-    border-radius: 5px;
-    border: 1px solid #444444;
+    border-radius: 15px; /* Закругление краёв постов */
 }
 
 /* Заголовок поста */
@@ -215,7 +218,7 @@ body {
 .post-image-wrapper img {
     width: 100%;
     display: block;
-    background: transparent;
+background: transparent;
 }
 
 /* Содержимое поста */
@@ -246,7 +249,7 @@ body {
     display: flex;
     align-items: center;
     cursor: pointer;
-    transition: color 0.3s;
+transition: color 0.3s; /* Плавный переход для цвета */
 }
 
 .read-more:hover {
@@ -258,18 +261,18 @@ body {
     font-size: 12px;
 }
 
-/* Стили для телеграм виджета */
+/* Стили телеграм виджета */
 .telegram-discussion {
     width: 100%;
     max-width: 540px;
-    margin: 10px auto 0 auto;
+    margin: 10px auto 0 auto; /* Отступ сверху на 10 пикселей */
     border-top: 1px groove transparent;
     border-image: linear-gradient(to right, var(--main-color), var(--main-color-dark)) 1;
 }
-
 .telegram-transparent {
     opacity: 1;
 }
+
 
 /* Стили для футера */
 .footer {
@@ -283,7 +286,7 @@ body {
     bottom: 0;
     left: 0;
     z-index: 1000;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* тень */
 }
 
 /* Стили для изображений в футере */
@@ -353,23 +356,12 @@ body {
     color: #ffb0e2;
     border-radius: 50%;
     width: 40px;
-    height: 40px
-}
-
-/* Кнопка "Наверх" */
-.back-to-top {
-    position: fixed;
-    bottom: 100px;
-    right: 18px;
-    color: #ffb0e2;
-    border-radius: 50%;
-    width: 40px;
     height: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    background: #222;
+background: #222;
 }
 
 .back-to-top i {
@@ -382,16 +374,16 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #333333;
-    padding: 14px;
+    background-color: #222;
+    padding: 14px; /* Уменьшено с 28px до 14px */
     margin-top: 28px;
     margin-bottom: 40px;
     width: 100%;
     max-width: 540px;
     margin-left: auto;
     margin-right: auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    border-radius: 10px; /* Закругление краёв */
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* тень */
 }
 
 .pagination a.fas {
@@ -399,7 +391,7 @@ body {
     color: #ffb0e2;
     cursor: pointer;
     text-decoration: none;
-    transition: color 0.3s;
+    transition: color 0.3s; /* Плавный переход для цвета */
 }
 
 .pagination a.fas:hover {
