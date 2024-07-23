@@ -267,6 +267,10 @@ transition: color 0.3s; /* Плавный переход для цвета */
     border-top: 1px groove transparent;
     border-image: linear-gradient(to right, var(--main-color), var(--main-color-dark)) 1;
 }
+.telegram-transparent {
+    opacity: 0.5; /* Пример: делаем элемент полупрозрачным */
+}
+
 
 /* Стили для футера */
 .footer {
