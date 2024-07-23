@@ -5,7 +5,7 @@
 
 /* Общие стили для страницы */
 body {
-    background: linear-gradient(to right, #222, #333);
+    background: #222;
     color: #aaa;
     font-family: 'Roboto', sans-serif;
     margin: 0;
@@ -100,7 +100,7 @@ body {
     color: var(--main-color);
     text-decoration: none;
     padding: 10px;
-    background: linear-gradient(to right, #222, #333);
+    background: #222
     text-align: center;
     transition: background-color 0.3s, transform 0.1s, box-shadow 0.1s;
     border: none;
