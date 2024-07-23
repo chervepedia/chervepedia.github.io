@@ -217,6 +217,7 @@ body {
 .post-image-wrapper img {
     width: 100%;
     display: block;
+background: transparent;
 }
 
 /* Содержимое поста */
