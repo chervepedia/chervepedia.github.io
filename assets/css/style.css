@@ -1,5 +1,3 @@
-
-
 :root {
     --main-color: #ffb0e2;
     --main-color-dark: #e699c7;
@@ -280,36 +278,14 @@ transition: color 0.3s; /* Плавный переход для цвета */
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: linear-gradient(to right, #222, #333);
+    background-color: #222;
     padding: 10px;
     width: 100%;
     position: fixed;
     bottom: 0;
     left: 0;
     z-index: 1000;
-    overflow: hidden; /* чтобы червяк не выходил за пределы футера */
-    position: relative; /* чтобы червяк можно было позиционировать относительно футера */
-}
-
-/* Стили для пиксельного червяка */
-.pixel-worm {
-    position: absolute;
-    top: 0;
-    left: -100%; /* Начальная позиция за пределами футера */
-    width: 100px; /* Ширина червяка */
-    height: 10px; /* Высота червяка */
-    background: linear-gradient(90deg, #ffb0e2 25%, #e699c7 50%, #ffb0e2 75%); /* Градиентный фон червяка */
-    animation: moveWorm 5s linear infinite;
-}
-
-/* Анимация для червяка */
-@keyframes moveWorm {
-    0% {
-        transform: translateX(-100%); /* Начало анимации за пределами футера */
-    }
-    100% {
-        transform: translateX(100%); /* Конец анимации за пределами футера справа */
-    }
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* тень */
 }
 
 /* Стили для изображений в футере */
