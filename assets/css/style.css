@@ -282,6 +282,29 @@ body {
     bottom: 0;
     left: 0;
     z-index: 1000;
+    overflow: hidden; /* чтобы червяк не выходил за пределы футера */
+    position: relative; /* чтобы червяк можно было позиционировать относительно футера */
+}
+
+/* Стили для пиксельного червяка */
+.pixel-worm {
+    position: absolute;
+    top: 0;
+    left: -100%; /* Начальная позиция за пределами футера */
+    width: 100px; /* Ширина червяка */
+    height: 10px; /* Высота червяка */
+    background: linear-gradient(90deg, #ffb0e2 25%, #e699c7 50%, #ffb0e2 75%); /* Градиентный фон червяка */
+    animation: moveWorm 5s linear infinite;
+}
+
+/* Анимация для червяка */
+@keyframes moveWorm {
+    0% {
+        transform: translateX(-100%); /* Начало анимации за пределами футера */
+    }
+    100% {
+        transform: translateX(100%); /* Конец анимации за пределами футера справа */
+    }
 }
 
 /* Стили для изображений в футере */
