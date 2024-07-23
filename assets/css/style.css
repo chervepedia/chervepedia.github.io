@@ -1,22 +1,18 @@
 :root {
-    --main-color: #e7e7e7;
-    --main-color-dark: #cccccc;
-    --highlight-color: #ff6b6b;
-    --background-color: #121212;
-    --sidebar-bg-color: #1e1e1e;
-    --post-bg-color: #1e1e1e;
-    --footer-bg-color: #1e1e1e;
+    --main-bg-color: #121212;
     --main-font-color: #e7e7e7;
-    --secondary-font-color: #aaaaaa;
     --link-color: #ff6b6b;
     --link-hover-color: #ff6b6b;
     --border-color: #333333;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    --header-bg-color: #1e1e1e;
+    --footer-bg-color: #1e1e1e;
     --footer-shadow: rgba(0, 0, 0, 0);
 }
 
 /* Общие стили для страницы */
 body {
-    background-color: var(--background-color);
+    background-color: var(--main-bg-color);
     color: var(--main-font-color);
     font-family: 'Roboto', sans-serif;
     margin: 0;
@@ -39,140 +35,50 @@ body {
 
 /* Стили для сайдбара */
 .sidebar {
-    background-color: var(--sidebar-bg-color);
+    width: 300px;
+    padding: 20px;
+    background: var(--header-bg-color);
+    border: 1px solid var(--border-color);
+    border-radius: 3px;
+    box-shadow: 0 1px 3px var(--shadow-color);
     text-align: center;
-    padding: 15px;
     margin-bottom: 20px;
     position: sticky;
     top: 20px;
-    width: 100%;
     max-width: 540px;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 15px;
 }
 
-/* Стили для контейнеров логотипа, заголовка, описания и меню */
-.logo-container, .title-container, .description-container, .menu-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 10px;
+.sidebar-item {
+    margin-bottom: 15px;
 }
 
-/* Стили для логотипа */
-.logo-container img {
-    width: 128px;
-    height: 128px;
-    border-radius: 50%;
-    display: block;
-    margin: 0 auto;
-}
-
-/* Стили для заголовка */
-.title-container h1 {
-    font-size: 24px;
+.sidebar-item-header {
+    font-size: 16px;
+    margin-bottom: 8px;
+    color: var(--main-font-color);
     font-weight: bold;
-    color: var(--main-color);
 }
 
-/* Стили для описания */
-.description-container p {
+.sidebar-item-content {
     font-size: 14px;
-    color: var(--secondary-font-color);
-    font-style: italic;
+    color: var(--main-font-color);
 }
 
-/* Стили для меню */
-.menu-container {
-    width: 100%;
-    max-width: 540px;
-    border-top: 1px groove transparent;
-    border-image: linear-gradient(to right, var(--main-color), var(--main-color-dark)) 1;
-}
-
-/* Сетка для меню */
-.menu-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
-    padding-top: 16px;
-}
-
-.menu-item {
-    position: relative;
-}
-
-/* Ссылки меню */
-.menu-link {
-    display: block;
+.sidebar-item a {
     color: var(--link-color);
     text-decoration: none;
-    padding: 10px;
-    text-align: center;
-    transition: background-color 0.3s, transform 0.1s, box-shadow 0.1s;
-    border: none;
-    border-radius: 10px;
 }
 
-.menu-link:hover {
-    background-color: var(--sidebar-bg-color);
-    color: var(--highlight-color);
+.sidebar-item a:hover {
+    text-decoration: underline;
+    color: var(--link-hover-color);
 }
 
-.menu-link:active {
-    transform: translateY(2px);
-}
-
-.menu-link.has-submenu::after {
-    font-size: 0.8em;
-}
-
-/* Подменю */
-.sub-menu {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: var(--sidebar-bg-color);
-    width: auto;
-    min-width: 150px;
-    border-radius: 10px;
-    padding: 0;
-    z-index: 1000;
-}
-
-/* Подменю ссылки */
-.sub-menu a {
+.sidebar-item img {
+    max-width: 100%;
+    height: auto;
     display: block;
-    color: var(--secondary-font-color);
-    text-decoration: none;
-    padding: 10px;
-    position: relative;
-    transition: background-color 0.3s;
-}
-
-/* Эффект подчеркивания */
-.sub-menu a::before {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 1px;
-    background: var(--link-color);
-    transform: scaleX(0);
-    transition: transform 0.3s ease;
-}
-
-.sub-menu a:hover::before {
-    transform: scaleX(1);
-}
-
-/* Подменю ссылки при наведении */
-.sub-menu a:hover {
-    background-color: var(--sidebar-bg-color);
-    color: var(--highlight-color);
+    margin: 10px 0;
 }
 
 /* Стили для контента */
@@ -191,90 +97,176 @@ body {
 
 /* Стили для постов */
 .post {
-    background-color: var(--post-bg-color);
+    background-color: var(--header-bg-color);
     margin-bottom: 24px;
     padding: 0;
     width: 100%;
     position: relative;
-    max-width: 540px;
-    border-radius: 15px;
+    box-shadow: 0 1px 3px var(--shadow-color);
+    border: 1px solid var(--border-color);
+    border-radius: 3px;
 }
 
-/* Заголовок поста */
 .post-header {
     padding: 10px 15px;
-    border-bottom: 1px groove var(--main-color);
-}
-
-.post-title {
+    border-bottom: 1px solid var(--border-color);
     font-size: 18px;
+    color: var(--main-font-color);
     font-weight: bold;
-    color: var(--main-color);
-    margin: 0;
 }
 
-/* Обёртка для изображения в посте */
-.post-image-wrapper {
-    margin-top: 16px;
-}
-
-.post-image-wrapper img {
-    width: 100%;
-    display: block;
-    background: transparent;
-}
-
-/* Содержимое поста */
 .post-content {
     padding: 15px;
     font-size: 14px;
+    line-height: 1.6;
     color: var(--main-font-color);
     text-align: left;
     word-break: break-word;
     overflow-wrap: break-word;
     hyphens: auto;
-    margin: 0 auto;
-    max-width: 100%;
 }
 
-/* Подвал поста */
 .post-footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 15px;
-    border-top: 1px groove var(--main-color);
+    border-top: 1px solid var(--border-color);
 }
 
 .read-more {
-    color: var(--main-color);
+    color: var(--link-color);
     text-decoration: none;
     display: flex;
     align-items: center;
     cursor: pointer;
-    transition: color 0.3s;
 }
 
 .read-more:hover {
-    color: var(--secondary-font-color);
+    color: var(--link-hover-color);
 }
 
 .post-date {
-    color: var(--secondary-font-color);
+    color: #aaaaaa;
     font-size: 12px;
 }
 
-/* Стили телеграм виджета */
-.telegram-discussion {
+/* Стили для изображений и ссылок в постах */
+.post a {
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+.post a:hover {
+    text-decoration: underline;
+}
+
+.post img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 10px 0;
+}
+
+/* Дополнительные стили для лого, заголовка и меню */
+.logo-container img {
+    width: 128px;
+    height: 128px;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto;
+}
+
+.title-container h1 {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--link-color);
+}
+
+.description-container p {
+    font-size: 14px;
+    color: #aaaaaa;
+    font-style: italic;
+}
+
+.menu-container {
     width: 100%;
     max-width: 540px;
-    margin: 10px auto 0 auto;
     border-top: 1px groove transparent;
     border-image: linear-gradient(to right, var(--main-color), var(--main-color-dark)) 1;
 }
 
-.telegram-transparent {
-    opacity: 1;
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    padding-top: 16px;
+}
+
+.menu-link {
+    display: block;
+    color: var(--link-color);
+    text-decoration: none;
+    padding: 10px;
+    text-align: center;
+    border: none;
+    border-radius: 10px;
+    transition: background-color 0.3s, transform 0.1s, box-shadow 0.1s;
+}
+
+.menu-link:hover {
+    background-color: #333;
+    color: var(--highlight-color);
+}
+
+.menu-link:active {
+    transform: translateY(2px);
+    box-shadow: inset 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* Подменю */
+.sub-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #222;
+    width: auto;
+    min-width: 150px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    padding: 0;
+    z-index: 1000;
+}
+
+.sub-menu a {
+    display: block;
+    color: #aaaaaa;
+    text-decoration: none;
+    padding: 10px;
+    position: relative;
+    transition: background-color 0.3s;
+}
+
+.sub-menu a::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: #ff6b6b;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.sub-menu a:hover::before {
+    transform: scaleX(1);
+}
+
+.sub-menu a:hover {
+    background-color: #222;
+    color: var(--highlight-color);
 }
 
 /* Стили для футера */
@@ -289,9 +281,9 @@ body {
     bottom: 0;
     left: 0;
     z-index: 1000;
+    box-shadow: 0 4px 8px var(--footer-shadow);
 }
 
-/* Стили для изображений в футере */
 .footer img {
     width: 40px;
     height: 40px;
@@ -363,13 +355,40 @@ body {
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    transition: background-color 0.3s, color 0.3s;
-    z-index: 1000;
+    background: #222;
 }
 
-.back-to-top:hover {
-    background-color: var(--highlight-color);
-    color: var(--main-color);
+.back-to-top i {
+    font-size: 18px;
+    color: var(--link-color);
+}
+
+/* Стили для пагинации */
+.pagination {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--footer-bg-color);
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 3px;
+    box-shadow: 0 1px 3px var(--shadow-color);
+    width: 100%;
+    max-width: 540px;
+}
+
+.pagination a {
+    color: var(--link-color);
+    text-decoration: none;
+    padding: 5px 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 3px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.pagination a:hover {
+    background-color: var(--link-hover-color);
+    color: var(--main-font-color);
 }
 
 /* Удаление теней */
@@ -398,4 +417,17 @@ body {
         opacity: 0;
         transform: translate3d(0, 100%, 0);
     }
+}
+
+/* Стили для телеграм виджета */
+.telegram-discussion {
+    width: 100%;
+    max-width: 540px;
+    margin: 10px auto 0 auto;
+    border-top: 1px groove transparent;
+    border-image: linear-gradient(to right, var(--main-color), var(--main-color-dark)) 1;
+}
+
+.telegram-transparent {
+    opacity: 1;
 }
