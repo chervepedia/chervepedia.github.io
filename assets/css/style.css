@@ -188,7 +188,6 @@ body {
     width: 100%;
     position: relative;
     max-width: 500px;
-    max-height: 720px;
     border-radius: 15px; /* Закругление краёв постов */
 }
 
@@ -212,6 +211,7 @@ body {
 
 .post-image-wrapper img {
     width: 100%;
+    max-height: 720px;
     display: block;
     background: transparent;
 }
