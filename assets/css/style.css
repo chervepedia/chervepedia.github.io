@@ -5,7 +5,7 @@
 
 /* Общие стили для страницы */
 body {
-    background-color: #222;
+    background-color: #000;
     color: #aaa;
     font-family: 'Roboto', sans-serif;
     margin: 0;
@@ -21,21 +21,21 @@ body {
     margin-top: 20px;
     padding: 0 15px;
     width: 100%;
-    max-width: 500px;
+    max-width: 1000px;
     margin-left: auto;
     margin-right: auto;
 }
 
 /* Стили для сайдбара */
 .sidebar {
-    background-color: #222;
+    background-color: #000;
     text-align: center;
     padding: 15px;
-    margin-bottom: 30px; /* Отступ между сайдбаром и постами */
+    margin-bottom: 20px;
     position: sticky;
     top: 20px;
     width: 100%;
-    max-width: 250px; /* Ширина сайдбара */
+    max-width: 250px;
     margin-left: auto;
     margin-right: auto;
     border-radius: 15px; /* Закругление краёв */
@@ -101,7 +101,7 @@ body {
     padding: 10px;
     background-color: ;
     text-align: center;
-    transition: background-color 0.3s, transform 0.1s;
+    transition: background-color 0.3s, transform 0.1s, box-shadow 0.1s;
     border: none;
     border-radius: 10px; /* Закругление краёв ссылок */
 }
@@ -115,17 +115,13 @@ body {
     transform: translateY(2px);
 }
 
-.menu-link.has-submenu::after {
-    font-size: 0.8em;
-}
-
 /* Подменю */
 .sub-menu {
     display: none;
     position: absolute;
     top: 100%;
     left: 0;
-    background-color: #222;
+    background-color: #000;
     width: auto; /* Автоматическая ширина подменю под содержимое */
     min-width: 150px; /* Минимальная ширина, чтобы избежать слишком узкого подменю */
     border-radius: 10px; /* Закругление краёв подменю */
@@ -162,7 +158,7 @@ body {
 
 /* Подменю ссылки при наведении */
 .sub-menu a:hover {
-    background-color: #222;
+    background-color: #000;
     color: var(--highlight-color);
 }
 
@@ -182,13 +178,12 @@ body {
 
 /* Стили для постов */
 .post {
-    background-color: #222;
-    margin-bottom: 40px; /* Отступ между постами */
+    background-color: #000;
+    margin-bottom: 40px; /* Отступ между постами 40px */
     padding: 0;
     width: 100%;
     position: relative;
     max-width: 500px;
-    max-height: 720px;
     border-radius: 15px; /* Закругление краёв постов */
 }
 
@@ -212,9 +207,9 @@ body {
 
 .post-image-wrapper img {
     width: 100%;
-    max-height: 720px;
     display: block;
-    background: transparent;
+    max-height: 720px;
+    object-fit: contain;
 }
 
 /* Содержимое поста */
@@ -260,7 +255,7 @@ body {
 /* Стили телеграм виджета */
 .telegram-discussion {
     width: 100%;
-    max-width: 500px;
+    max-width: 540px;
     margin: 10px auto 0 auto; /* Отступ сверху на 10 пикселей */
     border-top: 1px groove transparent;
     border-image: linear-gradient(to right, var(--main-color), var(--main-color-dark)) 1;
@@ -274,7 +269,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #222;
+    background-color: #000;
     padding: 10px;
     width: 100%;
     position: fixed;
@@ -355,7 +350,7 @@ body {
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    background: #222;
+    background: #000;
 }
 
 .back-to-top i {
@@ -368,7 +363,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #222;
+    background-color: #000;
     padding: 14px; /* Уменьшено с 28px до 14px */
     margin-top: 28px;
     margin-bottom: 40px;
@@ -419,14 +414,14 @@ body {
     }
 
     .sidebar {
-        margin-right: 30px; /* Отступ между сайдбаром и контентом */
+        margin-right: 30px; /* Отступ между сайдбаром и постами 30px */
         top: 0;
         width: 100%;
-        max-width: 250px; /* Ширина сайдбара */
+        max-width: 250px;
     }
 
     .content {
-        max-width: 590px;
+        max-width: 500px;
         margin-top: 0;
         margin-left: auto;
         margin-right: auto;
@@ -444,7 +439,7 @@ body {
         width: 100%;
         position: relative;
         top: 0;
-        max-width: 540px;
+        max-width: 250px;
         margin-left: auto;
         margin-right: auto;
     }
