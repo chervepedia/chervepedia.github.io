@@ -269,7 +269,7 @@ transition: color 0.3s; /* Плавный переход для цвета */
     border-image: linear-gradient(to right, var(--main-color), var(--main-color-dark)) 1;
 }
 .telegram-transparent {
-    opacity: 0.5; /* Пример: делаем элемент полупрозрачным */
+    opacity: 1;
 }
 
 
