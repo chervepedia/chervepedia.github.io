@@ -1,11 +1,11 @@
 :root {
-    --main-color: #ffb0e2;
-    --main-color-dark: #e699c7;
+    --main-color: #fdb8d6; /* Осветлённый розовый */
+    --main-color-dark: #f69ab5; /* Осветлённый розовый */
 }
 
 /* Общие стили для страницы */
 body {
-    background-color: #000;
+    background-color: #222;
     color: #aaa;
     font-family: 'Roboto', sans-serif;
     margin: 0;
@@ -28,16 +28,17 @@ body {
 
 /* Стили для сайдбара */
 .sidebar {
-    background-color: #000;
+    background-color: #222;
     text-align: center;
     padding: 15px;
-    margin-bottom: 20px;
+    margin-bottom: 30px; /* Изменено на 30px */
     position: sticky;
     top: 20px;
     width: 100%;
-    max-width: 250px;
+    max-width: 250px; /* Изменено на 250px */
     margin-left: auto;
     margin-right: auto;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
     border-radius: 15px; /* Закругление краёв */
 }
 
@@ -56,7 +57,6 @@ body {
     border-radius: 50%;
     display: block;
     margin: 0 auto;
-    
 }
 
 /* Стили для заголовка */
@@ -76,7 +76,7 @@ body {
 /* Стили для меню */
 .menu-container {
     width: 100%;
-    max-width: 540px;
+    max-width: 250px; /* Изменено на 250px */
     border-top: 1px groove transparent;
     border-image: linear-gradient(to right, var(--main-color), var(--main-color-dark)) 1;
 }
@@ -113,6 +113,11 @@ body {
 
 .menu-link:active {
     transform: translateY(2px);
+    box-shadow: inset 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.menu-link.has-submenu::after {
+    font-size: 0.8em;
 }
 
 /* Подменю */
@@ -121,10 +126,11 @@ body {
     position: absolute;
     top: 100%;
     left: 0;
-    background-color: #000;
+    background-color: #222;
     width: auto; /* Автоматическая ширина подменю под содержимое */
     min-width: 150px; /* Минимальная ширина, чтобы избежать слишком узкого подменю */
     border-radius: 10px; /* Закругление краёв подменю */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Тень для подменю */
     padding: 0; /* Убираем отступы по умолчанию */
     z-index: 1000; /* Устанавливаем z-index, чтобы подменю было поверх других элементов */
 }
@@ -147,7 +153,7 @@ body {
     left: 0;
     width: 100%;
     height: 1px;
-    background: #ffb0e2;
+    background: var(--main-color);
     transform: scaleX(0);
     transition: transform 0.3s ease;
 }
@@ -158,7 +164,7 @@ body {
 
 /* Подменю ссылки при наведении */
 .sub-menu a:hover {
-    background-color: #000;
+    background-color: #222;
     color: var(--highlight-color);
 }
 
@@ -169,7 +175,7 @@ body {
     flex-direction: column;
     align-items: center;
     width: 100%;
-    max-width: 500px;
+    max-width: 500px; /* Изменено на 500px */
     padding-bottom: 100px;
     margin-top: 24px;
     margin-left: auto;
@@ -178,13 +184,16 @@ body {
 
 /* Стили для постов */
 .post {
-    background-color: #000;
-    margin-bottom: 40px; /* Отступ между постами 40px */
+    background-color: #222;
+    margin-bottom: 40px; /* Изменено на 40px */
     padding: 0;
     width: 100%;
     position: relative;
-    max-width: 500px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    max-width: 500px; /* Изменено на 500px */
+    max-height: 720px; /* Максимальная высота постов */
     border-radius: 15px; /* Закругление краёв постов */
+    overflow: hidden; /* Обрезка содержимого, если оно превышает максимальную высоту */
 }
 
 /* Заголовок поста */
@@ -203,13 +212,16 @@ body {
 /* Обёртка для изображения в посте */
 .post-image-wrapper {
     margin-top: 16px;
+    max-height: 720px; /* Максимальная высота для изображений в постах */
 }
 
 .post-image-wrapper img {
     width: 100%;
+    height: auto; /* Подгонка изображения по ширине, сохранение пропорций */
+    max-height: 720px; /* Максимальная высота для изображений в постах */
+    object-fit: cover; /* Обрезка изображения, чтобы оно заполняло контейнер */
     display: block;
-    max-height: 720px;
-    object-fit: contain;
+    background: transparent;
 }
 
 /* Содержимое поста */
@@ -255,7 +267,7 @@ body {
 /* Стили телеграм виджета */
 .telegram-discussion {
     width: 100%;
-    max-width: 540px;
+    max-width: 250px; /* Изменено на 250px */
     margin: 10px auto 0 auto; /* Отступ сверху на 10 пикселей */
     border-top: 1px groove transparent;
     border-image: linear-gradient(to right, var(--main-color), var(--main-color-dark)) 1;
@@ -269,18 +281,19 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #000;
+    background-color: #222;
     padding: 10px;
     width: 100%;
     position: fixed;
     bottom: 0;
     left: 0;
     z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* тень */
 }
 
 /* Стили для изображений в футере */
 .footer img {
-    width: 40px;
+width: 40px;
     height: 40px;
     border-radius: 50%;
 }
@@ -313,14 +326,14 @@ body {
 /* Название сайта */
 .site-name {
     margin-left: 10px;
-    color: #ffb0e2;
+    color: var(--main-color);
     font-size: 18px;
 }
 
 /* Иконки социальных сетей */
 .social-icons a {
     margin: 0 10px;
-    color: #ffb0e2;
+    color: var(--main-color);
 }
 
 /* Контактная информация */
@@ -334,7 +347,7 @@ body {
 .contact-info i {
     font-size: 20px;
     margin-right: 10px;
-    color: #ffb0e2;
+    color: var(--main-color);
 }
 
 /* Кнопка "Наверх" */
@@ -342,7 +355,7 @@ body {
     position: fixed;
     bottom: 100px;
     right: 18px;
-    color: #ffb0e2;
+    color: var(--main-color);
     border-radius: 50%;
     width: 40px;
     height: 40px;
@@ -350,12 +363,12 @@ body {
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    background: #000;
+    background: #222;
 }
 
 .back-to-top i {
     font-size: 18px;
-    color: #ffb0e2;
+    color: var(--main-color);
 }
 
 /* Стили для пагинации */
@@ -363,20 +376,21 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #000;
+    background-color: #222;
     padding: 14px; /* Уменьшено с 28px до 14px */
     margin-top: 28px;
-    margin-bottom: 40px;
+    margin-bottom: 40px; /* Изменено на 40px */
     width: 100%;
-    max-width: 540px;
+    max-width: 250px; /* Изменено на 250px */
     margin-left: auto;
     margin-right: auto;
     border-radius: 10px; /* Закругление краёв */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* тень */
 }
 
 .pagination a.fas {
     font-size: 20px;
-    color: #ffb0e2;
+    color: var(--main-color);
     cursor: pointer;
     text-decoration: none;
     transition: color 0.3s; /* Плавный переход для цвета */
@@ -414,14 +428,14 @@ body {
     }
 
     .sidebar {
-        margin-right: 30px; /* Отступ между сайдбаром и постами 30px */
+        margin-right: 30px; /* Изменено на 30px */
         top: 0;
         width: 100%;
-        max-width: 250px;
+        max-width: 250px; /* Изменено на 250px */
     }
 
     .content {
-        max-width: 500px;
+        max-width: 500px; /* Изменено на 500px */
         margin-top: 0;
         margin-left: auto;
         margin-right: auto;
@@ -439,7 +453,7 @@ body {
         width: 100%;
         position: relative;
         top: 0;
-        max-width: 250px;
+        max-width: 250px; /* Изменено на 250px */
         margin-left: auto;
         margin-right: auto;
     }
