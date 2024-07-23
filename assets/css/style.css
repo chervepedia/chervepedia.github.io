@@ -1,3 +1,5 @@
+
+
 :root {
     --main-color: #ffb0e2;
     --main-color-dark: #e699c7;
@@ -5,7 +7,7 @@
 
 /* Общие стили для страницы */
 body {
-    background: #222;
+    background-color: #222;
     color: #aaa;
     font-family: 'Roboto', sans-serif;
     margin: 0;
@@ -24,12 +26,11 @@ body {
     max-width: 1000px;
     margin-left: auto;
     margin-right: auto;
-    background: linear-gradient(to right, #222, #333);
 }
 
 /* Стили для сайдбара */
 .sidebar {
-    background: linear-gradient(to right, #222, #333);
+    background-color: #222;
     text-align: center;
     padding: 15px;
     margin-bottom: 20px;
@@ -39,6 +40,7 @@ body {
     max-width: 540px;
     margin-left: auto;
     margin-right: auto;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
     border-radius: 15px; /* Закругление краёв */
 }
 
@@ -48,7 +50,6 @@ body {
     flex-direction: column;
     align-items: center;
     margin-bottom: 10px;
-    background: linear-gradient(to right, #222, #333);
 }
 
 /* Стили для логотипа */
@@ -58,6 +59,7 @@ body {
     border-radius: 50%;
     display: block;
     margin: 0 auto;
+    
 }
 
 /* Стили для заголовка */
@@ -73,6 +75,7 @@ body {
     color: #888;
     font-style: italic;
 }
+
 
 /* Стили для меню */
 .menu-container {
@@ -100,7 +103,7 @@ body {
     color: var(--main-color);
     text-decoration: none;
     padding: 10px;
-    background: #222
+    background-color: ;
     text-align: center;
     transition: background-color 0.3s, transform 0.1s, box-shadow 0.1s;
     border: none;
@@ -108,12 +111,13 @@ body {
 }
 
 .menu-link:hover {
-    background: linear-gradient(to right, #333, #444);
+    background-color: ;
     color: var(--highlight-color);
 }
 
 .menu-link:active {
     transform: translateY(2px);
+    box-shadow: inset 0 4px 6px rgba(0, 0, 0, 0.3);
 }
 
 .menu-link.has-submenu::after {
@@ -126,10 +130,11 @@ body {
     position: absolute;
     top: 100%;
     left: 0;
-    background: linear-gradient(to right, #222, #333);
+    background-color: #222;
     width: auto; /* Автоматическая ширина подменю под содержимое */
     min-width: 150px; /* Минимальная ширина, чтобы избежать слишком узкого подменю */
     border-radius: 10px; /* Закругление краёв подменю */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Тень для подменю */
     padding: 0; /* Убираем отступы по умолчанию */
     z-index: 1000; /* Устанавливаем z-index, чтобы подменю было поверх других элементов */
 }
@@ -163,7 +168,7 @@ body {
 
 /* Подменю ссылки при наведении */
 .sub-menu a:hover {
-    background: linear-gradient(to right, #333, #444);
+    background-color: #222;
     color: var(--highlight-color);
 }
 
@@ -179,16 +184,16 @@ body {
     margin-top: 24px;
     margin-left: auto;
     margin-right: auto;
-    background: linear-gradient(to right, #222, #333);
 }
 
 /* Стили для постов */
 .post {
-    background: linear-gradient(to right, #222, #333);
+    background-color: #222;
     margin-bottom: 24px;
     padding: 0;
     width: 100%;
     position: relative;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
     max-width: 540px;
     border-radius: 15px; /* Закругление краёв постов */
 }
@@ -214,7 +219,7 @@ body {
 .post-image-wrapper img {
     width: 100%;
     display: block;
-    background: transparent;
+background: transparent;
 }
 
 /* Содержимое поста */
@@ -245,7 +250,7 @@ body {
     display: flex;
     align-items: center;
     cursor: pointer;
-    transition: color 0.3s; /* Плавный переход для цвета */
+transition: color 0.3s; /* Плавный переход для цвета */
 }
 
 .read-more:hover {
@@ -265,10 +270,10 @@ body {
     border-top: 1px groove transparent;
     border-image: linear-gradient(to right, var(--main-color), var(--main-color-dark)) 1;
 }
-
 .telegram-transparent {
     opacity: 1;
 }
+
 
 /* Стили для футера */
 .footer {
@@ -379,7 +384,7 @@ body {
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    background: linear-gradient(to right, #222, #333);
+background: #222;
 }
 
 .back-to-top i {
@@ -392,8 +397,8 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: linear-gradient(to right, #222, #333);
-    padding: 14px;
+    background-color: #222;
+    padding: 14px; /* Уменьшено с 28px до 14px */
     margin-top: 28px;
     margin-bottom: 40px;
     width: 100%;
@@ -401,6 +406,7 @@ body {
     margin-left: auto;
     margin-right: auto;
     border-radius: 10px; /* Закругление краёв */
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* тень */
 }
 
 .pagination a.fas {
