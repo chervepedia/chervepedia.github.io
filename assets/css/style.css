@@ -182,7 +182,7 @@ body {
 /* Стили для постов */
 .post {
     background-color: #222;
-    margin-bottom: 40px; /* Отступ между постами 40px */
+    margin-bottom: 15px; /* Отступ между постами 15px */
     padding: 0;
     width: 100%;
     position: relative;
@@ -208,14 +208,14 @@ body {
 .post-image-wrapper {
     width: 100%;
     max-width: 500px; /* Ширина контейнера для изображения */
-    max-height: 720px; /* Высота контейнера для изображения */
+    max-height: 700px; /* Высота контейнера для изображения */
     margin-top: 16px;
     overflow: hidden; /* Обрезаем изображение, если оно выходит за границы контейнера */
 }
 
 .post-image-wrapper img {
-    width: 100%;
-    height: auto;
+    width: auto;
+    height: 100%;
     max-width: 100%;
     max-height: 100%;
     object-fit: contain; /* Масштабируем изображение с сохранением пропорций */
@@ -305,7 +305,6 @@ body {
     padding-bottom: 56.25%; /* Соотношение сторон 16:9 */
     height: 0;
 }
-
 .video-wrapper iframe {
     position: absolute;
     top: 0;
@@ -425,7 +424,7 @@ body {
     }
 
     .sidebar {
-        margin-right: 30px; /* Отступ между сайдбаром и постами 30px */
+        margin-right: 15px; /* Отступ между сайдбаром и постами 15px */
         top: 0;
         width: 100%;
         max-width: 250px; /* Ширина сайдбара */
