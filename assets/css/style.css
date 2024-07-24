@@ -1,4 +1,3 @@
-
 :root {
     --main-color: #0088cc; /* Основной цвет  */
     --main-color-dark: #007ab8; /* Более темный оттенок Telegram */
@@ -7,7 +6,7 @@
     --sidebar-bg: #f8f9fa; /* Цвет фона сайдбара */
     --post-bg: #ffffff; /* Цвет фона постов */
     --post-border: #e1e8ed; /* Цвет границы постов */
-    --footer-bg: #f1f3f4; /* Цвет фона футера */
+    --footer-bg: rgba(255, 255, 255, 0.8); /* Цвет фона футера с эффектом прозрачности */
     --link-color: #0088cc; /* Цвет ссылок */
     --link-hover-color: #007ab8; /* Цвет ссылок при наведении */
     --submenu-bg: #f8f9fa; /* Цвет фона подменю */
@@ -32,7 +31,7 @@ body {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
-    margin-top: 20px;
+    margin-top: 60px;
     padding: 0 15px;
     width: 100%;
     max-width: 1000px;
@@ -47,10 +46,9 @@ body {
     position: sticky;
     top: 20px;
     width: 100%;
-    max-width: 300px; /* Ширина сайдбара */
-     margin-right: 45px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 15px; /* Закругление краёв */
+    max-width: 300px;
+    margin-right: 45px;
+    border-radius: 10px; /* Закругление краёв */
 }
 
 /* Стили для логотипа */
@@ -79,7 +77,7 @@ body {
 /* Стили для меню */
 .menu-container {
     width: 100%;
-    max-width: 250px; /* Ширина меню */
+    max-width: 250px;
     border-top: 1px groove transparent;
     border-image: linear-gradient(to right, var(--main-color), var(--main-color-dark)) 1;
 }
@@ -93,7 +91,7 @@ body {
 }
 
 .menu-item {
-    position: relative; /* Родительское позиционирование */
+    position: relative;
 }
 
 /* Ссылки меню */
@@ -103,9 +101,10 @@ body {
     text-decoration: none;
     padding: 10px;
     text-align: center;
-    transition: background-color 0.3s, transform 0.1s, box-shadow 0.1s;
+    transition: background-color 0.3s, transform 0.1s;
     border: none;
     border-radius: 10px; /* Закругление краёв ссылок */
+    background: linear-gradient(45deg, var(--main-color), var(--main-color-dark));
 }
 
 .menu-link:hover {
@@ -114,7 +113,6 @@ body {
 
 .menu-link:active {
     transform: translateY(2px);
-    box-shadow: inset 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .menu-link.has-submenu::after {
@@ -128,12 +126,11 @@ body {
     top: 100%;
     left: 0;
     background-color: var(--submenu-bg);
-    width: auto; /* Автоматическая ширина подменю под содержимое */
-    min-width: 150px; /* Минимальная ширина, чтобы избежать слишком узкого подменю */
+    width: auto;
+    min-width: 150px;
     border-radius: 10px; /* Закругление краёв подменю */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Тень для подменю */
-    padding: 0; /* Убираем отступы по умолчанию */
-    z-index: 1000; /* Устанавливаем z-index, чтобы подменю было поверх других элементов */
+    padding: 0;
+    z-index: 1000;
 }
 
 /* Подменю ссылки */
@@ -142,7 +139,7 @@ body {
     color: var(--submenu-text-color);
     text-decoration: none;
     padding: 10px;
-    position: relative; /* Для позиционирования псевдо-элемента */
+    position: relative;
     transition: background-color 0.3s;
 }
 
@@ -176,7 +173,7 @@ body {
     flex-direction: column;
     align-items: center;
     width: 100%;
-    max-width: 500px; /* Ширина контента */
+    max-width: 500px;
     padding-bottom: 100px;
     margin-top: 24px;
 }
@@ -184,13 +181,12 @@ body {
 /* Стили для постов */
 .post {
     background-color: var(--post-bg);
-    margin-bottom: 15px; /* Отступ между постами 15px */
+    margin-bottom: 15px;
     padding: 0;
     width: 100%;
     position: relative;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    max-width: 500px; /* Ширина постов */
-    border-radius: 15px; /* Закругление краёв постов */
+    max-width: 500px;
+    border-radius: 10px; /* Закругление краёв постов */
     border: 1px solid var(--post-border); /* Граница постов */
 }
 
@@ -210,24 +206,24 @@ body {
 /* Основные стили для изображения в посте */
 .post-image-wrapper {
     position: relative;
-    max-width: 500px; /* Максимальная ширина контейнера */
-    max-height: 600px; /* Максимальная высота контейнера */
-    width: auto; /* Ширина контейнера будет зависеть от содержимого */
-    height: auto; /* Высота контейнера будет зависеть от содержимого, но не превысит 600px */
+    max-width: 500px;
+    max-height: 600px;
+    width: auto;
+    height: auto;
     overflow: hidden;
-    margin: auto; /* Центрирование контейнера по горизонтали */
+    margin: auto;
     display: flex;
     justify-content: center;
-    align-items: center; /* Центрирование изображения по вертикали */
+    align-items: center;
 }
 
 /* Стили для изображения */
 .post-image-wrapper img {
-    max-width: 100%; /* Ограничивает ширину изображения размером контейнера */
-    max-height: 600px; /* Ограничивает высоту изображения размером контейнера */
-    width: auto; /* Автоматическая ширина, сохраняет пропорции */
-    height: auto; /* Автоматическая высота, сохраняет пропорции */
-    object-fit: contain; /* Сохраняет пропорции изображения и не обрезает его */
+    max-width: 100%;
+    max-height: 600px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
 }
 
 /* Содержимое поста */
@@ -258,7 +254,7 @@ body {
     display: flex;
     align-items: center;
     cursor: pointer;
-    transition: color 0.3s; /* Плавный переход для цвета */
+    transition: color 0.3s;
 }
 
 .read-more:hover {
@@ -273,8 +269,8 @@ body {
 /* Стили телеграм виджета */
 .telegram-discussion {
     width: 100%;
-    max-width: 500px; /* Ширина виджета */
-    margin: 10px auto 0 auto; /* Отступ сверху на 10 пикселей */
+    max-width: 500px;
+    margin: 10px auto 0 auto;
     border-top: 1px groove transparent;
     border-image: linear-gradient(to right, var(--main-color), var(--main-color-dark)) 1;
 }
@@ -291,10 +287,11 @@ body {
     padding: 10px;
     width: 100%;
     position: fixed;
-    bottom: 0;
+    top: 0; /* Перемещение футера наверх */
     left: 0;
     z-index: 1000;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Тень */
+    backdrop-filter: blur(10px); /* Эффект AeroGlass */
+    -webkit-backdrop-filter: blur(10px); /* Эффект AeroGlass для Safari */
 }
 
 /* Стили для изображений в футере */
@@ -388,11 +385,10 @@ body {
     margin-top: 28px;
     margin-bottom: 40px;
     width: 100%;
-    max-width: 500px; /* Ширина пагинации */
+    max-width: 500px;
     margin-left: auto;
     margin-right: auto;
     border-radius: 10px; /* Закругление краёв */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Тень */
 }
 
 .pagination a.fas {
@@ -400,7 +396,7 @@ body {
     color: var(--main-color);
     cursor: pointer;
     text-decoration: none;
-    transition: color 0.3s; /* Плавный переход для цвета */
+    transition: color 0.3s;
 }
 
 .pagination a.fas:hover {
@@ -435,17 +431,15 @@ body {
     }
 
     .sidebar {
-        margin-right: 15px; /* Отступ между сайдбаром и постами 15px */
+        margin-right: 15px;
         top: 0;
         width: 100%;
-        max-width: 300px; /* Ширина сайдбара */
-margin-right: 45px;
+        max-width: 300px;
     }
 
     .content {
-        max-width: 500px; /* Ширина контента */
+        max-width: 500px;
         margin-top: 0;
-        
     }
 
     .back-to-top {
@@ -468,7 +462,7 @@ margin-right: 45px;
         width: 100%;
         position: relative;
         top: 0;
-        max-width: 100%; /* Ширина сайдбара на мобильных устройствах */
+        max-width: 100%;
         margin-left: auto;
         margin-right: auto;
     }
