@@ -28,17 +28,29 @@ body {
 /* Стили для футера */
 .footer {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    align-items: center; /* Вертикальное центрирование элементов */
     background: rgba(0, 0, 0, 0.3); /* Aero glass эффект */
     backdrop-filter: blur(10px); /* Эффект стеклянной поверхности */
     padding: 10px;
     width: 100%;
     position: fixed;
-    top: 0; /* Переносим футер наверх */
+    top: 0; /* Футер вверху страницы */
     left: 0;
     z-index: 1000;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Тень */
+}
+
+/* Иконки социальных сетей в футере*/
+.social-icons {
+    display: flex;
+    align-items: center; /* Центрирование иконок по вертикали */
+    margin-right: 15px; /* Отступ между иконками и названием сайта */
+}
+
+/* Название сайта в футере*/
+.site-name {
+    color: var(--main-color);
+    font-size: 18px;
 }
 
 /* Стили для изображений в футере */
