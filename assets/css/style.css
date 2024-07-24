@@ -74,8 +74,8 @@ body {
 /* Стили для меню */
 .menu-container {
     width: 100%;
-    max-width: 250px; /* Ширина меню */
-    border-top: 1px groove transparent;
+    max-width: 300px; /* Ширина меню */
+    border-top: 1px solud transparent;
     border-image: linear-gradient(to right, var(--main-color), var(--main-color-dark)) 1;
 }
 
@@ -190,7 +190,7 @@ body {
 
 /* Заголовок поста */
 .post-header {
-    padding: 10px,1px;
+    padding: 10px,15px;
 }
 
 .post-title {
@@ -464,7 +464,7 @@ body {
         width: 100%;
         position: relative;
         top: 0;
-        max-width: 100%; /* Ширина сайдбара на мобильных устройствах */
+        max-width: 300px:
         margin-left: auto;
         margin-right: auto;
     }
