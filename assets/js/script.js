@@ -44,39 +44,29 @@ $(document).ready(function() {
 
 
 
+window.onload = function() {
+    const canvas = document.getElementById('blur-canvas');
+    const img = document.getElementById('main-image');
+    const ctx = canvas.getContext('2d');
 
-$(document).ready(function() {
-    const img = $('.post-image-wrapper img');
-    const wrapper = img.parent();
+    // Функция для настройки размеров canvas в соответствии с размерами изображения
+    function resizeCanvas() {
+        canvas.width = img.clientWidth;
+        canvas.height = img.clientHeight;
+    }
 
-    img.on('load', function() {
-        const canvas = document.createElement('canvas');
-        const ctx = canvas.getContext('2d');
-        canvas.width = img[0].naturalWidth;
-        canvas.height = img[0].naturalHeight;
-        ctx.drawImage(img[0], 0, 0);
-
-        // Получаем данные пикселей
-        const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
-        const averageColor = getAverageColor(imageData.data);
-
-        // Устанавливаем цвет фона для блюра
-        const blurColor = `rgba(${averageColor.r}, ${averageColor.g}, ${averageColor.b}, 0.5)`;
-        wrapper.css('--blur-color', blurColor);
-    });
-
-    function getAverageColor(data) {
-        let r = 0, g = 0, b = 0, count = 0;
-        for (let i = 0; i < data.length; i += 4) {
-            r += data[i];
-            g += data[i + 1];
-            b += data[i + 2];
-            count++;
-        }
-        return {
-            r: Math.floor(r / count),
-            g: Math.floor(g / count),
-            b: Math.floor(b / count)
+    // Функция для создания размытого фона на основе изображения
+    function drawBlurredBackground() {
+        const image = new Image();
+        image.src = img.src;
+        image.onload = function() {
+            resizeCanvas();
+            ctx.drawImage(image, 0, 0, canvas.width, canvas.height);
         };
     }
-});
+
+    // Обновляем canvas при изменении размеров окна
+    window.addEventListener('resize', resizeCanvas);
+    // Первоначальная настройка
+    drawBlurredBackground();
+};
