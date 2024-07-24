@@ -206,19 +206,33 @@ body {
 
 /* Обёртка для изображения в посте */
 .post-image-wrapper {
-    width: 100%;
-    max-width: 500px; /* Ширина контейнера для изображения */
-    max-height: 700px; /* Высота контейнера для изображения */
-    margin-top: 16px;
-    overflow: hidden; /* Обрезаем изображение, если оно выходит за границы контейнера */
+    position: relative;
+    overflow: hidden;
+    max-height: 600px; /* Задайте максимальную высоту контейнера поста */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
+/* Изображение в посте */
 .post-image-wrapper img {
-    width: auto;
-    height: 100%;
     max-width: 100%;
     max-height: 100%;
-    object-fit: contain; /* Масштабируем изображение с сохранением пропорций */
+    height: auto;
+    width: auto; /* Изображение сохраняет свои пропорции и не обрезается */
+}
+
+/* Блюр-фон для заполнения пространства */
+.post-image-wrapper::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('path-to-image.jpg') center center / cover; /* Замените 'path-to-image.jpg' на путь к изображению */
+    filter: blur(10px); /* Настройте интенсивность размытия */
+    z-index: -1;
 }
 
 /* Содержимое поста */
