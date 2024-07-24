@@ -218,10 +218,9 @@ body {
 }
 
 .post-image-wrapper img {
-    max-width: 100%;
-    max-height: 100%;
     width: auto;
-    height: auto;
+    height: 100%;
+    max-height: 100%;
     object-fit: contain; /* Масштабируем изображение с сохранением пропорций */
 }
 
@@ -233,7 +232,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: inherit;
+    background-image: url('path_to_your_image'); /* Укажите путь к вашему изображению */
     filter: blur(20px);
     z-index: -1;
     background-size: cover;
