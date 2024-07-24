@@ -440,7 +440,8 @@ body {
         margin-right: 15px; /* Отступ между сайдбаром и постами 15px */
         top: 0;
         width: 100%;
-        max-width: 250px; /* Ширина сайдбара */
+        max-width: 300px; /* Ширина сайдбара */
+margin-right: 15px;
     }
 
     .content {
