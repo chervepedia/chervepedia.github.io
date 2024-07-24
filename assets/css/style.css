@@ -3,6 +3,9 @@
     --main-color-dark: #e699c7; /* Более темный розовый цвет */
 }
 
+/* Медиа-запрос для устройств с шириной экрана 768px и более */
+@media (min-width: 768px) {
+
 /* Общие стили для страницы */
 body {
     background-color: #222;
@@ -431,44 +434,7 @@ body {
 .page-number.current {
     color: #fff;
 }
-
-/* Медиа-запрос для устройств с шириной экрана 768px и более */
-@media (min-width: 768px) {
-    .post-image-wrapper {
-        max-width: 500px; 
-        max-height: 600px; 
-    }
-
-    .post-image-wrapper img {
-        max-width: 100%; 
-        max-height: 100%; 
-    }
-
-.container {
-        flex-direction: row;
-        justify-content: center;
-        align-items: flex-start;
-        max-width: 90%;
-    }
-
-    .sidebar {
-        margin-right: 15px; /* Отступ между сайдбаром и постами 15px */
-        top: 0;
-        width: 100%;
-        max-width: 250px; /* Ширина сайдбара */
-    }
-
-    .content {
-        max-width: 500px; /* Ширина контента */
-        margin-top: 0;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .back-to-top {
-        bottom: 100px;
-        right: 40px;
-    }
+    
 }
 
 /* Медиа-запрос для устройств с шириной экрана до 767px */
