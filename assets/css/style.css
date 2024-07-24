@@ -103,12 +103,12 @@ body {
 .contact-info {
     display: flex;
     align-items: center; /* Вертикальное центрирование контактных иконок */
-    justify-content: flex-end; /* Размещает контактные иконки справа */
+    justify-content: flex-right; /* Размещает контактные иконки справа */
 }
 
 .contact-info i {
     font-size: 20px;
-    margin-left: 10px; /* Отступ между иконками */
+    margin-left: 14px; /* Отступ между иконками */
     color: var(--main-color);
 }
 
