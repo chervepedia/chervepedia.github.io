@@ -103,13 +103,18 @@ body {
 .contact-info {
     display: flex;
     align-items: center;
-    justify-content: flex-end;
-    width: 50%;
+    justify-content: center; /* Центрирование по горизонтали */
+    width: 100%;
+    position: absolute; /* Позиционирование для корректного выравнивания */
+    right: 0; /* Расположение справа */
+    padding: 0 15px; /* Отступы от краёв */
+    box-sizing: border-box; /* Учитывает паддинги и границы в ширину элемента */
 }
 
+/* Стили для иконок контактной информации */
 .contact-info i {
     font-size: 20px;
-    margin-right: 10px;
+    margin-right: 10px; /* Отступ между иконками */
     color: var(--main-color);
 }
 
