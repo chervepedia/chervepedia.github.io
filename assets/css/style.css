@@ -214,11 +214,14 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
 }
 
 .post-image-wrapper img {
     max-width: 100%;
     max-height: 100%;
+    width: auto;
+    height: auto;
     object-fit: contain; /* Масштабируем изображение с сохранением пропорций */
 }
 
