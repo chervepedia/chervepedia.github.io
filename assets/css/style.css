@@ -1,8 +1,6 @@
 :root {
     --main-color: #ffb0e2; /* Светло-розовый цвет */
     --main-color-dark: #e699c7; /* Более темный розовый цвет */
-    --tg-light: #27a7e7; /* Светлый синий цвет Telegram */
-    --tg-dark: #3d93dd; /* Темный синий цвет Telegram */
 }
 
 /* Общие стили для страницы */
@@ -25,7 +23,6 @@ body {
     padding: 0 15px;
     width: 100%;
     max-width: 1000px;
-    margin-right: 30px;
 }
 
 /* Стили для сайдбара */
@@ -39,8 +36,8 @@ body {
     width: 100%;
     max-width: 300px; /* Ширина сайдбара */
     margin-right: 45px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
     border-radius: 15px; /* Закругление краёв */
-    border: 1px solid rgba(255, 255, 255, 0.3); /* Граница */
 }
 
 /* Стили для контейнеров логотипа, заголовка, описания и меню */
@@ -49,9 +46,6 @@ body {
     flex-direction: column;
     align-items: center;
     margin-bottom: 10px;
-    background: linear-gradient(to right, var(--tg-light), var(--tg-dark));
-    border-radius: 15px; /* Закругление краёв */
-    padding: 10px;
 }
 
 /* Стили для логотипа */
@@ -104,7 +98,7 @@ body {
     text-decoration: none;
     padding: 10px;
     text-align: center;
-    transition: background-color 0.3s, transform 0.1s;
+    transition: background-color 0.3s, transform 0.1s, box-shadow 0.1s;
     border: none;
     border-radius: 10px; /* Закругление краёв ссылок */
 }
@@ -115,6 +109,7 @@ body {
 
 .menu-link:active {
     transform: translateY(2px);
+    box-shadow: inset 0 4px 6px rgba(0, 0, 0, 0.3);
 }
 
 .menu-link.has-submenu::after {
@@ -131,6 +126,8 @@ body {
     width: auto; /* Автоматическая ширина подменю под содержимое */
     min-width: 150px; /* Минимальная ширина, чтобы избежать слишком узкого подменю */
     border-radius: 10px; /* Закругление краёв подменю */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Тень для подменю */
+    padding: 0; /* Убираем отступы по умолчанию */
     z-index: 1000; /* Устанавливаем z-index, чтобы подменю было поверх других элементов */
 }
 
@@ -181,20 +178,19 @@ body {
 
 /* Стили для постов */
 .post {
-    background: linear-gradient(to right, var(--tg-light), var(--tg-dark));
+    background-color: #222;
     margin-bottom: 15px; /* Отступ между постами 15px */
     padding: 0;
     width: 100%;
     position: relative;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
     max-width: 500px; /* Ширина постов */
     border-radius: 15px; /* Закругление краёв постов */
-    border: 1px solid rgba(255, 255, 255, 0.3); /* Граница */
 }
 
 /* Заголовок поста */
 .post-header {
-    padding: 10px 15px;
-    border-bottom: 1px groove var(--main-color);
+    padding: 1px;
 }
 
 .post-title {
@@ -203,6 +199,8 @@ body {
     color: var(--main-color);
     margin: 0;
 }
+
+
 
 /* Основные стили для изображения в посте */
 .post-image-wrapper {
@@ -229,7 +227,7 @@ body {
 
 /* Содержимое поста */
 .post-content {
-    padding: 15px;
+    padding: 8px;
     font-size: 14px;
     color: #fff;
     text-align: left;
@@ -271,7 +269,7 @@ body {
 .telegram-discussion {
     width: 100%;
     max-width: 500px; /* Ширина виджета */
-    margin: 10px 0 0 0; /* Отступ сверху на 10 пикселей */
+    margin: 10px auto 0 auto; /* Отступ сверху на 10 пикселей */
     border-top: 1px groove transparent;
     border-image: linear-gradient(to right, var(--main-color), var(--main-color-dark)) 1;
 }
@@ -284,14 +282,14 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: rgba(34, 34, 34, 0.8); /* Полупрозрачный фон */
-    backdrop-filter: blur(10px); /* Эффект размытия для стеклянного эффекта */
+    background-color: #222;
     padding: 10px;
     width: 100%;
     position: fixed;
-    top: 0;
+    bottom: 0;
     left: 0;
     z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Тень */
 }
 
 /* Стили для изображений в футере */
@@ -306,7 +304,6 @@ body {
     width: 100%;
     margin-top: 16px;
 }
-
 .video-wrapper {
     position: relative;
     padding-bottom: 56.25%; /* Соотношение сторон 16:9 */
@@ -380,13 +377,16 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: linear-gradient(to right, var(--tg-light), var(--tg-dark));
+    background-color: #222;
     padding: 14px;
     margin-top: 28px;
     margin-bottom: 40px;
     width: 100%;
     max-width: 500px; /* Ширина пагинации */
+    margin-left: auto;
+    margin-right: auto;
     border-radius: 10px; /* Закругление краёв */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Тень */
 }
 
 .pagination a.fas {
@@ -421,7 +421,9 @@ body {
 
 /* Медиа-запрос для устройств с шириной экрана 768px и более */
 @media (min-width: 768px) {
-    .container {
+
+
+.container {
         flex-direction: row;
         justify-content: center;
         align-items: flex-start;
@@ -429,7 +431,7 @@ body {
     }
 
     .sidebar {
-        margin-right: 45px; /* Отступ между сайдбаром и постами 45px */
+        margin-right: 45px; 
         top: 0;
         width: 100%;
         max-width: 250px; /* Ширина сайдбара */
@@ -447,21 +449,24 @@ body {
 }
 
 /* Медиа-запрос для устройств с шириной экрана до 767px */
+
 @media (max-width: 767px) {
-    /* Стили для изображения */
-    .post-image-wrapper img {
-        max-width: 100%; 
-        max-height: 100%; 
-        width: auto;  
-        height: auto; 
-        object-fit: contain; 
-    }
+/* Стили для изображения */
+.post-image-wrapper img {
+    max-width: 100%; 
+    max-height: 100‰; 
+    width: auto;  
+    height: auto; 
+    object-fit: contain; 
+}
    
-    .sidebar {
+ .sidebar {
         width: 100%;
         position: relative;
         top: 0;
         max-width: 100%; /* Ширина сайдбара на мобильных устройствах */
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .container {
@@ -472,6 +477,8 @@ body {
     .content {
         width: 100%;
         margin-top: 20px;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .footer {
