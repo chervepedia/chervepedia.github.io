@@ -102,19 +102,13 @@ body {
 /* Контактная информация */
 .contact-info {
     display: flex;
-    align-items: center;
-    justify-content: center; /* Центрирование по горизонтали */
-    width: 100%;
-    position: absolute; /* Позиционирование для корректного выравнивания */
-    right: 0; /* Расположение справа */
-    padding: 0 15px; /* Отступы от краёв */
-    box-sizing: border-box; /* Учитывает паддинги и границы в ширину элемента */
+    align-items: center; /* Вертикальное центрирование контактных иконок */
+    justify-content: flex-end; /* Размещает контактные иконки справа */
 }
 
-/* Стили для иконок контактной информации */
 .contact-info i {
     font-size: 20px;
-    margin-right: 10px; /* Отступ между иконками */
+    margin-left: 10px; /* Отступ между иконками */
     color: var(--main-color);
 }
 
