@@ -1,3 +1,4 @@
+
 :root {
     --main-color: #ffb0e2; /* Светло-розовый цвет */
     --main-color-dark: #e699c7; /* Более темный розовый цвет */
@@ -19,7 +20,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 20px;
+    margin-top: 60px;
     padding: 0 15px;
     width: 100%;
     max-width: 1000px;
@@ -28,29 +29,17 @@ body {
 /* Стили для футера */
 .footer {
     display: flex;
-    align-items: center; /* Вертикальное центрирование элементов */
+    justify-content: space-between;
+    align-items: center;
     background: rgba(0, 0, 0, 0.3); /* Aero glass эффект */
     backdrop-filter: blur(10px); /* Эффект стеклянной поверхности */
     padding: 10px;
     width: 100%;
     position: fixed;
-    top: 0; /* Футер вверху страницы */
+    top: 0; /* Переносим футер наверх */
     left: 0;
     z-index: 1000;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Тень */
-}
-
-/* Иконки социальных сетей в футере*/
-.social-icons {
-    display: flex;
-    align-items: center; /* Центрирование иконок по вертикали */
-    margin-right: 45px; /* Отступ между иконками и названием сайта */
-}
-
-/* Название сайта в футере*/
-.site-name {
-    color: var(--main-color);
-    font-size: 18px;
 }
 
 /* Стили для изображений в футере */
@@ -102,13 +91,14 @@ body {
 /* Контактная информация */
 .contact-info {
     display: flex;
-    align-items: center; /* Вертикальное центрирование контактных иконок */
-    justify-content: flex-right; /* Размещает контактные иконки справа */
+    align-items: center;
+    justify-content: flex-end;
+    width: 50%;
 }
 
 .contact-info i {
     font-size: 20px;
-    margin-left: 14px; /* Отступ между иконками */
+    margin-right: 10px;
     color: var(--main-color);
 }
 
@@ -405,6 +395,7 @@ body {
     text-align: center;
     padding: 15px;
     margin-bottom: 20px;
+margin-top: 60px;
     position: sticky;
     top: 20px;
     width: 100%;
@@ -425,6 +416,7 @@ body {
 
     .sidebar {
         margin-right: 45px; 
+margin-top: 60px;
         top: 0;
         width: 100%;
         max-width: 250px; /* Ширина сайдбара */
