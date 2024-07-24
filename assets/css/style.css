@@ -1,19 +1,19 @@
 :root {
-    --main-color: #0088cc;
-    --main-color-dark: #007ab8;
-    --background-color: #ffffff;
-    --text-color: #333333;
-    --sidebar-bg: #f8f9fa;
-    --post-bg: #ffffff;
-    --post-border: #e1e8ed;
-    --footer-bg: #f1f3f4;
-    --link-color: #0088cc;
-    --link-hover-color: #007ab8;
-    --submenu-bg: #f8f9fa;
-    --submenu-text-color: #333333;
-    --submenu-link-hover-bg: #e1e8ed;
-    --read-more-color: #0088cc;
-    --read-more-hover-color: #007ab8;
+    --main-color: #0088cc; /* Основной цвет */
+    --main-color-dark: #007ab8; /* Более темный оттенок Telegram */
+    --background-color: #000000; /* Черный фоновый цвет страницы */
+    --text-color: #e0e0e0; /* Светлый цвет текста */
+    --sidebar-bg: #111111; /* Темный цвет фона сайдбара */
+    --post-bg: #1a1a1a; /* Темный цвет фона постов */
+    --post-border: #333333; /* Цвет границы постов */
+    --footer-bg: rgba(0, 0, 0, 0.5); /* Полупрозрачный цвет фона футера */
+    --link-color: #0088cc; /* Цвет ссылок */
+    --link-hover-color: #007ab8; /* Цвет ссылок при наведении */
+    --submenu-bg: #111111; /* Темный цвет фона подменю */
+    --submenu-text-color: #e0e0e0; /* Светлый цвет текста в подменю */
+    --submenu-link-hover-bg: #333333; /* Цвет фона ссылки в подменю при наведении */
+    --read-more-color: #0088cc; /* Цвет ссылки "Читать далее" */
+    --read-more-hover-color: #007ab8; /* Цвет ссылки "Читать далее" при наведении */
 }
 
 body {
@@ -39,7 +39,7 @@ body {
 
 /* Стили для сайдбара */
 .sidebar {
-    background: linear-gradient(to right, var(--main-color), var(--main-color-dark));
+    background-color: var(--sidebar-bg);
     text-align: center;
     padding: 15px;
     margin-bottom: 20px;
@@ -70,7 +70,7 @@ body {
 /* Стили для описания */
 .description-container p {
     font-size: 14px;
-    color: #555;
+    color: #bbbbbb;
     font-style: italic;
 }
 
@@ -80,10 +80,9 @@ body {
     max-width: 250px;
     border-top: 1px groove transparent;
     border-image: linear-gradient(to right, var(--main-color), var(--main-color-dark)) 1;
-    display: flex;
-    justify-content: center;
 }
 
+/* Сетка для меню */
 .menu-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -95,15 +94,17 @@ body {
     position: relative;
 }
 
+/* Ссылки меню */
 .menu-link {
     display: block;
     color: var(--link-color);
     text-decoration: none;
     padding: 10px;
     text-align: center;
-    transition: background-color 0.3s, transform 0.1s, box-shadow 0.1s;
+    transition: background-color 0.3s, transform 0.1s;
     border: none;
     border-radius: 10px;
+    background: linear-gradient(45deg, #0088cc, #007ab8); /* Градиент для ссылок */
 }
 
 .menu-link:hover {
@@ -114,10 +115,7 @@ body {
     transform: translateY(2px);
 }
 
-.menu-link.has-submenu::after {
-    font-size: 0.8em;
-}
-
+/* Подменю */
 .sub-menu {
     display: none;
     position: absolute;
@@ -131,6 +129,7 @@ body {
     z-index: 1000;
 }
 
+/* Подменю ссылки */
 .sub-menu a {
     display: block;
     color: var(--submenu-text-color);
@@ -140,6 +139,7 @@ body {
     transition: background-color 0.3s;
 }
 
+/* Эффект подчеркивания */
 .sub-menu a::before {
     content: '';
     position: absolute;
@@ -175,7 +175,7 @@ body {
 
 /* Стили для постов */
 .post {
-    background: linear-gradient(to right, var(--main-color), var(--main-color-dark));
+    background-color: var(--post-bg);
     margin-bottom: 15px;
     padding: 0;
     width: 100%;
@@ -185,6 +185,7 @@ body {
     border: 1px solid var(--post-border);
 }
 
+/* Заголовок поста */
 .post-header {
     padding: 10px 15px;
     border-bottom: 1px groove var(--main-color);
@@ -197,6 +198,7 @@ body {
     margin: 0;
 }
 
+/* Основные стили для изображения в посте */
 .post-image-wrapper {
     position: relative;
     max-width: 500px;
@@ -210,6 +212,7 @@ body {
     align-items: center;
 }
 
+/* Стили для изображения */
 .post-image-wrapper img {
     max-width: 100%;
     max-height: 600px;
@@ -218,6 +221,7 @@ body {
     object-fit: contain;
 }
 
+/* Содержимое поста */
 .post-content {
     padding: 15px;
     font-size: 14px;
@@ -230,6 +234,7 @@ body {
     max-width: 100%;
 }
 
+/* Подвал поста */
 .post-footer {
     display: flex;
     justify-content: space-between;
@@ -252,10 +257,11 @@ body {
 }
 
 .post-date {
-    color: #666;
+    color: #999999;
     font-size: 12px;
 }
 
+/* Стили телеграм виджета */
 .telegram-discussion {
     width: 100%;
     max-width: 500px;
@@ -273,18 +279,17 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: rgba(241, 243, 244, 0.8);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    background-color: var(--footer-bg);
     padding: 10px;
     width: 100%;
     position: fixed;
     top: 0;
     left: 0;
     z-index: 1000;
-    border-bottom: 1px solid var(--main-color);
+    backdrop-filter: blur(10px); /* Эффект aeroglass */
 }
 
+/* Стили для изображений в футере */
 .footer img {
     width: 40px;
     height: 40px;
@@ -317,17 +322,20 @@ body {
     width: 100%;
 }
 
+/* Название сайта */
 .site-name {
     margin-left: 10px;
     color: var(--main-color);
     font-size: 18px;
 }
 
+/* Иконки социальных сетей */
 .social-icons a {
     margin: 0 10px;
     color: var(--main-color);
 }
 
+/* Контактная информация */
 .contact-info {
     display: flex;
     align-items: center;
@@ -341,6 +349,7 @@ body {
     color: var(--main-color);
 }
 
+/* Кнопка "Наверх" */
 .back-to-top {
     position: fixed;
     bottom: 100px;
@@ -366,7 +375,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: linear-gradient(to right, var(--main-color), var(--main-color-dark));
+    background-color: var(--background-color);
     padding: 14px;
     margin-top: 28px;
     margin-bottom: 40px;
@@ -404,7 +413,7 @@ body {
 }
 
 .page-number.current {
-    color: #000;
+    color: #fff;
 }
 
 /* Медиа-запрос для устройств с шириной экрана 768px и более */
@@ -421,7 +430,6 @@ body {
         top: 0;
         width: 100%;
         max-width: 300px;
-        margin-right: 45px;
     }
 
     .content {
