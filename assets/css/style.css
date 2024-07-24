@@ -464,7 +464,18 @@ body {
 }
 
 /* Медиа-запрос для устройств с шириной экрана до 767px */
+
 @media (max-width: 767px) {
+    .post-image-wrapper {
+        max-width: 100%;
+        overflow: hidden;
+    }
+
+    .post-image-wrapper img {
+        width: 100%;
+        height: auto;
+    }
+}
    
  .sidebar {
         width: 100%;
