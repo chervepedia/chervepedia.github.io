@@ -435,8 +435,11 @@ body {
 /* Медиа-запрос для устройств с шириной экрана 768px и более */
 @media (min-width: 768px) {
     .post-image-wrapper img {
-    max-height: 600px; 
-    }
+    max-width: 100%; 
+    max-height: 600; 
+    width: auto; 
+    height: auto; 
+    object-fit: contain;
 
 .container {
         flex-direction: row;
