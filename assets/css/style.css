@@ -206,7 +206,8 @@ body {
     width: 100%;
     max-width: 300px; /* Ширина меню */
     border-image: linear-gradient(to right, var(--main-color), var(--main-color-dark)) 1;
-justify-content: center;
+    display: flex; /* Используем flexbox */
+    justify-content: center; /* Выравнивание по горизонтали */
 }
 
 /* Сетка для меню */
@@ -215,6 +216,7 @@ justify-content: center;
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
     padding-top: 16px;
+    justify-content: center; /* Выравнивание элементов внутри grid по горизонтали */
 }
 
 .menu-item {
