@@ -70,3 +70,27 @@ window.onload = function() {
     // Первоначальная настройка
     drawBlurredBackground();
 };
+
+/*фон*/
+document.addEventListener('DOMContentLoaded', function() {
+    twallpaper('#wallpaper', {
+        fps: 60,
+        tails: 90,
+        animate: false,
+        scrollAnimate: true,
+        colors: [
+            "#ffb0e2",
+            "#da389e",
+            "#d71991",
+            "#e2b8d2"
+        ],
+        pattern: {
+            image: "https://twallpaper.js.org/patterns/cats_and_dogs.svg",
+            background: "#000",
+            blur: 0,
+            size: "420px",
+            opacity: 0.5,
+            mask: true
+        }
+    });
+});
