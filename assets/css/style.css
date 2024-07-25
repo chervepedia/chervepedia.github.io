@@ -398,25 +398,24 @@ margin-top: 60px;
     margin-right: 45px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
     border-radius: 15px; /* Закругление краёв */
+
+/* Стили для контейнера с иконками социальных сетей в сайдбаре*/
 .social-icons-sidebar {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 10px;
-  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap; /* Перенос строк */
+  gap: 15px; /* Отступ между иконками */
+  margin-top: 8px;
 }
 
+/* Стили для каждой иконки */
 .social-icons-sidebar a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 1.5rem;
-  color: #333;
+  font-size: 3rem; /* Размер иконок */
+  color: #ffb0e2; /* Цвет иконок */
   transition: color 0.3s;
 }
 
 .social-icons-sidebar a:hover {
-  color: #007bff; /* или любой другой цвет */
-
+  color: #e699c7; /* Цвет иконок при наведении */
 }
 
 /* Медиа-запрос для устройств с шириной экрана 768px и более */
