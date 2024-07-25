@@ -305,13 +305,14 @@ body {
     width: 100%;
     max-width: 500px; /* Ширина контента */
     padding-bottom: 50px; /* Уменьшен отступ снизу */
-    margin-top: 60px;
+    margin-top: 24px;
 }
 
 /* Стили для постов */
 .post {
     background-color: #222;
-    margin-bottom: 15px; /* Отступ между постами 15px */
+  margin-top: 45px:  
+margin-bottom: 15px; /* Отступ между постами 15px */
     padding: 0;
     width: 100%;
     position: relative;
@@ -390,7 +391,7 @@ body {
     text-align: center;
     padding: 15px;
     margin-bottom: 20px;
-margin-top: 60px;
+margin-top: 45px;
     position: sticky;
     top: 20px;
     width: 100%;
