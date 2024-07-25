@@ -413,16 +413,17 @@ margin-top: 60px;
 
 .social-icons-sidebar a {
   display: flex;
-  justify-content: center;
+  justify-content: center;  /* Центрирование по горизонтали */
   align-items: center;
-  font-size: 0.еrem;
+  font-size: 0.8rem;
   color: #ffb0e2;
+  text-decoration: none;  /* Удаление подчёркиваний */
   transition: color 0.3s;
 }
 
 .social-icons-sidebar a:hover {
   color: #e699c7;
-} 
+}
 
 /* Медиа-запрос для устройств с шириной экрана 768px и более */
 @media (min-width: 768px) {
