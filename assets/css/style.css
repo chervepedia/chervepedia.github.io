@@ -407,7 +407,7 @@ margin-top: 60px;
 .social-icons-sidebar {
   display: flex;
   justify-content: center; /* Центрирование всех элементов по горизонтали */
-  gap: 4px;
+  gap: 10px;
   margin-top: 4px;
 }
 
@@ -471,7 +471,7 @@ margin-top: 60px;
         max-width: 300px;
         margin-left: auto;
         margin-right: auto;
-        margin-top: 15px;
+        margin-top: 4px;
     }
 
     .container {
