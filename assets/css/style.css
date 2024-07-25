@@ -405,17 +405,17 @@ margin-top: 60px;
 }
 
 .social-icons-sidebar {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  display: flex;
+  justify-content: center; /* Центрирование всех элементов по горизонтали */
   gap: 4px;
   margin-top: 4px;
 }
 
 .social-icons-sidebar a {
   display: flex;
-  justify-content: center;  /* Центрирование по горизонтали */
+  justify-content: center;  /* Центрирование контента внутри ссылки по горизонтали */
   align-items: center;
-  font-size: 0.8rem;
+  font-size: 1.3rem;
   color: #ffb0e2;
   text-decoration: none;  /* Удаление подчёркиваний */
   transition: color 0.3s;
@@ -471,6 +471,7 @@ margin-top: 60px;
         max-width: 300px;
         margin-left: auto;
         margin-right: auto;
+        margin-top: 15px;
     }
 
     .container {
