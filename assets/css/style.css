@@ -407,15 +407,15 @@ margin-top: 60px;
 .social-icons-sidebar {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 15px;
-  margin-top: 10px;
+  gap: 4px;
+  margin-top: 4px;
 }
 
 .social-icons-sidebar a {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1.7rem;
+  font-size: 0.еrem;
   color: #ffb0e2;
   transition: color 0.3s;
 }
