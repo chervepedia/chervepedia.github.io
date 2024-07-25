@@ -379,13 +379,7 @@ margin-top: 60px;
 /* Стили для телеграм виджета */
 .telegram-discussion {
     width: 100%;
-    max-width: 500px; /* Ширина виджета */
-    margin: 10px auto 0 auto; /* Отступ сверху на 10 пикселей */
-    border-top: 1px groove transparent;
-    border-image: linear-gradient(to right, var(--main-color), var(--main-color-dark)) 1;
-}
-.telegram-transparent {
-    opacity: 1;
+    max-width: 500px;
 }
 
 /* Стили для сайдбара */
@@ -407,7 +401,7 @@ margin-top: 60px;
 .social-icons-sidebar {
   display: flex;
   justify-content: center; /* Центрирование всех элементов по горизонтали */
-  gap: 10px;
+  gap: 15px;
   margin-top: 4px;
 }
 
@@ -415,7 +409,7 @@ margin-top: 60px;
   display: flex;
   justify-content: center;  /* Центрирование контента внутри ссылки по горизонтали */
   align-items: center;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   color: #ffb0e2;
   text-decoration: none;  /* Удаление подчёркиваний */
   transition: color 0.3s;
@@ -468,7 +462,7 @@ margin-top: 60px;
         width: 100%;
         position: relative;
         top: 0;
-        max-width: 300px;
+        max-width: 540px;
         margin-left: auto;
         margin-right: auto;
         margin-top: 4px;
@@ -490,5 +484,3 @@ margin-top: 60px;
         display: none; /* Прячем футер в мобильной версии */
     }
 }
-
-Это default.html и style.css
