@@ -372,64 +372,62 @@ body {
 
 /* Футер поста */
 .post-footer {
+    /* Стили футера поста */
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 15px;
     border-top: 1px solid #333;
-    position: relative; /* Для позиционирования градиента */
-    overflow: hidden; /* Чтобы градиент не выходил за пределы футера */
+    position: relative;
+    overflow: hidden;
+    transition: background-color 0.3s ease;
 }
 
-/* Градиентный эффект при наведении */
 .post-footer::before {
-    content: ''; /* Псевдоэлемент для градиента */
+    content: '';
     position: absolute;
     top: 0;
-    left: -100%; /* Начало за пределами футера */
-    width: 100%;
+    left: -100%;
     height: 100%;
-    background: linear-gradient(to right, rgba(var(--main-color-rgb), 0) 0%, var(--main-color) 100%);
-    transition: left 0.3s; /* Плавный переход */
-    z-index: 0; /* Под футером */
+    width: 100%;
+    background: linear-gradient(90deg, rgba(255,255,255,0) 0%, var(--main-color) 100%);
+    z-index: 0;
+    transition: left 0.3s ease;
 }
 
 .post-footer:hover::before,
-.post-footer:focus::before {
-    left: 0; /* При наведении или фокусе, градиент перемещается */
+.post-footer:active::before {
+    left: 100%;
 }
 
-.post-footer > * {
-    position: relative; /* Для правильного отображения текста поверх градиента */
-    z-index: 1; /* Содержание футера выше градиента */
-}
-
-/* Стили для ссылки "Читать далее" */
 .read-more {
+    /* Стили для ссылки "Читать далее" */
     color: var(--main-color);
     text-decoration: none;
     display: flex;
     align-items: center;
     cursor: pointer;
+    position: relative;
+    z-index: 1;
 }
 
-/* Стили для даты поста */
 .post-date {
+    /* Стили для даты поста */
     color: #888;
     font-size: 12px;
+    position: relative;
+    z-index: 1;
 }
 
-/* Псевдоэлемент для текста "Комментировать" */
+/* Новый текст "Комментировать" */
 .post-footer::after {
     content: 'Комментировать';
     color: var(--main-color);
     font-size: 12px;
-    margin: 0 10px;
     position: absolute;
-    right: calc(100% - 120px); /* Позиционирование текста "Комментировать" */
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 1; /* Чтобы текст был поверх градиента */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
 }
 
 /* Стили для телеграм виджета */
