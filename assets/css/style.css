@@ -360,7 +360,7 @@ body {
 
 /* Содержимое поста */ .post-content { padding: 8px; font-size: 14px; color: #fff; text-align: left; word-break: break-word; overflow-wrap: break-word; hyphens: auto; margin: 0 auto; max-width: 100%; }
 
-/* Футер поста */
+/* Основной стиль футера */
 .post-footer {
     display: flex;
     justify-content: space-between;
@@ -369,26 +369,31 @@ body {
     border-top: 1px solid var(--main-color);
     position: relative;
     overflow: hidden;
-    transition: background-color 0.3s ease;
 }
 
-/* Псевдоэлемент для градиента */
+/* Псевдоэлемент для стеклянного градиента */
 .post-footer::before {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
+    width: 100%;
     height: 100%;
-    width: 0;
-    background: rgba(255, 255, 255, 0.2); /* Полупрозрачный белый цвет */
-    backdrop-filter: blur(10px); /* Эффект стеклянного размытия */
-    transition: width 0.3s ease;
+    background: linear-gradient(135deg, rgba(255, 176, 226, 0.2), rgba(255, 176, 226, 0.5)); /* Стеклянный градиент */
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    z-index: 1; /* Помещаем псевдоэлемент поверх футера */
 }
 
 /* Эффект при наведении */
 .post-footer:hover::before {
-    width: 100%; /* Плавно заполняет весь футер при наведении */
-   
+    opacity: 1; /* Градиент появляется при наведении */
+}
+
+/* Эффект при нажатии */
+.post-footer:active::before {
+    background: linear-gradient(135deg, rgba(255, 176, 226, 0.4), rgba(255, 176, 226, 0.7)); /* Более заметный градиент при нажатии */
 }
 
 .read-more {
