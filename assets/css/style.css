@@ -247,7 +247,7 @@ body {
 /* Основные стили футера поста */
 .post-footer {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* Распределение элементов по краям футера */
     align-items: center;
     padding: 10px 15px;
     border-top: 1px solid var(--main-color);
@@ -274,21 +274,13 @@ body {
     transform: translateX(100%);
 }
 
-/* Содержание футера выше псевдоэлемента */
-.post-footer > * {
-    position: relative;
-    z-index: 1; /* Содержание футера находится над псевдоэлементом */
-}
-
 /* Стили для элемента "Read more" */
 .read-more {
     color: var(--main-color);
     text-decoration: none;
-    display: flex;
+    display: inline-flex; /* Размещение элементов на одной линии */
     align-items: center;
     cursor: pointer;
-    position: relative;
-    z-index: 1;
 }
 
 /* Стили для даты поста */
@@ -296,7 +288,7 @@ body {
     color: #888;
     font-size: 12px;
     position: relative;
-    z-index: 1;
+    z-index: 1; /* Элемент даты находится выше псевдоэлемента */
 }
 
 /* Стили для элемента "Комментировать" */
@@ -304,16 +296,10 @@ body {
     content: 'Комментировать';
     color: var(--main-color);
     font-size: 12px;
-    position: absolute;
-    right: 0; /* Выравнивание по правому краю футера */
+    text-decoration: none;
     margin-left: 10px; /* Отступ между "Read more" и "Комментировать" */
-    z-index: 1;
-}
-
-/* Стили для телеграм виджета */
-.telegram-discussion {
-    width: 100%;
-    max-width: 500px;
+    display: inline-flex; /* Размещение элементов на одной линии */
+    align-items: center;
 }
 
 /* Стили для сайдбара */
