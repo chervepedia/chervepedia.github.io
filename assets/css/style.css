@@ -1,6 +1,7 @@
 :root {
     --main-color: #ffb0e2; /* Светло-розовый цвет */
   --main-color-rgba: rgba(255, 176, 226, 0.5); /* Цвет с прозрачностью 0.5 */
+--gradient-color: rgba(255, 255, 255, 0.1); /* Прозрачный цвет для эффекта aero glass */
     --main-color-dark: #e699c7; /* Более темный розовый цвет */
 }
 
@@ -373,40 +374,46 @@ body {
 
 /* Стили для подвала поста */
 .post-footer {
+    position: relative;
     display: flex;
-    justify-content: space-between;
+    justify-content: center; /* Центрируем содержимое по горизонтали */
     align-items: center;
     padding: 10px 15px;
     border-top: 1px groove var(--main-color);
-    transition: background-color 0.3s, color 0.3s;
-    position: relative; /* Для того чтобы использовать ::before */
-    overflow: hidden; /* Скрывает градиент за пределами блока */
     background-color: transparent; /* Фоновый цвет по умолчанию */
+    border-radius: 10px; /* Закругленные углы, если нужны */
+    overflow: hidden; /* Скрывает градиент за пределами блока */
 }
 
+/* Псевдоэлемент для градиента */
 .post-footer::before {
     content: '';
     position: absolute;
     top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: var(--main-color-rgba); /* Прозрачный цвет */
-    transition: opacity 0.3s;
-    opacity: 0; /* Градиент изначально скрыт */
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, var(--gradient-color), transparent);
+    transition: left 0.5s ease-in-out;
     z-index: 0; /* Градиент под содержимым */
 }
 
+/* Анимация при наведении и фокусе */
 .post-footer:hover::before,
 .post-footer:focus::before {
-    opacity: 1; /* Показываем градиент при наведении и фокусе */
+    left: 100%; /* Перемещение градиента с одного края на другой */
 }
 
-/* Обеспечиваем, что содержимое футера находится поверх градиента */
-.post-footer > * {
-    position: relative;
-    z-index: 1;
+/* Псевдоэлемент для текста "Комментировать" */
+.post-footer::after {
+    content: 'Комментировать';
+    color: var(--main-color); /* Цвет текста */
+    position: relative; /* Чтобы текст был поверх градиента */
+    z-index: 1; /* Текст поверх градиента */
+    font-size: 16px; /* Размер шрифта для текста */
+    font-weight: bold; /* Жирный шрифт для выделения, можно удалить при необходимости */
 }
+
 /* Стили для телеграм виджета */
 .telegram-discussion {
     width: 100%;
