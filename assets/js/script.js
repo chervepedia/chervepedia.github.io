@@ -19,17 +19,10 @@ $(document).ready(function() {
         }
     });
 
-    // Открытие поста при клике на футер
-    $('.post-footer').click(function() {
-        var postUrl = $(this).find('.read-more').data('url');
-        if (postUrl) {
-            window.open(postUrl, '_blank');
-        }
-    });
-
-    // Предотвращение действий по умолчанию для ссылок внутри футера
-    $('.post-footer a').click(function(event) {
-        event.stopPropagation(); // Останавливаем событие клика от распространения
+    // Открытие поста при клике на "читать далее"
+    $('.post-footer .read-more').click(function() {
+        var postUrl = $(this).data('url');
+        window.open(postUrl, '_blank');
     });
 
     // Показать/скрыть подменю при клике на пункт меню
@@ -46,11 +39,8 @@ $(document).ready(function() {
             $submenu.slideDown(); // Используем slideDown для показа
         }
     });
-
-
-
-
 });
 
 
-    
+
+
