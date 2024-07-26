@@ -335,7 +335,7 @@ body {
     text-align: left; /* Центрирование текста заголовка слева */
 }
 
-/* Основные стили для контейнера изображения */
+/* Основные стили для изображения в посте */
 .post-image-wrapper {
     position: relative;
     max-width: 500px; /* Максимальная ширина контейнера */
@@ -358,18 +358,17 @@ body {
     object-fit: contain; /* Сохраняет пропорции изображения и не обрезает его */
 }
 
-/* Псевдоэлемент для размытого фона */
-.post-image-wrapper::before {
+/* Псевдоэлемент для цветного фона с эффектом блюра */
+.post-image-wrapper::after {
     content: "";
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background: inherit; /* Использует фон родительского элемента */
-    filter: blur(10px); /* Эффект размытия */
-    z-index: -1; /* Помещает фон за изображение */
-    opacity: 0.5; /* Полупрозрачность для улучшения эффекта */
+    background: rgba(255, 255, 255, 0.5); /* Цвет по умолчанию */
+    filter: blur(10px); /* Эффект блюра */
+    z-index: -1; /* Размещаем псевдоэлемент за изображением */
 }
 
 /* Содержимое поста */ .post-content { padding: 8px; font-size: 14px; color: #fff; text-align: left; word-break: break-word; overflow-wrap: break-word; hyphens: auto; margin: 0 auto; max-width: 100%; }
