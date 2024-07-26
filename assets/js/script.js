@@ -52,6 +52,7 @@ document.addEventListener('DOMContentLoaded', function() {
         var image = wrapper.querySelector('img');
 
         if (image) {
+            // Обработчик для загрузки изображения
             image.addEventListener('load', function() {
                 if (image.complete && image.naturalHeight !== 0) {
                     var wrapperWidth = wrapper.offsetWidth;
@@ -71,7 +72,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
                             // Применение класса и цвета
                             wrapper.classList.add('aero-glass');
-                            wrapper.style.setProperty('--dominant-color', color);
+                            wrapper.style.setProperty('--glass-background-color', color);
                         }
                     }
                 }
