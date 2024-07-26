@@ -183,7 +183,7 @@ body {
 /* Стили для постов */
 .post {
     background-color: #222;
-    margin-top: 45px; 
+    margin-top: 45px;
     margin-bottom: 15px; /* Отступ между постами 15px */
     padding: 0;
     width: 100%;
@@ -196,6 +196,7 @@ body {
 .post-header {
     padding: 10px 15px;
 }
+
 .post-title {
     font-size: 18px;
     font-weight: bold;
@@ -279,6 +280,7 @@ body {
     z-index: 1; /* Содержание футера находится над псевдоэлементом */
 }
 
+/* Стили для элемента "Read more" */
 .read-more {
     color: var(--main-color);
     text-decoration: none;
@@ -289,6 +291,7 @@ body {
     z-index: 1;
 }
 
+/* Стили для даты поста */
 .post-date {
     color: #888;
     font-size: 12px;
@@ -296,14 +299,14 @@ body {
     z-index: 1;
 }
 
-/* "Комментировать" */
+/* Стили для элемента "Комментировать" */
 .post-footer::after {
     content: 'Комментировать';
     color: var(--main-color);
     font-size: 12px;
-    position: relative;
-    left: 10px;
-    transform: translateX(-50%);
+    position: absolute;
+    right: 0; /* Выравнивание по правому краю футера */
+    margin-left: 10px; /* Отступ между "Read more" и "Комментировать" */
     z-index: 1;
 }
 
