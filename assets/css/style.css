@@ -370,35 +370,49 @@ body {
     max-width: 100%;
 }
 
-/* Подвал поста */
+/* Основной стиль футера */
 .post-footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 15px;
     border-top: 1px groove var(--main-color);
+    position: relative;
+    overflow: hidden; /* Для скрытия псевдоэлемента */
+    transition: background 0.3s; /* Плавный переход для фона */
 }
 
-/* Стили для футера при наведении */
-.footer:hover {
-    background: linear-gradient(to right, var(--main-color), var(--main-color-dark));
-    transition: background 0.3s ease;
-}
-
-/* Для эффекта перелива */
-.footer {
-    background: rgba(0, 0, 0, 0.3); /* Начальный фон */
-    backdrop-filter: blur(10px); /* Эффект стеклянной поверхности */
-    transition: background 0.3s ease; /* Плавный переход фона */
-}
-
-/* Псевдо-элемент для добавления текста */
+/* Псевдоэлемент для эффекта градиента */
 .post-footer::before {
-    content: "Комментировать";
-    color: var(--main-color);
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 200%;
+    height: 100%;
+    background: linear-gradient(to right, var(--main-color), var(--main-color-dark));
+    transition: left 0.3s;
+    z-index: 0; /* Убираем на задний план */
+}
+
+/* Эффект градиента при наведении */
+.post-footer:hover::before {
+    left: 0;
+}
+
+/* Для текста и кнопок в футере */
+.post-footer > * {
+    position: relative;
+    z-index: 1; /* На передний план */
+}
+
+/* "КОММЕНТИРОВАТЬ" */
+.post-footer::after {
+    content: 'Комментировать';
     font-size: 14px;
-    margin-right: 10px;
-    /* Выравнивание текста между датой и кнопкой */
+    color: var(--main-color);
+    margin: 0 10px;
+    display: inline-block;
     text-align: center;
 }
 
