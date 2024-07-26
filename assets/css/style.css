@@ -284,24 +284,20 @@ body {
   color: var(--main-color);
   text-decoration: none;
   cursor: pointer;
-  /* Keep these flex properties */
   display: flex;
-  align-items: center; 
+  align-items: center;
+}
+
+.read-more::after {
+  content: 'Прокомментировать';
+  color: var(--main-color);
+  font-size: 12px;
+  margin-left: 8px;
 }
 
 .post-date {
   color: #888;
   font-size: 12px;
-  display: flex;
-  align-items: center; 
-}
-
-/* "Комментировать" */
-.post-footer::after {
-  content: 'Прокомментировать';
-  color: var(--main-color);
-  font-size: 12px;
-  margin-left: 8px; 
 }
 
 /* Стили для сайдбара */
