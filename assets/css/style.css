@@ -369,7 +369,9 @@ body {
     padding: 10px 15px;
     border-top: 1px solid var(--main-color);
     position: relative;
-    overflow: hidden; /* Убедитесь, что градиент не выходит за границы футера */
+    overflow: hidden;
+    box-sizing: border-box; /* Убедитесь, что размеры учитывают padding и border */
+    z-index: 1; /* Повышаем z-index для содержимого футера */
 }
 
 /* Градиентная анимация */
@@ -378,13 +380,18 @@ body {
     position: absolute;
     top: 0;
     left: -100%;
+    right: 0;
     height: 100%;
-    width: 200%; /* Увеличиваем ширину, чтобы избежать появления углов */
     background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(var(--main-color-rgb), 0.3) 100%);
-    z-index: 0;
+    z-index: 0; /* Понижаем z-index для псевдоэлемента */
     transition: left 1s ease; /* Плавная анимация */
-    border-radius: 0 15px 15px 0; /* Закругления градиента */
+    border-radius: 15px; /* Закругления футера */
     pointer-events: none; /* Отключение событий для псевдоэлемента */
+}
+
+.post-footer:hover::before,
+.post-footer:active::before {
+    left: 100%;
 }
 
 /* Эффект наведения */
