@@ -334,6 +334,7 @@ body {
     justify-content: center; /* Центрирование всех элементов по горизонтали */
     gap: 16px;
     margin-top: 8px;
+border-top: 1px solid var(--main-color);
 }
 
 .social-icons-sidebar a {
@@ -342,7 +343,6 @@ body {
     align-items: center;
     font-size: 1.2rem;
     color: #ffb0e2;
-    text-decoration: none;  /* Удаление подчёркиваний */
     transition: color 0.3s;
 }
 
@@ -417,37 +417,7 @@ body {
     transition: color 0.3s;
 }
 
-/* Псевдоэлемент для градиента в подменю */
-.menu-link::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, rgba(255, 176, 226, 0.3), rgba(255, 176, 226, 0) 100%);
-    transition: transform 1s ease-in-out; /* Плавный переход */
-    z-index: 0; /* Псевдоэлемент находится под содержимым ссылки */
-    transform: translateX(-100%);
-}
-
-/* Анимация при наведении на кнопку меню */
-.menu-link:hover::after {
-    transform: translateX(100%);
-}
-
-/* Обеспечиваем, что текст ссылки находится поверх градиента */
-.menu-link:hover {
-    color: var(--main-color-dark);
-}
-
-/* Текст находится поверх градиента */
-.menu-link span {
-    position: relative;
-    z-index: 1; /* С текстом поверх градиента */
-}
-
-/* Анимация нажатия */
+/* Эффект нажатия */
 .menu-link:active {
     transform: translateY(2px);
     box-shadow: inset 0 4px 6px rgba(0, 0, 0, 0.3);
