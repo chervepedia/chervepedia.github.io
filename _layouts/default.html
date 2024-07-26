@@ -192,36 +192,8 @@
     <i class="fas fa-chevron-up"></i>
   </div>
 
-  
-
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/color-thief/2.3.2/color-thief.umd.js"></script>
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    var image = document.querySelector('.post-image-wrapper img');
-    if (image) {
-        var colorThief = new ColorThief();
-        
-        image.addEventListener('load', function() {
-            if (image.complete && image.naturalHeight !== 0) {
-                var dominantColor = colorThief.getColor(image);
-                var color = `rgb(${dominantColor[0]}, ${dominantColor[1]}, ${dominantColor[2]})`;
-                
-                var style = document.createElement('style');
-                style.innerHTML = `
-                    .post-image-wrapper::after {
-                        background: rgba(${dominantColor[0]}, ${dominantColor[1]}, ${dominantColor[2]}, 0.5);
-                    }
-                `;
-                document.head.appendChild(style);
-            }
-        });
-    }
-});
-</script>
-
-
-
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.6/dist/medium-zoom.min.js"></script>
   <script src="{{ '/assets/js/script.js' | absolute_url }}"></script>
