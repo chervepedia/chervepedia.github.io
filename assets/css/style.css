@@ -297,6 +297,7 @@ body {
     margin-left: 10px;
     transform: translateX(-50%);
     z-index: 1;
+}
 
 /* Дата поста справа */
 .post-date {
