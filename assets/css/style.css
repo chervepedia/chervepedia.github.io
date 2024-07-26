@@ -362,7 +362,6 @@ body {
 
 /* Футер поста */
 .post-footer {
-    /* Стили футера поста */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -370,34 +369,34 @@ body {
     border-top: 1px solid var(--main-color);
     position: relative;
     overflow: hidden;
-    box-sizing: border-box; /* Убедитесь, что размеры учитывают padding и border */
-    z-index: 1; /* Повышаем z-index для содержимого футера */
+    transition: background-color 0.3s;
 }
 
-/* Градиентная анимация */
+/* Псевдоэлемент для градиентного эффекта */
 .post-footer::before {
     content: '';
     position: absolute;
-    top: 0;
-    left: -100%;
-    right: 0;
-    height: 100%;
-    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(var(--main-color-rgb), 0.3) 100%);
-    z-index: 0; /* Понижаем z-index для псевдоэлемента */
-    transition: left 1s ease; /* Плавная анимация */
-    border-radius: 15px; /* Закругления футера */
-    pointer-events: none; /* Отключение событий для псевдоэлемента */
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    transition: transform 0.3s;
+    transform: translate(-50%, -50%) scale(0);
+    z-index: 1;
 }
 
+/* Стиль при наведении и нажатии */
 .post-footer:hover::before,
 .post-footer:active::before {
-    left: 100%;
+    transform: translate(-50%, -50%) scale(1);
 }
 
-/* Эффект наведения */
-.post-footer:hover::before,
-.post-footer:active::before {
-    left: 100%;
+/* Стили для контента футера, чтобы он был виден поверх градиента */
+.post-footer > * {
+    position: relative;
+    z-index: 2;
 }
 
 .read-more {
