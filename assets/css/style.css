@@ -183,7 +183,7 @@ body {
 /* Стили для постов */
 .post {
     background-color: #222;
-    margin-top: 45px;
+    margin-top: 45px; 
     margin-bottom: 15px; /* Отступ между постами 15px */
     padding: 0;
     width: 100%;
@@ -196,7 +196,6 @@ body {
 .post-header {
     padding: 10px 15px;
 }
-
 .post-title {
     font-size: 18px;
     font-weight: bold;
@@ -247,6 +246,7 @@ body {
 /* Основные стили футера поста */
 .post-footer {
     display: flex;
+    justify-content: space-between;
     align-items: center;
     padding: 10px 15px;
     border-top: 1px solid var(--main-color);
@@ -254,31 +254,51 @@ body {
     overflow: hidden;
 }
 
-/* Стили для элемента "Read more" */
+/* Псевдоэлемент для градиента */
+.post-footer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(255, 176, 226, 0.3), rgba(255, 176, 226, 0) 100%);
+    transition: transform 1s ease-in-out; /* Плавный переход */
+    z-index: 0; /* Псевдоэлемент находится под содержимым футера */
+    transform: translateX(-100%);
+}
+
+/* Анимация при наведении */
+.post-footer:hover::before {
+    transform: translateX(100%);
+}
+
+/* Содержание футера выше псевдоэлемента */
+.post-footer > * {
+    position: relative;
+    z-index: 1; /* Содержание футера находится над псевдоэлементом */
+}
+
+/* Стили для ссылки "Read more" */
 .read-more {
     color: var(--main-color);
     text-decoration: none;
-    display: inline-flex; /* Размещение элементов на одной линии */
-    align-items: center;
     cursor: pointer;
+    display: flex;
+    align-items: center;
 }
 
-/* Стили для элемента "Комментировать" */
-.post-footer::after {
-    content: 'Комментировать';
+/* Стили для "Комментировать" */
+.comment {
     color: var(--main-color);
     font-size: 12px;
-    text-decoration: none;
-    margin-left: 10px; /* Отступ между "Read more" и "Комментировать" */
-    display: inline-flex; /* Размещение элементов на одной линии */
-    align-items: center;
+    margin-left: 10px; /* Отступ от "Read more" */
 }
 
-/* Стили для даты поста */
+/* Дата поста справа */
 .post-date {
     color: #888;
     font-size: 12px;
-    margin-left: auto; /* Отодвигает дату вправо, занимая всё доступное пространство */
 }
 
 /* Стили для сайдбара */
