@@ -370,34 +370,38 @@ body {
     max-width: 100%;
 }
 
-/* футер поста */
+/* Футер поста */
 .post-footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 15px;
     border-top: 1px solid #333;
-    position: relative;
-    overflow: hidden;
+    position: relative; /* Для позиционирования градиента */
+    overflow: hidden; /* Чтобы градиент не выходил за пределы футера */
 }
 
-/* добавляем градиент при наведении и клике */
+/* Градиентный эффект при наведении */
 .post-footer::before {
-    content: "";
+    content: ''; /* Псевдоэлемент для градиента */
     position: absolute;
     top: 0;
-    left: 0;
+    left: -100%; /* Начало за пределами футера */
     width: 100%;
     height: 100%;
-    background: linear-gradient(to right, var(--main-color) 0%, transparent 100%);
-    opacity: 0;
-    transition: opacity 0.5s;
-    pointer-events: none;
+    background: linear-gradient(to right, rgba(var(--main-color-rgb), 0) 0%, var(--main-color) 100%);
+    transition: left 0.3s; /* Плавный переход */
+    z-index: 0; /* Под футером */
 }
 
 .post-footer:hover::before,
-.post-footer:active::before {
-    opacity: 1;
+.post-footer:focus::before {
+    left: 0; /* При наведении или фокусе, градиент перемещается */
+}
+
+.post-footer > * {
+    position: relative; /* Для правильного отображения текста поверх градиента */
+    z-index: 1; /* Содержание футера выше градиента */
 }
 
 /* Стили для ссылки "Читать далее" */
@@ -413,18 +417,19 @@ body {
 .post-date {
     color: #888;
     font-size: 12px;
-    position: relative;
-    margin-right: 50px; /* Пространство для "Комментировать" */
 }
 
-/* стили для текста "Комментировать" */
-.post-date::after {
-    content: "Комментировать";
+/* Псевдоэлемент для текста "Комментировать" */
+.post-footer::after {
+    content: 'Комментировать';
     color: var(--main-color);
     font-size: 12px;
-    margin-left: 10px;
+    margin: 0 10px;
     position: absolute;
-    right: -100px; /* Расположение текста справа от даты */
+    right: calc(100% - 120px); /* Позиционирование текста "Комментировать" */
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1; /* Чтобы текст был поверх градиента */
 }
 
 /* Стили для телеграм виджета */
