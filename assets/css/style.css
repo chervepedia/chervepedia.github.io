@@ -1,5 +1,6 @@
 :root {
     --main-color: #ffb0e2; /* Светло-розовый цвет */
+--main-color-rgb: 255, 105, 180;
     --main-color-dark: #e699c7; /* Более темный розовый цвет */
 }
 
@@ -380,9 +381,10 @@ body {
     border-top: 1px solid #333;
     position: relative;
     overflow: hidden;
-    transition: background-color 0.3s ease;
+    border-radius: 8px; /* Закругления футера */
 }
 
+/* Градиентная анимация */
 .post-footer::before {
     content: '';
     position: absolute;
@@ -390,9 +392,10 @@ body {
     left: -100%;
     height: 100%;
     width: 100%;
-    background: linear-gradient(90deg, rgba(255,255,255,0) 0%, var(--main-color) 100%);
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(var(--main-color-rgb), 0.3) 100%);
     z-index: 0;
-    transition: left 0.3s ease;
+    transition: left 1s ease; /* Плавная анимация */
+    border-radius: 8px; /* Учитываем закругления футера */
 }
 
 .post-footer:hover::before,
@@ -429,7 +432,6 @@ body {
     transform: translateX(-50%);
     z-index: 1;
 }
-
 /* Стили для телеграм виджета */
 .telegram-discussion {
     width: 100%;
