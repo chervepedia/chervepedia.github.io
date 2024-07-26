@@ -20,9 +20,9 @@ $(document).ready(function() {
     });
 
     // Открытие поста при клике на "читать далее"
-    $('.post-footer .read-more').click(function() {
+    $('.post-footer').click(function() {
         var postUrl = $(this).data('url');
-        window.open(postUrl, '_blank');
+        window.open(postUrl);
     });
 
     // Показать/скрыть подменю при клике на пункт меню
