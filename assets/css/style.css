@@ -370,12 +370,6 @@ body {
     max-width: 100%;
 }
 
-/* Стили для ссылки футера */
-.post-footer-link {
-    display: block;
-    text-decoration: none;
-}
-
 /* Стили для подвала поста */
 .post-footer {
     display: flex;
@@ -386,39 +380,6 @@ body {
     transition: background-color 0.3s;
     position: relative; /* Для того чтобы использовать ::before */
     overflow: hidden; /* Скрывает градиент за пределами блока */
-}
-
-/* Анимация перелива градиентом при наведении */
-.post-footer::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 300%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(0, 0, 0, 0.1), transparent);
-    transition: left 0.3s;
-    opacity: 0;
-}
-
-.post-footer-link:hover .post-footer::before,
-.post-footer-link:focus .post-footer::before {
-    left: 100%;
-    opacity: 1;
-}
-
-.post-date, .post-link-text, .post-arrow {
-    color: var(--main-color);
-    transition: color 0.3s;
-}
-
-.post-footer-link:hover .post-date,
-.post-footer-link:hover .post-link-text,
-.post-footer-link:hover .post-arrow,
-.post-footer-link:focus .post-date,
-.post-footer-link:focus .post-link-text,
-.post-footer-link:focus .post-arrow {
-    color: var(--main-color-dark);
 }
 
 /* Стили для телеграм виджета */
