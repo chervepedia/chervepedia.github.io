@@ -46,30 +46,30 @@ $(document).ready(function() {
             $submenu.slideDown(); // Используем slideDown для показа
         }
     });
+});
 
-
-
+// Использование чистого JavaScript для работы с изображениями
 document.addEventListener('DOMContentLoaded', () => {
-    // Находим контейнер и изображение внутри него
     const wrapper = document.querySelector('.post-image-wrapper');
+    if (!wrapper) return; // Если контейнера нет, ничего не делаем
+
     const img = wrapper.querySelector('img');
-    
     if (!img) return; // Если изображения нет, ничего не делаем
-    
+
     const canvas = document.createElement('canvas');
     const ctx = canvas.getContext('2d');
-    
+
     img.onload = function() {
         const width = img.naturalWidth;
         const height = img.naturalHeight;
         canvas.width = width;
         canvas.height = height;
-        
+
         ctx.drawImage(img, 0, 0, width, height);
-        
+
         const imageData = ctx.getImageData(0, 0, width, height);
         const data = imageData.data;
-        
+
         let r = 0, g = 0, b = 0, count = 0;
         for (let i = 0; i < data.length; i += 4) {
             r += data[i];
@@ -77,11 +77,11 @@ document.addEventListener('DOMContentLoaded', () => {
             b += data[i + 2];
             count++;
         }
-        
+
         r = Math.floor(r / count);
         g = Math.floor(g / count);
         b = Math.floor(b / count);
-        
+
         const color = `rgb(${r}, ${g}, ${b})`;
         wrapper.style.setProperty('--blur-background-color', color);
     };
@@ -91,6 +91,3 @@ document.addEventListener('DOMContentLoaded', () => {
         img.onload();
     }
 });
-
-
-    
