@@ -180,6 +180,7 @@ body {
     margin-top: 24px;
 }
 
+
 /* Стили для постов */
 .post {
     background-color: #222;
@@ -279,30 +280,32 @@ body {
     z-index: 1; /* Содержание футера находится над псевдоэлементом */
 }
 
-/* Стили для ссылки "Read more" */
 .read-more {
     color: var(--main-color);
     text-decoration: none;
-    cursor: pointer;
     display: flex;
     align-items: center;
-}
-
-/* Стили для "Комментировать" */
-.post-footer::after {
-    content: 'Комментировать';
-    color: var(--main-color);
-    font-size: 12px;
+    cursor: pointer;
     position: relative;
-    margin-left: 10px;
-    transform: translateX(-50%);
     z-index: 1;
 }
 
-/* Дата поста справа */
 .post-date {
     color: #888;
     font-size: 12px;
+    position: relative;
+    z-index: 1;
+}
+
+/* "Перейти" */
+.post-footer::after {
+    content: 'Прокомментировать';
+    color: var(--main-color);
+    font-size: 18px;
+    position: relative;
+    left: 10px;
+    transform: translateX(-50%);
+    z-index: 1;
 }
 
 /* Стили для сайдбара */
