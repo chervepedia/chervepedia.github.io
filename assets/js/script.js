@@ -19,11 +19,11 @@ $(document).ready(function() {
         }
     });
 
-    // Открытие поста при клике на "читать далее"
-    $('.post-footer .read-more').click(function() {
-        var postUrl = $(this).data('url');
-        window.open(postUrl, '_blank');
-    });
+    // Открытие поста при клике на "футер"
+$('.post-footer').click(function() {
+    var postUrl = $(this).data('url');
+    window.open(postUrl, '_blank');
+});
 
     // Показать/скрыть подменю при клике на пункт меню
     $('.menu-link.has-submenu').click(function(e) {
