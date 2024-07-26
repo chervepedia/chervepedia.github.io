@@ -369,28 +369,26 @@ body {
     border-top: 1px solid var(--main-color);
     position: relative;
     overflow: hidden;
-    background-color: #fff; /* Цвет фона футера для лучшего контраста */
-    z-index: 1; /* Чтобы футер был поверх псевдоэлемента */
+    transition: background-color 0.3s ease;
 }
 
-/* Псевдоэлемент для градиентного эффекта */
+/* Псевдоэлемент для градиента */
 .post-footer::before {
     content: '';
     position: absolute;
     top: 0;
-    left: -100%;
-    width: 100%;
+    left: 0;
     height: 100%;
-    background: rgba(255, 255, 255, 0.2); /* Прозрачный белый цвет для стеклянного эффекта */
-    border-radius: 15px; /* Закруглённые углы */
-    transition: left 0.3s ease-in-out;
-    z-index: -1; /* Чтобы псевдоэлемент находился за контентом футера */
+    width: 0;
+    background: rgba(255, 255, 255, 0.2); /* Полупрозрачный белый цвет */
+    backdrop-filter: blur(10px); /* Эффект стеклянного размытия */
+    transition: width 0.3s ease;
 }
 
-/* Эффект при наведении и нажатии */
-.post-footer:hover::before,
-.post-footer:active::before {
-    left: 0;
+/* Эффект при наведении */
+.post-footer:hover::before {
+    width: 100%; /* Плавно заполняет весь футер при наведении */
+   
 }
 
 .read-more {
