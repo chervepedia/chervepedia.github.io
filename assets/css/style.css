@@ -296,13 +296,13 @@ body {
     z-index: 1;
 }
 
-/* Новый текст "Комментировать" */
+/* "Комментировать" */
 .post-footer::after {
     content: 'Комментировать';
     color: var(--main-color);
     font-size: 12px;
-    position: absolute;
-    left: 50%;
+    position: relative;
+    left: 10px;
     transform: translateX(-50%);
     z-index: 1;
 }
@@ -334,7 +334,7 @@ body {
     justify-content: center; /* Центрирование всех элементов по горизонтали */
     gap: 16px;
     margin-top: 8px;
-border-top: 1px solid var(--main-color);
+border-top: ;
 }
 
 .social-icons-sidebar a {
@@ -343,6 +343,7 @@ border-top: 1px solid var(--main-color);
     align-items: center;
     font-size: 1.2rem;
     color: #ffb0e2;
+text-decoration: none; 
     transition: color 0.3s;
 }
 
