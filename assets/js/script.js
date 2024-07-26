@@ -1,5 +1,3 @@
-ПОЧЕМУ СКРИПТ НЕ РАБОТАЮТ
-
 $(document).ready(function() {
     // Настройки увеличения изображений с Medium Zoom
     mediumZoom('.post-image-wrapper img', {
