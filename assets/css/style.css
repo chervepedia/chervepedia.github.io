@@ -349,17 +349,18 @@ body {
     align-items: center; /* Центрирование изображения по вертикали */
 }
 
-/* Эффект Aero Glass для контейнера */
+/* Эффект стеклянного фона */
 .post-image-wrapper::after {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(255, 255, 255, 0.5); /* Цвет и прозрачность эффекта Aero Glass */
-    backdrop-filter: blur(10px); /* Эффект размытия фона */
-    z-index: 1;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.3); /* Стандартный фон, будет заменен JavaScript */
+    backdrop-filter: blur(10px); /* Размытие фона */
+    z-index: 1; /* Положение фона выше изображения */
+    pointer-events: none; /* Фон не мешает взаимодействию с изображением */
 }
 
 /* Стили для изображения поста */
