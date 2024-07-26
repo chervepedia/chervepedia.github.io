@@ -289,11 +289,14 @@ body {
 }
 
 /* Стили для "Комментировать" */
-.comment {
+.post-footer::after {
+    content: 'Комментировать';
     color: var(--main-color);
     font-size: 12px;
-    margin-left: 10px; /* Отступ от "Read more" */
-}
+    position: relative;
+    margin-left: 10px;
+    transform: translateX(-50%);
+    z-index: 1;
 
 /* Дата поста справа */
 .post-date {
