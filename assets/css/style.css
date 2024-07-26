@@ -167,128 +167,6 @@ body {
     color: #fff;
 }
 
-/* Стили для контейнеров логотипа, заголовка, описания и меню */
-.logo-container, .title-container, .description-container, .menu-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 10px;
-}
-
-/* Стили для логотипа */
-.logo-container img {
-    width: 128px;
-    height: 128px;
-    display: block;
-    margin: 0 auto;
-}
-
-/* Стили для заголовка */
-.title-container h1 {
-    font-size: 24px;
-    font-weight: bold;
-    color: var(--main-color);
-    text-align: left; /* Текст в заголовке поста центрируется слева */
-}
-
-/* Стили для описания */
-.description-container p {
-    font-size: 14px;
-    color: #888;
-    font-style: italic;
-}
-
-/* Стили для меню */
-.menu-container {
-    width: 100%;
-    max-width: 300px; /* Ширина меню */
-    border-image: linear-gradient(to right, var(--main-color), var(--main-color-dark)) 1;
-    display: flex; /* Используем flexbox */
-    justify-content: center; /* Выравнивание по горизонтали */
-}
-
-/* Сетка для меню */
-.menu-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
-    padding-top: 16px;
-    justify-content: center; /* Выравнивание элементов внутри grid по горизонтали */
-}
-
-.menu-item {
-    position: relative; /* Родительское позиционирование */
-}
-
-/* Ссылки меню */
-.menu-link {
-    display: block;
-    color: var(--main-color);
-    text-decoration: none;
-    padding: 10px;
-    text-align: center;
-    transition: background-color 0.3s, transform 0.1s, box-shadow 0.1s;
-}
-
-.menu-link:hover {
-    color: var(--main-color-dark);
-}
-
-.menu-link:active {
-    transform: translateY(2px);
-    box-shadow: inset 0 4px 6px rgba(0, 0, 0, 0.3);
-}
-
-.menu-link.has-submenu::after {
-    font-size: 0.8em;
-}
-
-/* Подменю */
-.sub-menu {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: #222;
-    width: auto; /* Автоматическая ширина подменю под содержимое */
-    min-width: 150px; /* Минимальная ширина, чтобы избежать слишком узкого подменю */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Тень для подменю */
-    padding: 0; /* Убираем отступы по умолчанию */
-    z-index: 1000; /* Устанавливаем z-index, чтобы подменю было поверх других элементов */
-}
-
-/* Подменю ссылки */
-.sub-menu a {
-    display: block;
-    color: #888;
-    text-decoration: none;
-    padding: 10px;
-    position: relative; /* Для позиционирования псевдо-элемента */
-    transition: background-color 0.3s;
-}
-
-/* Эффект подчеркивания */
-.sub-menu a::before {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 1px;
-    background: var(--main-color);
-    transform: scaleX(0);
-    transition: transform 0.3s ease;
-}
-
-.sub-menu a:hover::before {
-    transform: scaleX(1);
-}
-
-/* Подменю ссылки при наведении */
-.sub-menu a:hover {
-    background-color: #222;
-    color: var(--main-color-dark);
-}
 
 /* Стили для контента */
 .content {
@@ -470,6 +348,131 @@ body {
 
 .social-icons-sidebar a:hover {
     color: #e699c7;
+}
+
+/* Стили для контейнеров логотипа, заголовка, описания и меню */
+.logo-container, .title-container, .description-container, .menu-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+/* Стили для логотипа */
+.logo-container img {
+    width: 128px;
+    height: 128px;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Стили для заголовка */
+.title-container h1 {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--main-color);
+    text-align: left; /* Текст в заголовке поста центрируется слева */
+}
+
+/* Стили для описания */
+.description-container p {
+    font-size: 14px;
+    color: #888;
+    font-style: italic;
+    margin: 0; /* Удаление внешних отступов у абзаца */
+    padding: 0; /* Удаление внутренних отступов у абзаца */
+}
+
+/* Стили для меню */
+.menu-container {
+    width: 100%;
+    max-width: 300px; /* Ширина меню */
+    border-image: linear-gradient(to right, var(--main-color), var(--main-color-dark)) 1;
+    display: flex; /* Используем flexbox */
+    justify-content: center; /* Выравнивание по горизонтали */
+}
+
+/* Сетка для меню */
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    padding-top: 16px;
+    justify-content: center; /* Выравнивание элементов внутри grid по горизонтали */
+}
+
+.menu-item {
+    position: relative; /* Родительское позиционирование */
+}
+
+/* Ссылки меню */
+.menu-link {
+    display: block;
+    color: var(--main-color);
+    text-decoration: none;
+    padding: 10px;
+    text-align: center;
+    transition: background-color 0.3s, transform 0.1s, box-shadow 0.1s;
+}
+
+.menu-link:hover {
+    color: var(--main-color-dark);
+}
+
+.menu-link:active {
+    transform: translateY(2px);
+    box-shadow: inset 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.menu-link.has-submenu::after {
+    font-size: 0.8em;
+}
+
+/* Подменю */
+.sub-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #222;
+    width: auto; /* Автоматическая ширина подменю под содержимое */
+    min-width: 150px; /* Минимальная ширина, чтобы избежать слишком узкого подменю */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Тень для подменю */
+    padding: 0; /* Убираем отступы по умолчанию */
+    z-index: 1000; /* Устанавливаем z-index, чтобы подменю было поверх других элементов */
+}
+
+/* Подменю ссылки */
+.sub-menu a {
+    display: block;
+    color: #888;
+    text-decoration: none;
+    padding: 10px;
+    position: relative; /* Для позиционирования псевдо-элемента */
+    transition: background-color 0.3s;
+}
+
+/* Эффект подчеркивания */
+.sub-menu a::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: var(--main-color);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.sub-menu a:hover::before {
+    transform: scaleX(1);
+}
+
+/* Подменю ссылки при наведении */
+.sub-menu a:hover {
+    background-color: #222;
+    color: var(--main-color-dark);
 }
 
 /* Медиа-запрос для устройств с шириной экрана 768px и более */
