@@ -297,11 +297,11 @@ body {
     z-index: 1;
 }
 
-/* "Перейти" */
+/* "перейти" */
 .post-footer::after {
     content: 'Прокомментировать';
     color: var(--main-color);
-    font-size: 18px;
+    font-size: 14px;
     position: relative;
     left: 10px;
     transform: translateX(-50%);
