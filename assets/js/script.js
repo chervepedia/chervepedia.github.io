@@ -20,15 +20,17 @@ $(document).ready(function() {
     });
 
     // Открытие поста при клике на футер
-$('.post-footer').click(function() {
-    var postUrl = $(this).find('.read-more').data('url');
-    window.open(postUrl, '_blank');
-});
+    $('.post-footer').click(function() {
+        var postUrl = $(this).find('.read-more').data('url');
+        if (postUrl) {
+            window.open(postUrl, '_blank');
+        }
+    });
+
     // Предотвращение действий по умолчанию для ссылок внутри футера
     $('.post-footer a').click(function(event) {
         event.stopPropagation(); // Останавливаем событие клика от распространения
     });
-});
 
     // Показать/скрыть подменю при клике на пункт меню
     $('.menu-link.has-submenu').click(function(e) {
@@ -47,55 +49,4 @@ $('.post-footer').click(function() {
 });
 
 
-
-
-window.onload = function() {
-    const canvas = document.getElementById('blur-canvas');
-    const img = document.getElementById('main-image');
-    const ctx = canvas.getContext('2d');
-
-    // Функция для настройки размеров canvas в соответствии с размерами изображения
-    function resizeCanvas() {
-        canvas.width = img.clientWidth;
-        canvas.height = img.clientHeight;
-    }
-
-    // Функция для создания размытого фона на основе изображения
-    function drawBlurredBackground() {
-        const image = new Image();
-        image.src = img.src;
-        image.onload = function() {
-            resizeCanvas();
-            ctx.drawImage(image, 0, 0, canvas.width, canvas.height);
-        };
-    }
-
-    // Обновляем canvas при изменении размеров окна
-    window.addEventListener('resize', resizeCanvas);
-    // Первоначальная настройка
-    drawBlurredBackground();
-};
-
-/*фон*/
-document.addEventListener('DOMContentLoaded', function() {
-    twallpaper('#wallpaper', {
-        fps: 60,
-        tails: 90,
-        animate: false,
-        scrollAnimate: true,
-        colors: [
-            "#ffb0e2",
-            "#da389e",
-            "#d71991",
-            "#e2b8d2"
-        ],
-        pattern: {
-            image: "https://twallpaper.js.org/patterns/cats_and_dogs.svg",
-            background: "#000",
-            blur: 0,
-            size: "420px",
-            opacity: 0.5,
-            mask: true
-        }
-    });
-});
+    
