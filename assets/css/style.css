@@ -303,9 +303,9 @@ body {
 .post-footer::after {
     content: 'Прокомментировать';
     color: var(--main-color);
-    font-size: 16px;
+    font-size: 12px;
     position: absolute;
-    left: 45%;
+    left: 35%;
     transform: translateX(-50%);
     z-index: 1;
 }
