@@ -332,8 +332,8 @@ body {
 .social-icons-sidebar {
     display: flex;
     justify-content: center; /* Центрирование всех элементов по горизонтали */
-    gap: 15px;
-    margin-top: 4px;
+    gap: 16px;
+    margin-top: 8px;
 }
 
 .social-icons-sidebar a {
@@ -397,7 +397,7 @@ body {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
-    padding-top: 16px;
+    padding-top: 8px;
     justify-content: center; /* Выравнивание элементов внутри grid по горизонтали */
 }
 
@@ -412,20 +412,40 @@ body {
     text-decoration: none;
     padding: 10px;
     text-align: center;
-    transition: background-color 0.3s, transform 0.1s, box-shadow 0.1s;
+    position: relative; /* Для позиционирования псевдо-элемента */
+    overflow: hidden; /* Скрываем градиент за пределами ссылки */
+    transition: color 0.3s;
+}
+
+/* Эффект градиента при наведении */
+.menu-link::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, var(--main-color), var(--main-color-dark));
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+    z-index: 1;
+    pointer-events: none; /* Псевдо-элемент не должен мешать взаимодействию с ссылкой */
+}
+
+/* Обеспечиваем, что текст ссылки находится поверх градиента */
+.menu-link:hover::before {
+    transform: scaleX(1);
 }
 
 .menu-link:hover {
     color: var(--main-color-dark);
 }
 
-.menu-link:active {
-    transform: translateY(2px);
-    box-shadow: inset 0 4px 6px rgba(0, 0, 0, 0.3);
-}
-
-.menu-link.has-submenu::after {
-    font-size: 0.8em;
+/* текст находится поверх градиента */
+.menu-link span {
+    position: relative;
+    z-index: 2; /* С текстом поверх градиента */
 }
 
 /* Подменю */
@@ -452,24 +472,27 @@ body {
     transition: background-color 0.3s;
 }
 
-/* Эффект подчеркивания */
+/* Эффект градиента при наведении на подменю */
 .sub-menu a::before {
     content: '';
     position: absolute;
-    bottom: 0;
+    top: 0;
     left: 0;
     width: 100%;
-    height: 1px;
-    background: var(--main-color);
+    height: 100%;
+    background: linear-gradient(to right, var(--main-color), var(--main-color-dark));
     transform: scaleX(0);
+    transform-origin: left;
     transition: transform 0.3s ease;
+    z-index: 1;
+    pointer-events: none; /* Псевдо-элемент не должен мешать взаимодействию с ссылкой */
 }
 
+/* Эффект при наведении на ссылки подменю */
 .sub-menu a:hover::before {
     transform: scaleX(1);
 }
 
-/* Подменю ссылки при наведении */
 .sub-menu a:hover {
     background-color: #222;
     color: var(--main-color-dark);
