@@ -125,6 +125,5 @@ function getColorsFromImage(image) {
 }
 
 });
-});
 
     
