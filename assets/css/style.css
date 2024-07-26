@@ -370,49 +370,35 @@ body {
     max-width: 100%;
 }
 
-/* Основной стиль футера */
+
+/* Подвал поста */
 .post-footer {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     padding: 10px 15px;
     border-top: 1px groove var(--main-color);
     position: relative;
-    overflow: hidden; /* Для скрытия псевдоэлемента */
-    transition: background 0.3s; /* Плавный переход для фона */
+    overflow: hidden;
+    background: linear-gradient(90deg, var(--main-color-dark), var(--main-color), var(--main-color-dark));
+    background-size: 200% 100%;
+    transition: background-position 0.5s ease;
+    cursor: pointer;
 }
 
-/* Псевдоэлемент для эффекта градиента */
+.post-footer:hover {
+    background-position: 100% 0;
+}
+
+.post-footer:active {
+    background-position: 200% 0;
+}
+
+/* Текст "КОММЕНТИРОВАТЬ" */
 .post-footer::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 200%;
-    height: 100%;
-    background: linear-gradient(to right, var(--main-color), var(--main-color-dark));
-    transition: left 0.3s;
-    z-index: 0; /* Убираем на задний план */
-}
-
-/* Эффект градиента при наведении */
-.post-footer:hover::before {
-    left: 0;
-}
-
-/* Для текста и кнопок в футере */
-.post-footer > * {
-    position: relative;
-    z-index: 1; /* На передний план */
-}
-
-/* "КОММЕНТИРОВАТЬ" */
-.post-footer::after {
-    content: 'Комментировать';
-    font-size: 14px;
-    color: var(--main-color);
-    margin: 0 10px;
-    display: inline-block;
+    content: "Комментировать";
+    color: #fff;
+    
     text-align: center;
 }
 
