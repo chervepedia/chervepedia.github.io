@@ -304,8 +304,8 @@ body {
     content: 'Прокомментировать';
     color: var(--main-color);
     font-size: 12px;
-    position: absolute;
-    left: 35%;
+    position: relative;
+    margin-left: 35px;
     transform: translateX(-50%);
     z-index: 1;
 }
