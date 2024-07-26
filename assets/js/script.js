@@ -46,27 +46,42 @@ $(document).ready(function() {
 // Скрипт для обновления эффекта Aero Glass на основе цвета изображения
 document.addEventListener('DOMContentLoaded', function() {
     var colorThief = new ColorThief();
-    var imageWrappers = document.querySelectorAll('.post-image-wrapper img');
+    var imageWrappers = document.querySelectorAll('.post-image-wrapper');
 
-    imageWrappers.forEach(function(image) {
-        image.addEventListener('load', function() {
-            if (image.complete && image.naturalHeight !== 0) {
-                // Получение доминирующего цвета
-                var dominantColor = colorThief.getColor(image);
-                var color = `rgba(${dominantColor[0]}, ${dominantColor[1]}, ${dominantColor[2]}, 0.3)`;
-                
-                // Применение цвета к фону
-                var wrapper = image.closest('.post-image-wrapper');
-                if (wrapper) {
-                    wrapper.style.setProperty('--dominant-color', color);
+    imageWrappers.forEach(function(wrapper) {
+        var image = wrapper.querySelector('img');
+
+        if (image) {
+            image.addEventListener('load', function() {
+                if (image.complete && image.naturalHeight !== 0) {
+                    var wrapperWidth = wrapper.offsetWidth;
+                    var wrapperHeight = wrapper.offsetHeight;
+                    var imageWidth = image.naturalWidth;
+                    var imageHeight = image.naturalHeight;
+
+                    var imageAspectRatio = imageWidth / imageHeight;
+                    var containerAspectRatio = wrapperWidth / wrapperHeight;
+
+                    // Проверка, если изображение не заполняет весь контейнер
+                    if (imageAspectRatio > containerAspectRatio) {
+                        if (imageWidth < wrapperWidth || imageHeight < wrapperHeight) {
+                            // Получение доминирующего цвета
+                            var dominantColor = colorThief.getColor(image);
+                            var color = `rgba(${dominantColor[0]}, ${dominantColor[1]}, ${dominantColor[2]}, 0.3)`;
+
+                            // Применение класса и цвета
+                            wrapper.classList.add('aero-glass');
+                            wrapper.style.setProperty('--dominant-color', color);
+                        }
+                    }
                 }
-            }
-        });
+            });
 
-        // Если изображение уже загружено, обработать сразу
-        if (image.complete) {
-            var event = new Event('load');
-            image.dispatchEvent(event);
+            // Если изображение уже загружено, обработать сразу
+            if (image.complete) {
+                var event = new Event('load');
+                image.dispatchEvent(event);
+            }
         }
     });
 });
