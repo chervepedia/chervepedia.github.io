@@ -372,14 +372,19 @@ body {
     max-width: 100%;
 }
 
+:root {
+    --main-color: #ffb0e2; /* Светло-розовый цвет */
+    --gradient-color: rgba(255, 255, 255, 0.1); /* Прозрачный цвет для эффекта aero glass */
+}
+
 /* Стили для подвала поста */
 .post-footer {
-    position: relative;
     display: flex;
-    justify-content: center; /* Центрируем содержимое по горизонтали */
+    justify-content: space-between; /* Располагаем элементы по краям */
     align-items: center;
     padding: 10px 15px;
     border-top: 1px groove var(--main-color);
+    position: relative; /* Для того чтобы использовать ::before */
     background-color: transparent; /* Фоновый цвет по умолчанию */
     border-radius: 10px; /* Закругленные углы, если нужны */
     overflow: hidden; /* Скрывает градиент за пределами блока */
@@ -408,10 +413,11 @@ body {
 .post-footer::after {
     content: 'Комментировать';
     color: var(--main-color); /* Цвет текста */
-    position: relative; /* Чтобы текст был поверх градиента */
-    z-index: 1; /* Текст поверх градиента */
+    position: absolute;
+    left: 50%; /* Центрирование текста по горизонтали */
+    transform: translateX(-50%); /* Корректировка для центрирования */
     font-size: 16px; /* Размер шрифта для текста */
-    font-weight: bold; /* Жирный шрифт для выделения, можно удалить при необходимости */
+    
 }
 
 /* Стили для телеграм виджета */
