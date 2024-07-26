@@ -45,35 +45,28 @@ $(document).ready(function() {
 
 // Скрипт для обновления эффекта Aero Glass на основе цвета изображения
 document.addEventListener('DOMContentLoaded', function() {
-    var images = document.querySelectorAll('.post-image-wrapper img');
+    var colorThief = new ColorThief();
+    var imageWrappers = document.querySelectorAll('.post-image-wrapper img');
 
-    images.forEach(function(image) {
-        var colorThief = new ColorThief();
-        
-        if (image.complete && image.naturalHeight !== 0) {
-            var dominantColor = colorThief.getColor(image);
-            var color = `rgba(${dominantColor[0]}, ${dominantColor[1]}, ${dominantColor[2]}, 0.5)`;
-            
-            var style = document.createElement('style');
-            style.innerHTML = `
-                .post-image-wrapper[data-image-src="${image.src}"]::after {
-                    background: rgba(${dominantColor[0]}, ${dominantColor[1]}, ${dominantColor[2]}, 0.5);
-                }
-            `;
-            document.head.appendChild(style);
-        } else {
-            image.addEventListener('load', function() {
+    imageWrappers.forEach(function(image) {
+        image.addEventListener('load', function() {
+            if (image.complete && image.naturalHeight !== 0) {
+                // Получение доминирующего цвета
                 var dominantColor = colorThief.getColor(image);
-                var color = `rgba(${dominantColor[0]}, ${dominantColor[1]}, ${dominantColor[2]}, 0.5)`;
+                var color = `rgba(${dominantColor[0]}, ${dominantColor[1]}, ${dominantColor[2]}, 0.3)`;
                 
-                var style = document.createElement('style');
-                style.innerHTML = `
-                    .post-image-wrapper[data-image-src="${image.src}"]::after {
-                        background: rgba(${dominantColor[0]}, ${dominantColor[1]}, ${dominantColor[2]}, 0.5);
-                    }
-                `;
-                document.head.appendChild(style);
-            });
+                // Применение цвета к фону
+                var wrapper = image.closest('.post-image-wrapper');
+                if (wrapper) {
+                    wrapper.style.setProperty('--dominant-color', color);
+                }
+            }
+        });
+
+        // Если изображение уже загружено, обработать сразу
+        if (image.complete) {
+            var event = new Event('load');
+            image.dispatchEvent(event);
         }
     });
 });
