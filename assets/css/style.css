@@ -290,6 +290,8 @@ body {
     cursor: pointer;
     position: relative;
     z-index: 1;
+    /* Убрать отступ слева */
+    margin-left: 0;
 }
 
 .post-date {
@@ -298,6 +300,8 @@ body {
     display: flex;
     position: relative;
     z-index: 1;
+    /* Выровнять по правому краю */
+    text-align: right;
 }
 
 /* "Комментировать" */
