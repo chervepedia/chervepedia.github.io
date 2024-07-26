@@ -348,7 +348,7 @@ body {
     align-items: center; /* Центрирование изображения по вертикали */
 }
 
-/* Стили для изображения */
+/* Стили для изображения поста*/
 .post-image-wrapper img {
     max-width: 100%; /* Ограничивает ширину изображения размером контейнера */
     max-height: 600px; /* Ограничивает высоту изображения размером контейнера */
@@ -370,36 +370,29 @@ body {
     max-width: 100%;
 }
 
-
-/* Подвал поста */
+/*футер поста*/
 .post-footer {
+    /* Футер поста */
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     padding: 10px 15px;
-    border-top: 1px groove var(--main-color);
-    position: relative;
-    overflow: hidden;
-    background: linear-gradient(90deg, var(--main-color-dark), var(--main-color), var(--main-color-dark));
-    background-size: 200% 100%;
-    transition: background-position 0.5s ease;
+    border-top: 1px solid #333;
+}
+
+.read-more {
+    /* Стили для ссылки "Читать далее" */
+    color: #ddd;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
     cursor: pointer;
 }
 
-.post-footer:hover {
-    background-position: 100% 0;
-}
-
-.post-footer:active {
-    background-position: 200% 0;
-}
-
-/* Текст "КОММЕНТИРОВАТЬ" */
-.post-footer::before {
-    content: "Комментировать";
-    color: #fff;
-    
-    text-align: center;
+.post-date {
+    /* Стили для даты поста */
+    color: #888;
+    font-size: 12px;
 }
 
 /* Стили для телеграм виджета */
