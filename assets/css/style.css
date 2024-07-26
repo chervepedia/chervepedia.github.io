@@ -114,6 +114,13 @@ body {
     align-items: center;
     cursor: pointer;
     background: #222;
+    border-radius: 8px; /* Закругление углов */
+    z-index: 10000; /* кнопка находится поверх всех элементов */
+}
+
+.back-to-top i {
+    font-size: 18px;
+    color: var(--main-color);
 }
 
 .back-to-top i {
