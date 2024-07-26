@@ -428,7 +428,7 @@ body {
     background: linear-gradient(to right, var(--main-color), var(--main-color-dark));
     transform: scaleX(0);
     transform-origin: left;
-    transition: transform 0.3s ease;
+    transition: transform 0.4s ease-in-out; /* Длительность и тип анимации градиента */
     z-index: 1;
     pointer-events: none; /* Псевдо-элемент не должен мешать взаимодействию с ссылкой */
 }
@@ -483,7 +483,7 @@ body {
     background: linear-gradient(to right, var(--main-color), var(--main-color-dark));
     transform: scaleX(0);
     transform-origin: left;
-    transition: transform 0.3s ease;
+    transition: transform 0.4s ease-in-out; /* Длительность и тип анимации градиента */
     z-index: 1;
     pointer-events: none; /* Псевдо-элемент не должен мешать взаимодействию с ссылкой */
 }
