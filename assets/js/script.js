@@ -27,7 +27,6 @@ $(document).ready(function() {
         }
     });
 
-
     // Показать/скрыть подменю при клике на пункт меню
     $('.menu-link.has-submenu').click(function(e) {
         e.preventDefault(); // Предотвращаем переход по ссылке
@@ -44,6 +43,37 @@ $(document).ready(function() {
     });
 });
 
+// Скрипт для обновления эффекта Aero Glass на основе цвета изображения
+document.addEventListener('DOMContentLoaded', function() {
+    var images = document.querySelectorAll('.post-image-wrapper img');
 
-
-
+    images.forEach(function(image) {
+        var colorThief = new ColorThief();
+        
+        if (image.complete && image.naturalHeight !== 0) {
+            var dominantColor = colorThief.getColor(image);
+            var color = `rgba(${dominantColor[0]}, ${dominantColor[1]}, ${dominantColor[2]}, 0.5)`;
+            
+            var style = document.createElement('style');
+            style.innerHTML = `
+                .post-image-wrapper[data-image-src="${image.src}"]::after {
+                    background: rgba(${dominantColor[0]}, ${dominantColor[1]}, ${dominantColor[2]}, 0.5);
+                }
+            `;
+            document.head.appendChild(style);
+        } else {
+            image.addEventListener('load', function() {
+                var dominantColor = colorThief.getColor(image);
+                var color = `rgba(${dominantColor[0]}, ${dominantColor[1]}, ${dominantColor[2]}, 0.5)`;
+                
+                var style = document.createElement('style');
+                style.innerHTML = `
+                    .post-image-wrapper[data-image-src="${image.src}"]::after {
+                        background: rgba(${dominantColor[0]}, ${dominantColor[1]}, ${dominantColor[2]}, 0.5);
+                    }
+                `;
+                document.head.appendChild(style);
+            });
+        }
+    });
+});
