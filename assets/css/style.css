@@ -280,13 +280,6 @@ body {
     z-index: 1; /* Содержание футера находится над псевдоэлементом */
 }
 
-
-.post-footer {
-  display: flex;
-  align-items: center;
-  justify-content: space-between; /* Use space-between to distribute elements */
-}
-
 .read-more {
   color: var(--main-color);
   text-decoration: none;
@@ -299,7 +292,6 @@ body {
 .post-date {
   color: #888;
   font-size: 12px;
-  /* Keep these flex properties */
   display: flex;
   align-items: center; 
 }
