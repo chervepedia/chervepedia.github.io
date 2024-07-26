@@ -1,7 +1,7 @@
+НАДО ЧТОБЫ ПРИ НАВЕДЕНИИ И НАЖАТИИ НА ФУТЕР ПОСТА ОН ПЕРЕЛИВАЛСЯ СЛЕВА НАПРАВО AERO GLASS ГРАДИЕНТОМ ЦВЕТОМ MAIN COLOR И ПО ЦЕНТРУ МЕЖДУ ДАТОЙ ПОСТА И КНОПКОЙ ПЕРЕХОДА БЫЛО "КОММЕНТИРОВАТЬ" БЕЗ ПРАВОК ХТМЛ КОДА ПИДОРАС НЕПОСРЕДСТВЕННО В КСС ДОБАВЬ КОММЕНТИРОВАТЬ
+
 :root {
     --main-color: #ffb0e2; /* Светло-розовый цвет */
-  --main-color-rgba: rgba(255, 176, 226, 0.5); /* Цвет с прозрачностью 0.5 */
---gradient-color: rgba(255, 255, 255, 0.1); /* Прозрачный цвет для эффекта aero glass */
     --main-color-dark: #e699c7; /* Более темный розовый цвет */
 }
 
@@ -372,52 +372,36 @@ body {
     max-width: 100%;
 }
 
-
-
-/* Стили для подвала поста */
+/* Подвал поста */
 .post-footer {
     display: flex;
-    justify-content: space-between; /* Располагаем элементы по краям футера */
+    justify-content: space-between;
     align-items: center;
     padding: 10px 15px;
     border-top: 1px groove var(--main-color);
-    position: relative; /* Для градиента */
-    background-color: transparent; /* Фоновый цвет по умолчанию */
-    border-radius: 10px; /* Закругленные углы */
-    overflow: hidden; /* Скрывает градиент за пределами блока */
 }
 
-/* Псевдоэлемент для градиента */
+/* Стили для футера при наведении */
+.footer:hover {
+    background: linear-gradient(to right, var(--main-color), var(--main-color-dark));
+    transition: background 0.3s ease;
+}
+
+/* Для эффекта перелива */
+.footer {
+    background: rgba(0, 0, 0, 0.3); /* Начальный фон */
+    backdrop-filter: blur(10px); /* Эффект стеклянной поверхности */
+    transition: background 0.3s ease; /* Плавный переход фона */
+}
+
+/* Псевдо-элемент для добавления текста */
 .post-footer::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, var(--gradient-color), transparent);
-    transition: left 0.5s ease-in-out;
-    z-index: 0; /* Градиент под содержимым */
-}
-
-/* Анимация градиента при наведении и фокусе */
-.post-footer:hover::before,
-.post-footer:focus::before {
-    left: 100%; /* Перемещение градиента с одного края на другой */
-}
-
-/* Стили для текстового элемента "Комментировать" */
-.post-footer .comment-text {
-    color: var(--main-color); /* Цвет текста */
-    font-size: 16px; /* Размер шрифта */
-    z-index: 1; /* Текст поверх градиента */
-    margin: 0 20px; /* Отступы слева и справа для выравнивания */
-}
-
-/* Стили для кнопки "Читать далее" */
-.post-footer .read-more {
-    color: var(--main-color); /* Цвет текста кнопки */
-    
+    content: "Комментировать";
+    color: var(--main-color);
+    font-size: 14px;
+    margin-right: 10px;
+    /* Выравнивание текста между датой и кнопкой */
+    text-align: center;
 }
 
 /* Стили для телеграм виджета */
@@ -523,4 +507,4 @@ margin-top: 45px;
     .footer {
         display: none; /* Прячем футер в мобильной версии */
     }
-}
+    }
