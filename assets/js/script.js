@@ -20,9 +20,19 @@ $(document).ready(function() {
     });
 
     // Открытие поста при клике на "футер"
-$('.post-footer').click(function() {
-    var postUrl = $(this).data('url');
-    window.open(postUrl, '_blank');
+$(document).ready(function() {
+    // Обработка клика на футер
+    $('.post-footer').click(function() {
+        var postUrl = $(this).data('url'); // Получаем URL из атрибута data-url
+        if (postUrl) {
+            window.open(postUrl, '_blank'); // Открываем URL в новой вкладке
+        }
+    });
+
+    // Предотвращение действий по умолчанию для ссылок внутри футера
+    $('.post-footer a').click(function(event) {
+        event.stopPropagation(); // Останавливаем событие клика от распространения
+    });
 });
 
     // Показать/скрыть подменю при клике на пункт меню
