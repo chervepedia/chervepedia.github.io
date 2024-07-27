@@ -251,8 +251,6 @@ body {
     align-items: center;
     padding: 10px 15px;
     border-top: 1px solid var(--main-color);
-width: 80%;
-margin: 0 auto;
     position: relative;
     overflow: hidden;
     border-radius: 0 0 10px 10px; /* Закругление только нижних углов */
@@ -314,8 +312,8 @@ margin: 0 auto;
     position: sticky;
     top: 20px;
     width: 100%;
-    max-width: 300px; /* Ширина сайдбара */
-    margin-right: 55px;
+    max-width: 350px; /* Ширина сайдбара */
+    margin-right: 45px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
 }
 
@@ -324,6 +322,7 @@ margin: 0 auto;
     display: flex;
     justify-content: center; /* Центрирование всех элементов по горизонтали */
     gap: 16px;
+    margin-top: 10px;
 }
 
 .social-icons-sidebar a {
@@ -345,7 +344,7 @@ margin: 0 auto;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 14px;
+    margin-bottom: 10px;
 }
 
 /* Стили для логотипа */
@@ -362,6 +361,7 @@ margin: 0 auto;
     font-weight: bold;
     color: var(--main-color);
     text-align: left; /* Текст в заголовке поста центрируется слева */
+margin: 0 auto;
 }
 
 /* Стили для описания */
@@ -369,19 +369,17 @@ margin: 0 auto;
     font-size: 14px;
     color: #888;
     font-style: italic;
-    margin: 0; /* Удаление внешних отступов у абзаца */
+    margin: 0 auto; /* Удаление внешних отступов у абзаца */
     padding: 0; /* Удаление внутренних отступов у абзаца */
 }
 
 /* Стили для меню */
 .menu-container {
     width: 100%;
-    max-width: 300px; /* Ширина меню */
+    max-width: 350px; /* Ширина меню */
     border-image: linear-gradient(to right, var(--main-color), var(--main-color-dark)) 1;
     display: flex; /* Используем flexbox */
-    justify-content: center; /* Выравнивание по горизонтали */
-border-bottom: 1px solid var(--main-color);
-width: 80%;
+    justify-content: center; /* Выравнивание по горизонтали *
 margin: 0 auto;
 }
 
@@ -454,7 +452,6 @@ border-radius: 10px;
     transition: transform 1s ease-in-out; /* Плавный переход */
     z-index: 0; /* Псевдоэлемент находится под содержимым ссылки */
     transform: translateX(-100%);
-    border-radius: 0 0 10px 10px; /* Закругление градиента только снизу */
 }
 
 /* Анимация при наведении на ссылки подменю */
@@ -477,11 +474,11 @@ border-radius: 10px;
     }
 
     .sidebar {
-        margin-right: 55px; 
+        margin-right: 45px; 
         margin-top: 45px;
         top: 0;
         width: 100%;
-        max-width: 250px; /* Ширина сайдбара */
+        max-width: 350px; /* Ширина сайдбара */
     }
 
     .content {
