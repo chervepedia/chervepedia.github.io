@@ -303,8 +303,8 @@ body {
 }
 
 /* Стили для сайдбара */
-.sidebar > *:not(:last-child) {
-    margin-bottom: 10px;                background-color: #222;
+.sidebar {
+    background-color: #222;
     text-align: center;
     padding: 15px;
     margin-bottom: 20px;
@@ -313,19 +313,17 @@ body {
     top: 20px;
     width: 100%;
     max-width: 300px; /* Ширина сайдбара */
-    margin-right: 45px;
+    margin-right: 55px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
 }
 
-/*  для иконок социальных сетей в сайдбаре */
-.sidebar .social-icons-sidebar {
+/* Иконки социальных сетей в сайдбаре */
+.social-icons-sidebar {
     display: flex;
     justify-content: center; /* Центрирование всех элементов по горизонтали */
     gap: 16px;
-    margin-top: 10px; /* Отступ от меню */
 }
 
-/* Цвет и стили для ссылок социальных иконок */
 .social-icons-sidebar a {
     display: flex;
     justify-content: center;  /* Центрирование контента внутри ссылки по горизонтали */
@@ -336,7 +334,6 @@ body {
     transition: color 0.3s;
 }
 
-/* Цвет при наведении */
 .social-icons-sidebar a:hover {
     color: #e699c7;
 }
@@ -346,7 +343,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 10px;
+    margin-bottom: 14px;
 }
 
 /* Стили для логотипа */
@@ -475,7 +472,7 @@ border-radius: 10px;
     }
 
     .sidebar {
-        margin-right: 45px; 
+        margin-right: 55px; 
         margin-top: 45px;
         top: 0;
         width: 100%;
