@@ -251,7 +251,7 @@ body {
     align-items: center;
     padding: 10px 15px;
     border-top: 1px solid var(--main-color);
-width: 80%;
+width: 99%;
 margin: 0 auto;
     position: relative;
     overflow: hidden;
@@ -380,9 +380,6 @@ margin: 0 auto;
     border-image: linear-gradient(to right, var(--main-color), var(--main-color-dark)) 1;
     display: flex; /* Используем flexbox */
     justify-content: center; /* Выравнивание по горизонтали */
-border-bottom: 1px solid var(--main-color);
-width: 80%;
-margin: 0 auto;
 }
 
 /* Сетка для меню */
