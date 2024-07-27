@@ -262,7 +262,7 @@ body {
     border-top: 1px solid var(--main-color);
     position: relative;
     overflow: hidden;
-    border-radius: 0 0 10px 10px; /* Закругление углов */
+    border-radius: 0px 0px 10px 10px; /* Закругление углов */
 }
 
 /* Псевдоэлемент для градиента */
