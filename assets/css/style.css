@@ -322,6 +322,9 @@ body {
     display: flex;
     justify-content: center; /* Центрирование всех элементов по горизонтали */
     gap: 16px;
+border-top: 1px solid var(--main-color);
+width: 80%;
+margin: 0 auto;
 }
 
 .social-icons-sidebar a {
