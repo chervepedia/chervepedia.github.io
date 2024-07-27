@@ -114,7 +114,7 @@ body {
     align-items: center;
     cursor: pointer;
     background: #222;
-    border-radius: 10px; /* Закругление углов */
+    border-radius: 8px; /* Закругление углов */
     z-index: 10000; /* кнопка находится поверх всех элементов */
 }
 
@@ -251,6 +251,8 @@ body {
     align-items: center;
     padding: 10px 15px;
     border-top: 1px solid var(--main-color);
+width: 80%;
+margin: 0 auto;
     position: relative;
     overflow: hidden;
     border-radius: 0 0 10px 10px; /* Закругление только нижних углов */
@@ -322,7 +324,6 @@ body {
     display: flex;
     justify-content: center; /* Центрирование всех элементов по горизонтали */
     gap: 16px;
-    margin-top: 4px;
 }
 
 .social-icons-sidebar a {
@@ -379,6 +380,9 @@ body {
     border-image: linear-gradient(to right, var(--main-color), var(--main-color-dark)) 1;
     display: flex; /* Используем flexbox */
     justify-content: center; /* Выравнивание по горизонтали */
+border-bottom: 1px solid var(--main-color);
+width: 80%;
+margin: 0 auto;
 }
 
 /* Сетка для меню */
