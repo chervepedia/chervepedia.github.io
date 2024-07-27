@@ -324,6 +324,7 @@ margin: 0 auto;
     display: flex;
     justify-content: center; /* Центрирование всех элементов по горизонтали */
     gap: 16px;
+margin-top: 4px;
 }
 
 .social-icons-sidebar a {
