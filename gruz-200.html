@@ -1,0 +1,81 @@
+---
+layout: default
+title: Груз 200. Погибшие на СВО россияне. Информация для жен и матерей, отправивших своих мужей и сыновей на убой в зоу т.н. "СВО"
+---
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Встраиваемые посты из Telegram</title>
+    <link rel="stylesheet" href="{{ base_url }}/assets/css/style.css">
+    {% if page.css %}
+        <link rel="stylesheet" href="{{ base_url }}/assets/css/{{ page.css }}">
+    {% endif %}
+    <script async src="https://telegram.org/js/telegram-widget.js?19" data-telegram-post="telegram" data-width="100%"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <div class="logo-container">
+                <img src="{{ base_url }}/assets/images/your-logo.png" alt="Logo">
+            </div>
+            <div class="title-container">
+                <h1>Название сайта</h1>
+            </div>
+            <div class="description-container">
+                <p>Описание вашего сайта</p>
+            </div>
+            <div class="menu-container">
+                <div class="menu-grid">
+                    <div class="menu-item">
+                        <a href="#" class="menu-link">Меню 1</a>
+                    </div>
+                    <div class="menu-item">
+                        <a href="#" class="menu-link">Меню 2</a>
+                    </div>
+                </div>
+            </div>
+            <div class="social-icons-sidebar">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+        <div class="content">
+            {% include telegrampost.html %}
+        </div>
+    </div>
+    <div class="back-to-top">
+        <i class="fas fa-chevron-up"></i>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const links = document.querySelectorAll('#telegram-posts a');
+            const container = document.querySelector('.content');
+            links.forEach(link => {
+                const postContainer = document.createElement('div');
+                postContainer.classList.add('post');
+                postContainer.innerHTML = `
+                    <div class="post-header">
+                        <h2 class="post-title">Пост из Telegram</h2>
+                    </div>
+                    <div class="post-content">
+                        <div class="embed-wrapper">
+                            <blockquote class="telegram-post" data-width="100%" data-dnt="true">
+                                <a href="${link.href}">Здесь должен быть пост из телеграм</a>
+                            </blockquote>
+                        </div>
+                    </div>`;
+                container.appendChild(postContainer);
+            });
+
+            // Перезагрузка виджетов Telegram после добавления новых постов
+            if (window.Telegram) {
+                window.Telegram.WebApp.expand();
+            }
+        });
+    </script>
+</body>
+</html>
