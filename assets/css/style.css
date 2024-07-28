@@ -202,7 +202,7 @@ body {
 
 /* Заголовок поста */
 .post-header {
-    border-radius: 0px 0px 10px 10px; /* Закругление углов */
+    border-radius: 10px 10px 0px 0px; /* Закругление углов */
     display: flex;
     align-items: center; /* Вертикальное выравнивание по центру */
 }
