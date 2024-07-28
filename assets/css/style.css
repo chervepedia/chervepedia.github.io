@@ -202,14 +202,14 @@ body {
 
 /* Заголовок поста */
 .post-header {
-    padding: 5px 10px; 
+    padding: 5px; 
     border-radius: 10px; /* Закругление углов */
     display: flex; /* Гибкий контейнер */
     align-items: center; /* Вертикальное выравнивание по центру */
 }
 
 .post-title {
-    font-size: 18px; /* Оставлен прежний размер шрифта */
+    font-size: 18px;
     font-weight: bold;
     color: var(--main-color);
     margin: 0; /* Убраны внешние отступы */
@@ -305,6 +305,7 @@ body {
     content: 'Прокомментировать';
     color: var(--main-color);
     font-size: 12px;
+    font-weight: bold;
     margin-left: 8px;
 }
 
