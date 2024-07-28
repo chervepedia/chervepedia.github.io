@@ -202,7 +202,7 @@ body {
 
 /* Заголовок поста */
 .post-header {
-    border-radius: 10px; /* Закругление углов */
+    border-radius: 0px 0px 10px 10px; /* Закругление углов */
     display: flex;
     align-items: center; /* Вертикальное выравнивание по центру */
 }
@@ -284,7 +284,7 @@ body {
     transition: transform 1s ease-in-out; /* Плавный переход */
     z-index: 0; /* Псевдоэлемент находится под содержимым футера */
     transform: translateX(-100%);
-    border-radius: 10px; /* Закругление углов */
+    border-radius: 0px 0px 10px 10px; /* Закругление углов */
 }
 
 /* Анимация при наведении */
