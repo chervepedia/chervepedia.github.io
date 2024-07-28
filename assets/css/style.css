@@ -202,8 +202,6 @@ body {
 
 /* Заголовок поста */
 .post-header {
-    padding: 8px; 
-    margin: 0;
     border-radius: 10px; /* Закругление углов */
     display: flex;
     align-items: center; /* Вертикальное выравнивание по центру */
@@ -214,6 +212,7 @@ body {
     font-weight: bold;
     color: var(--main-color);
     margin: 0;
+    padding: 8px;
     text-align: left; /* Текст в заголовке поста центрируется слева */
 }
 
