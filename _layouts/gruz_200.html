@@ -26,17 +26,18 @@
                     </div>
                     <div class="post-content">
                         <div class="embed-wrapper">
-                            <blockquote class="telegram-post" data-width="100%" data-dnt="true" data-theme="dark">
+                            <blockquote class="telegram-post" data-width="100%" data-dnt="true">
                                 <a href="${link.href}">Здесь должен быть пост из телеграм</a>
                             </blockquote>
                         </div>
                     </div>`;
                 container.appendChild(postContainer);
-                // Перезагрузка виджетов Telegram после добавления новых постов
-                if (window.Telegram) {
-                    window.Telegram.WebApp.expand();
-                }
             });
+
+            // Перезагрузка виджетов Telegram после добавления новых постов
+            if (window.Telegram) {
+                window.Telegram.WebApp.expand();
+            }
         }
 
         document.addEventListener('DOMContentLoaded', loadTelegramPosts);
@@ -72,7 +73,6 @@
         </div>
         <div class="content">
             <!-- Посты будут загружены сюда -->
-            {% include _includes/telegrampost.html %}
         </div>
     </div>
     <div class="back-to-top">
