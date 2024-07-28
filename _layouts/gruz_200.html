@@ -9,39 +9,6 @@
         <link rel="stylesheet" href="{{ base_url }}/assets/css/{{ page.css }}">
     {% endif %}
     <script async src="https://telegram.org/js/telegram-widget.js?19" data-telegram-post="telegram" data-width="100%"></script>
-    <script>
-        async function loadTelegramPosts() {
-            const response = await fetch('{{ base_url }}/_includes/telegrampost.html');
-            const text = await response.text();
-            const parser = new DOMParser();
-            const doc = parser.parseFromString(text, 'text/html');
-            const links = doc.querySelectorAll('#telegram-posts a');
-            const container = document.querySelector('.content');
-            links.forEach(link => {
-                const postContainer = document.createElement('div');
-                postContainer.classList.add('post');
-                postContainer.innerHTML = `
-                    <div class="post-header">
-                        <h2 class="post-title">Пост из Telegram</h2>
-                    </div>
-                    <div class="post-content">
-                        <div class="embed-wrapper">
-                            <blockquote class="telegram-post" data-width="100%" data-dnt="true">
-                                <a href="${link.href}">Здесь должен быть пост из телеграм</a>
-                            </blockquote>
-                        </div>
-                    </div>`;
-                container.appendChild(postContainer);
-            });
-
-            // Перезагрузка виджетов Telegram после добавления новых постов
-            if (window.Telegram) {
-                window.Telegram.WebApp.expand();
-            }
-        }
-
-        document.addEventListener('DOMContentLoaded', loadTelegramPosts);
-    </script>
 </head>
 <body>
     <div class="container">
@@ -72,11 +39,38 @@
             </div>
         </div>
         <div class="content">
-            <!-- Посты будут загружены сюда -->
+            {% include telegrampost.html %}
         </div>
     </div>
     <div class="back-to-top">
         <i class="fas fa-chevron-up"></i>
     </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const links = document.querySelectorAll('#telegram-posts a');
+            const container = document.querySelector('.content');
+            links.forEach(link => {
+                const postContainer = document.createElement('div');
+                postContainer.classList.add('post');
+                postContainer.innerHTML = `
+                    <div class="post-header">
+                        <h2 class="post-title">Пост из Telegram</h2>
+                    </div>
+                    <div class="post-content">
+                        <div class="embed-wrapper">
+                            <blockquote class="telegram-post" data-width="100%" data-dnt="true">
+                                <a href="${link.href}">Здесь должен быть пост из телеграм</a>
+                            </blockquote>
+                        </div>
+                    </div>`;
+                container.appendChild(postContainer);
+            });
+
+            // Перезагрузка виджетов Telegram после добавления новых постов
+            if (window.Telegram) {
+                window.Telegram.WebApp.expand();
+            }
+        });
+    </script>
 </body>
 </html>
