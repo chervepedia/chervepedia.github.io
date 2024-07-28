@@ -202,15 +202,17 @@ body {
 
 /* Заголовок поста */
 .post-header {
-    padding: 10px 15px;
+    padding: 5px 10px; 
     border-radius: 10px; /* Закругление углов */
+    display: flex; /* Гибкий контейнер */
+    align-items: center; /* Вертикальное выравнивание по центру */
 }
 
 .post-title {
-    font-size: 18px;
+    font-size: 18px; /* Оставлен прежний размер шрифта */
     font-weight: bold;
     color: var(--main-color);
-    margin: 0;
+    margin: 0; /* Убраны внешние отступы */
     text-align: left; /* Текст в заголовке поста центрируется слева */
 }
 
