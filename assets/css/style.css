@@ -202,7 +202,7 @@ body {
 
 /* Заголовок поста */
 .post-header {
-    padding: 5px, 5px, 5px; 
+    padding: 8px; 
     margin: 0;
     border-radius: 10px; /* Закругление углов */
     display: flex;
@@ -226,6 +226,7 @@ body {
     height: auto; /* Высота контейнера будет зависеть от содержимого, но не превысит 600px */
     overflow: hidden;
     margin: auto; /* Центрирование контейнера по горизонтали */
+    padding: 0;
     display: flex;
     justify-content: center;
     align-items: center; /* Центрирование изображения по вертикали */
@@ -239,8 +240,6 @@ body {
     width: auto; /* Автоматическая ширина, сохраняет пропорции */
     height: auto; /* Автоматическая высота, сохраняет пропорции */
     object-fit: contain; /* Сохраняет пропорции изображения и не обрезает его */
-    position: relative; /* Помещает изображение выше эффекта Aero Glass */
-    z-index: 2;
 }
 
 /* Содержимое поста */
