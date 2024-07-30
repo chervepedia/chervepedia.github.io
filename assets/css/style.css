@@ -426,6 +426,18 @@ body {
     border-radius: 10px; /* Закругление углов */
 }
 
+/* Скрываем текст для пунктов "Главная" и "Меню" */
+.menu-link.menu-only-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu-link.menu-only-icon span {
+    display: none;
+}
+
+
 /* Эффект нажатия */
 .menu-link:active {
     transform: translateY(2px);
