@@ -93,27 +93,16 @@
                 </div>
               </div>
             {% else %}
-              <div class="menu-item">
-                <a href="{{ item.url }}" class="menu-link {{ 'menu-only-icon' if item.title == 'Главная' or item.title == 'Меню' }}">
-                  {% if item.icon %}
-                    <i class="fas {{ item.icon }}"></i>
-                  {% endif %}
-                  {% if item.title != "Главная" %}
-                    {% if item.title == "Меню" %}
-                      <!-- Only display icon for 'Меню' -->
-                      {% if item.icon %}
-                        <i class="fas {{ item.icon }}"></i>
-                      {% endif %}
-                    {% else %}
-                      {{ item.title }}
-                    {% endif %}
-                  {% endif %}
-                </a>
-              </div>
-            {% endif %}
-          {% endfor %}
-        </div>
-      </div>
+         <div class="menu-item">
+  <a href="{{ item.url }}" class="menu-link {{ 'menu-only-icon' if item.title == 'Главная' or item.title == 'Меню' }}">
+    {% if item.icon %}
+      <i class="fas {{ item.icon }}"></i>
+    {% endif %}
+    {% if item.title != "Главная" and item.title != "Меню" %}
+      {{ item.title }}
+    {% endif %}
+  </a>
+</div>
       <div class="social-icons-sidebar">
         {% if site.social.facebook != "" %}
           <a href="{{ site.social.facebook }}" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
