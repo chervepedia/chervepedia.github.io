@@ -87,39 +87,36 @@
     <div class="menu-container">
   <div class="menu-grid">
     {% for item in site.menu %}
-      {% if item.sub_menu %}
-        <div class="menu-item">
-          <a href="javascript:void(0);" class="menu-link has-submenu">
-            {% if item.icon %}
-              <i class="fas {{ item.icon }}"></i>
-            {% endif %}
-            {{ item.title }}
-          </a>
-          <div class="sub-menu">
-            {% for sub_item in item.sub_menu %}
-              <a href="{{ sub_item.url }}" class="hvr-outline-in" {% if sub_item.target %}target="{{ sub_item.target }}"{% endif %}>{{ sub_item.title }}</a>
-            {% endfor %}
-          </div>
-        </div>
-      {% else %}
-        <div class="menu-item">
-          <a href="{{ item.url }}" class="menu-link">
-            {% if item.title == 'Главная' %}
-              <i class="fas fa-home"></i>
-            {% elsif item.title == 'Меню' %}
-              <i class="fas fa-bars"></i>
-            {% else %}
-              {% if item.icon %}
-                <i class="fas {{ item.icon }}"></i>
-              {% endif %}
-              {{ item.title }}
-            {% endif %}
-          </a>
-        </div>
-      {% endif %}
-    {% endfor %}
-  </div>
-</div>
+  {% if item.sub_menu %}
+    <div class="menu-item">
+      <a href="javascript:void(0);" class="menu-link has-submenu">
+        {% if item.icon %}
+          <i class="fas {{ item.icon }}"></i>
+        {% endif %}
+        {% if item.title != "Меню" %}
+          {{ item.title }}
+        {% endif %}
+      </a>
+      <div class="sub-menu">
+        {% for sub_item in item.sub_menu %}
+          <a href="{{ sub_item.url }}" class="hvr-outline-in" {% if sub_item.target %}target="{{ sub_item.target }}"{% endif %}>{{ sub_item.title }}</a>
+        {% endfor %}
+      </div>
+    </div>
+  {% else %}
+    <div class="menu-item">
+      <a href="{{ item.url }}" class="menu-link {{ 'menu-only-icon' if item.title == 'Главная' or item.title == 'Меню' }}">
+        {% if item.icon %}
+          <i class="fas {{ item.icon }}"></i>
+        {% endif %}
+        {% if item.title != "Главная" and item.title != "Меню" %}
+          {{ item.title }}
+        {% endif %}
+      </a>
+    </div>
+  {% endif %}
+{% endfor %}
+
       <div class="social-icons-sidebar">
         {% if site.social.facebook != "" %}
           <a href="{{ site.social.facebook }}" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
