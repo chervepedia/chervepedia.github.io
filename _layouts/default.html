@@ -98,14 +98,7 @@
                 </div>
               </div>
             {% else %}
-              <div class="menu-item">
-                <a href="{{ item.url }}" class="menu-link {{ 'menu-only-icon' if item.title == 'Главная' or item.title == 'Меню' }}">
-                  {% if item.icon %}
-                    <i class="fas {{ item.icon }}"></i>
-                  {% endif %}
-                  Запомни код, дальше скажу
-
-{% if item.title != "Меню" %}
+              {% if item.title != "Меню" %}
           {{ item.title }}
         {% endif %}
       </a>
@@ -124,6 +117,7 @@
         {% if item.title != "Главная" and item.title != "Меню" %}
           {{ item.title }}
         {% endif %}
+
       <div class="social-icons-sidebar">
         {% if site.social.facebook != "" %}
           <a href="{{ site.social.facebook }}" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
@@ -193,8 +187,9 @@
   <div class="back-to-top">
     <i class="fas fa-chevron-up"></i>
   </div>
-<script src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.6/dist/medium-zoom.min.js"></script>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.6/dist/medium-zoom.min.js"></script>
   <script src="{{ '/assets/js/script.js' | absolute_url }}"></script>
 </body>
-</html>
-  
+      </html>
