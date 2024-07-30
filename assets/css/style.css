@@ -426,7 +426,7 @@ body {
     border-radius: 10px; /* Закругление углов */
 }
 
-/* Скрываем текст для пунктов "Главная" и "Меню" */
+/* Скрыть текст для пункта меню с иконкой */
 .menu-link.menu-only-icon {
     display: flex;
     align-items: center;
