@@ -13,7 +13,7 @@ menu:
   - title: Меню
     icon: fa-bars
     sub_menu:
-      - title: Обр на Тучаннел
+      - title: ОБР-тред
         url: http://www1.2channel.moe/pol
         target: _blank
       - title: Черветред
