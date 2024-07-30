@@ -1,35 +1,31 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-
-{% seo %}
-
+  <!-- SEO and Meta Tags -->
+  {% seo %}
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ site.title }}</title>
 
+  <!-- Open Graph and Twitter Card Meta Tags -->
   {% if page.url == '/' %}
-    <!-- Open Graph Meta Tags for the Home Page -->
+    <!-- Home Page Meta Tags -->
     <meta property="og:title" content="{{ site.title | escape }}" />
     <meta property="og:description" content="{{ site.description | escape }}" />
     <meta property="og:image" content="{{ '/assets/images/logo.png' | absolute_url }}" />
     <meta property="og:url" content="{{ site.url | absolute_url }}" />
     <meta property="og:type" content="website" />
-    
-    <!-- Twitter Card Meta Tags for the Home Page -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="{{ site.title | escape }}" />
     <meta name="twitter:description" content="{{ site.description | escape }}" />
     <meta name="twitter:image" content="{{ '/assets/images/logo.png' | absolute_url }}" />
   {% else %}
-    <!-- Open Graph Meta Tags for a Blog Post -->
+    <!-- Blog Post Meta Tags -->
     <meta property="og:title" content="{{ page.title | escape }}" />
     <meta property="og:description" content="{{ page.excerpt | strip_html | escape }}" />
     <meta property="og:image" content="{{ page.image | absolute_url }}" />
     <meta property="og:url" content="{{ page.url | absolute_url }}" />
     <meta property="og:type" content="article" />
-    
-    <!-- Twitter Card Meta Tags for a Blog Post -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="{{ page.title | escape }}" />
     <meta name="twitter:description" content="{{ page.excerpt | strip_html | escape }}" />
@@ -66,7 +62,6 @@
   {% if page.css %}
     <link rel="stylesheet" href="{{ base_url }}/assets/css/{{ page.css }}">
   {% endif %}
-
 </head>
 <body>
   <div class="container">
@@ -103,8 +98,15 @@
                   {% if item.icon %}
                     <i class="fas {{ item.icon }}"></i>
                   {% endif %}
-                  {% if item.title != "Главная" and item.title != "Меню" %}
-                    {{ item.title }}
+                  {% if item.title != "Главная" %}
+                    {% if item.title == "Меню" %}
+                      <!-- Only display icon for 'Меню' -->
+                      {% if item.icon %}
+                        <i class="fas {{ item.icon }}"></i>
+                      {% endif %}
+                    {% else %}
+                      {{ item.title }}
+                    {% endif %}
                   {% endif %}
                 </a>
               </div>
@@ -173,11 +175,12 @@
         <i class="fas fa-phone-alt"></i> {{ site.contact.phone }}
       {% endif %}
       {% if site.contact.address != "" %}
-        <i class="fas fa-map-marker-alt" style="margin-left: 20px;"></i> {{ site.contact.address }}
+     <i class="fas fa-map-marker-alt" style="margin-left: 20px;"></i> {{ site.contact.address }}
       {% endif %}
     </div>
   </div>
-<div class="back-to-top">
+
+  <div class="back-to-top">
     <i class="fas fa-chevron-up"></i>
   </div>
 
@@ -186,4 +189,3 @@
   <script src="{{ '/assets/js/script.js' | absolute_url }}"></script>
 </body>
 </html>
-  
