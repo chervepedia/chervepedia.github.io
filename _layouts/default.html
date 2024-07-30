@@ -42,7 +42,7 @@
 
 <!-- Yandex.Metrika counter -->
 <script type="text/javascript" >
-   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i.a=m[i.a||[]]).push(arguments)};
    m[i.l]=1*new Date();
    for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
    k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
@@ -103,8 +103,10 @@
               </div>
             {% else %}
               <div class="menu-item">
-                <a href="{{ item.url }}" class="menu-link {{ 'menu-only-icon' if item.title == 'Главная' or item.title == 'Меню' }}">
-                  {% if item.title == 'Меню' %}
+                <a href="{{ item.url }}" class="menu-link">
+                  {% if item.title == 'Главная' %}
+                    <i class="fas fa-home"></i>
+                  {% elif item.title == 'Меню' %}
                     <i class="fas fa-bars"></i>
                   {% else %}
                     {% if item.icon %}
@@ -185,7 +187,8 @@
   </div>
 
   <div class="back-to-top">
-    <i class="fas fa-chevron-up"></i> </div>
+    <i class="fas fa-chevron-up"></i>
+  </div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/color-thief/2.3.2/color-thief.umd.js"></script>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
