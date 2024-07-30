@@ -105,20 +105,14 @@
               </div>
             {% else %}
               {% for item in menu_items %}
-      {% if item.title == "Главная" or item.title == "Меню" %}
-        <a href="{{ item.url }}" class="menu-link">
-          {% if item.icon %}
-            <i class="fas {{ item.icon }}"></i>
-          {% endif %}
-        </a>
-      {% else %}
-        <a href="{{ item.url }}" class="menu-link">
-          {% if item.icon %}
-            <i class="fas {{ item.icon }}"></i>
-          {% endif %}
+      <a href="{{ item.url }}" class="menu-link">
+        {% if item.icon %}
+          <i class="fas {{ item.icon }}"></i>
+        {% endif %}
+        {% if item.title != "Главная" and item.title != "Меню" %}
           {{ item.title }}
-        </a>
-      {% endif %}
+        {% endif %}
+      </a>
     {% endfor %}
   </div>
 </div>
