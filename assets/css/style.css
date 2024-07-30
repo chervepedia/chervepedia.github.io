@@ -309,14 +309,14 @@ body {
 .read-more::after {
     content: 'Прокомментировать';
     color: var(--main-color);
-    font-size: 12px;
+    font-size: 14px;
     font-weight: bold;
     margin-left: 8px;
 }
 
 .post-date {
     color: #888;
-    font-size: 12px;
+    font-size: 14px;
 }
 
 /* Стили для сайдбара */
@@ -538,7 +538,7 @@ border-radius: 10px;
         width: 100%;
         position: relative;
         top: 0;
-        max-width: 500px;
+        max-width: 300px;
         margin-left: auto;
         margin-right: auto;
         margin-top: 4px;
