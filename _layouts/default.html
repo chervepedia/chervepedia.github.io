@@ -42,19 +42,20 @@
 
 <!-- Yandex.Metrika counter -->
 <script type="text/javascript" >
-   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i.a=m[i.a||[]]).push(arguments)};
-   m[i.l]=1*new Date();
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();
    for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
    k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
 
-   ym(97892425, "init", {
+   ym(97915168, "init", {
         clickmap:true,
         trackLinks:true,
-        accurateTrackBounce:true
+        accurateTrackBounce:true,
+        webvisor:true
    });
 </script>
-<noscript><div><img src="https://mc.yandex.ru/watch/97892425" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<noscript><div><img src="https://mc.yandex.ru/watch/97915168" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 <!-- /Yandex.Metrika counter -->
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -68,11 +69,6 @@
   
 </head>
 <body>
-
-<div class="post-image-wrapper">
-    <!-- Изображение будет добавляться динамически -->
-</div>
-
   <div class="container">
     <div class="sidebar">
       <div class="logo-container">
@@ -84,39 +80,42 @@
       <div class="description-container">
         <p><em>{{ site.description }}</em></p>
       </div>
-    <div class="menu-container">
-  <div class="menu-grid">
-    {% for item in site.menu %}
-  {% if item.sub_menu %}
-    <div class="menu-item">
-      <a href="javascript:void(0);" class="menu-link has-submenu">
-        {% if item.icon %}
-          <i class="fas {{ item.icon }}"></i>
-        {% endif %}
-        {% if item.title != "Меню" %}
-          {{ item.title }}
-        {% endif %}
-      </a>
-      <div class="sub-menu">
-        {% for sub_item in item.sub_menu %}
-          <a href="{{ sub_item.url }}" class="hvr-outline-in" {% if sub_item.target %}target="{{ sub_item.target }}"{% endif %}>{{ sub_item.title }}</a>
-        {% endfor %}
+      <div class="menu-container">
+        <div class="menu-grid">
+          {% for item in site.menu %}
+            {% if item.sub_menu %}
+              <div class="menu-item">
+                <a href="javascript:void(0);" class="menu-link has-submenu">
+                  {% if item.icon %}
+                    <i class="fas {{ item.icon }}"></i>
+                  {% endif %}
+                  {{ item.title }}
+                </a>
+                <div class="sub-menu">
+                  {% for sub_item in item.sub_menu %}
+                    <a href="{{ sub_item.url }}" class="hvr-outline-in" {% if sub_item.target %}target="{{ sub_item.target }}"{% endif %}>{{ sub_item.title }}</a>
+                  {% endfor %}
+                </div>
+              </div>
+            {% else %}
+              {% if item.title == "Главная" or item.title == "Меню" %}
+                <a href="{{ item.url }}" class="menu-link">
+                  {% if item.icon %}
+                    <i class="fas {{ item.icon }}"></i>
+                  {% endif %}
+                </a>
+              {% else %}
+                <a href="{{ item.url }}" class="menu-link">
+                  {% if item.icon %}
+                    <i class="fas {{ item.icon }}"></i>
+                  {% endif %}
+                  {{ item.title }}
+                </a>
+              {% endif %}
+            {% endif %}
+          {% endfor %}
+        </div>
       </div>
-    </div>
-  {% else %}
-    <div class="menu-item">
-      <a href="{{ item.url }}" class="menu-link {{ 'menu-only-icon' if item.title == 'Главная' or item.title == 'Меню' }}">
-        {% if item.icon %}
-          <i class="fas {{ item.icon }}"></i>
-        {% endif %}
-        {% if item.title != "Главная" and item.title != "Меню" %}
-          {{ item.title }}
-        {% endif %}
-      </a>
-    </div>
-  {% endif %}
-{% endfor %}
-
       <div class="social-icons-sidebar">
         {% if site.social.facebook != "" %}
           <a href="{{ site.social.facebook }}" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
@@ -125,34 +124,34 @@
           <a href="{{ site.social.twitter }}" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
         {% endif %}
         {% if site.social.instagram != "" %}
-          <a href="{{ site.social.instagram }}" target="_blank" title="Instagram"><i class="fab fa-instagram }}"></i></a>
+          <a href="{{ site.social.instagram }}" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
         {% endif %}
         {% if site.social.linkedin != "" %}
-          <a href="{{ site.social.linkedin }}" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in }}"></i></a>
+          <a href="{{ site.social.linkedin }}" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
         {% endif %}
         {% if site.social.pinterest != "" %}
-          <a href="{{ site.social.pinterest }}" target="_blank" title="Pinterest"><i class="fab fa-pinterest-p }}"></i></a>
+          <a href="{{ site.social.pinterest }}" target="_blank" title="Pinterest"><i class="fab fa-pinterest-p"></i></a>
         {% endif %}
         {% if site.social.tumblr != "" %}
-          <a href="{{ site.social.tumblr }}" target="_blank" title="Tumblr"><i class="fab fa-tumblr }}"></i></a>
+          <a href="{{ site.social.tumblr }}" target="_blank" title="Tumblr"><i class="fab fa-tumblr"></i></a>
         {% endif %}
         {% if site.social.telegram != "" %}
-          <a href="{{ site.social.telegram }}" target="_blank" title="Telegram"><i class="fab fa-telegram-plane }}"></i></a>
+          <a href="{{ site.social.telegram }}" target="_blank" title="Telegram"><i class="fab fa-telegram-plane"></i></a>
         {% endif %}
         {% if site.social.youtube != "" %}
-          <a href="{{ site.social.youtube }}" target="_blank" title="YouTube"><i class="fab fa-youtube }}"></i></a>
+          <a href="{{ site.social.youtube }}" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
         {% endif %}
         {% if site.social.github != "" %}
-          <a href="{{ site.social.github }}" target="_blank" title="GitHub"><i class="fab fa-github }}"></i></a>
+          <a href="{{ site.social.github }}" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
         {% endif %}
         {% if site.social.vkontakte != "" %}
-          <a href="{{ site.social.vkontakte }}" target="_blank" title="VK"><i class="fab fa-vk }}"></i></a>
+          <a href="{{ site.social.vkontakte }}" target="_blank" title="VK"><i class="fab fa-vk"></i></a>
         {% endif %}
         {% if site.social.snapchat != "" %}
-          <a href="{{ site.social.snapchat }}" target="_blank" title="Snapchat"><i class="fab fa-snapchat-ghost }}"></i></a>
+          <a href="{{ site.social.snapchat }}" target="_blank" title="Snapchat"><i class="fab fa-snapchat-ghost"></i></a>
         {% endif %}
         {% if site.social.reddit != "" %}
-          <a href="{{ site.social.reddit }}" target="_blank" title="Reddit"><i class="fab fa-reddit }}"></i></a>
+          <a href="{{ site.social.reddit }}" target="_blank" title="Reddit"><i class="fab fa-reddit"></i></a>
         {% endif %}
       </div>
     </div>
@@ -187,9 +186,8 @@
     <i class="fas fa-chevron-up"></i>
   </div>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/color-thief/2.3.2/color-thief.umd.js"></script>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.6/dist/medium-zoom.min.js"></script>
   <script src="{{ '/assets/js/script.js' | absolute_url }}"></script>
 </body>
-</html>
+      </html>
