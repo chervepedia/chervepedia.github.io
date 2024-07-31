@@ -2,7 +2,7 @@
 layout: default
 title: "Червепедия"
 image: "assets/images/f59968a03da667d25af0c2c447905982.png"
-permalink: /page/2
+permalink: /page/2/
 except: "Черветред - это русофобский тред на дваче"
 CSS: "about.css"
 ---
