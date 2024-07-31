@@ -190,8 +190,7 @@ body {
 /* Стили для постов */
 .post {
     background-color: #222;
-    margin-top: 45px;
-    margin-bottom: 15px; /* Отступ между постами 15px */
+    margin-bottom: 24px;
     padding: 0;
     width: 100%;
     position: relative;
