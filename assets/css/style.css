@@ -219,10 +219,14 @@ max-height: 600px;
 max-width: 500px;
 }
 
+/* Стили для изображения поста */
 .post-image-wrapper img {
-    width: 100%;
-    display: block;
-    border-radius: 0; /* Если нужнв закругления */
+    max-width: 100%; /* Ограничивает ширину изображения размером контейнера */
+    max-height: 100%; /* Ограничивает высоту изображения размером контейнера */
+    width: auto; /* Автоматическая ширина, сохраняет пропорции */
+    height: auto; /* Автоматическая высота, сохраняет пропорции */
+    object-fit: contain; /* Сохраняет пропорции изображения и не обрезает его */
+    display: block; /* Убирает возможные пробелы вокруг изображения */
 }
 
 /* Содержимое поста */
@@ -308,7 +312,7 @@ max-width: 500px;
     position: sticky;
     top: 20px;
     width: 100%;
-    max-width: 300px; /* Ширина сайдбара */
+    max-width: 350px; /* Ширина сайдбара */
     margin-right: 45px;
     border-radius: 10px; /* Закругление углов */
 }
@@ -495,7 +499,7 @@ border-radius: 10px;
         margin-top: 45px;
         top: 0;
         width: 100%;
-        max-width: 300px; /* Ширина сайдбара */
+        max-width: 350px; /* Ширина сайдбара */
     }
 
     .content {
