@@ -202,23 +202,16 @@ body {
 
 /* Заголовок поста */
 .post-header {
-    border-radius: 10px 10px 0px 0px; /* Закругление углов */
-    display: flex;
-    align-items: center; /* Вертикальное выравнивание по центру */
-    padding: 0; /* Убедитесь, что нет лишних отступов */
-    border-bottom: 1px solid var(--main-color); /* Нижняя граница */
+    padding: 10px 15px;
+    border-radius: 10px, 10px, 0px, 0px;
+    border-bottom: 1px groove var(--main-color);
 }
 
-/* Заголовок поста */
 .post-title {
     font-size: 18px;
     font-weight: bold;
     color: var(--main-color);
-    margin: 0; /* Убираем внешние отступы */
-    padding: 8px; /* Внутренний отступ для пространства вокруг текста */
-    text-align: left; /* Текст в заголовке поста выравнивается по левому краю */
-    box-sizing: border-box; /* Включаем границы и отступы в общую ширину и высоту */
-    flex: 1; /* Заголовок занимает всю доступную ширину */
+    margin: 0;
 }
 
 /* Основные стили для изображения в посте */
