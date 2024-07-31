@@ -230,6 +230,7 @@ body {
     justify-content: center;
     align-items: center; /* Центрирование изображения по вертикали */
     background: transparent;
+    border-top: 1px solid var(--main-color);
 }
 
 /* Обнуление отступов между заголовком и изображением */
@@ -300,6 +301,7 @@ body {
 
 .read-more {
     color: var(--main-color);
+    font-size: 14px;
     text-decoration: none;
     cursor: pointer;
     display: flex;
@@ -331,7 +333,6 @@ body {
     width: 100%;
     max-width: 300px; /* Ширина сайдбара */
     margin-right: 45px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
     border-radius: 10px; /* Закругление углов */
 }
 
