@@ -109,7 +109,7 @@ body {
 /* Кнопка "Наверх" */
 .back-to-top {
     position: fixed;
-    bottom: 100px;
+    bottom: 80px;
     right: 18px;
     color: var(--main-color);
     width: 40px;
@@ -223,7 +223,7 @@ body {
 
 /* Основные стили для изображения в посте */
 .post-image-wrapper {
-    margin-top: 16px;
+    margin-top: 4px;
 max-height: 600px;
 max-width: 500px;
 }
