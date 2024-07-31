@@ -314,7 +314,7 @@ body {
 }
 
 .read-more::after {
-    content: 'Прокомментировать';
+    content: 'КОММЕНТИРОВАТЬ';
     color: var(--main-color);
     font-size: 14px;
     font-weight: bold;
@@ -339,28 +339,6 @@ body {
     max-width: 300px; /* Ширина сайдбара */
     margin-right: 45px;
     border-radius: 10px; /* Закругление углов */
-}
-
-/* Иконки социальных сетей в сайдбаре */
-.social-icons-sidebar {
-    display: flex;
-    justify-content: center; /* Центрирование всех элементов по горизонтали */
-    gap: 16px;
-    margin-top: 8px;
-}
-
-.social-icons-sidebar a {
-    display: flex;
-    justify-content: center;  /* Центрирование контента внутри ссылки по горизонтали */
-    align-items: center;
-    font-size: 1.2rem;
-    color: #ffb0e2;
-    text-decoration: none; 
-    transition: color 0.3s;
-}
-
-.social-icons-sidebar a:hover {
-    color: #e699c7;
 }
 
 /* Стили для контейнеров логотипа, заголовка, описания и меню */
@@ -499,6 +477,36 @@ border-radius: 10px;
 .sub-menu a:hover {
     background-color: #222;
     color: var(--main-color-dark);
+}
+
+/* Стили для линии-разделителя */
+.separator {
+    width: 100%;
+    height: 1px; /* Толщина линии */
+    background-color: #ffb0e2; /* Цвет линии */
+    margin: 0; /* Убираем отступы */
+}
+
+/* Иконки социальных сетей в сайдбаре */
+.social-icons-sidebar {
+    display: flex;
+    justify-content: center; /* Центрирование всех элементов по горизонтали */
+    gap: 16px;
+    margin-top: 8px;
+}
+
+.social-icons-sidebar a {
+    display: flex;
+    justify-content: center;  /* Центрирование контента внутри ссылки по горизонтали */
+    align-items: center;
+    font-size: 1.2rem;
+    color: #ffb0e2;
+    text-decoration: none; 
+    transition: color 0.3s;
+}
+
+.social-icons-sidebar a:hover {
+    color: #e699c7;
 }
 
 /* Медиа-запрос для устройств с шириной экрана 768px и более */
