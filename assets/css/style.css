@@ -229,11 +229,7 @@ body {
     background: transparent;
 }
 
-/* Обнуление отступов между заголовком и изображением */
-.post-header, .post-image-wrapper {
-    margin: 0;
-    padding: 0;
-}
+
 
 /* Стили для изображения поста */
 .post-image-wrapper img {
