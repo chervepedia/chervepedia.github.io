@@ -6,6 +6,17 @@ image: "assets/images/IMG_20240811_155802_031.jpg"
 description: "Суджа. Курская область. Освобождение Курской области от российских оккупантов. Суджа - это Украина"
 ---
 
+<style>
+  .video-container {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  video {
+    width: 100%;
+    height: auto;
+  }
+</style>
+
 <p align="center" class="video-container">
   <video controls>
     <source src="https://github.com/chervepedia/chervepedia.github.io/raw/main/assets/videos/VID_20240811_154322_983.mp4" type="video/mp4">
