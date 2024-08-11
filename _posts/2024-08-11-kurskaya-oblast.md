@@ -6,30 +6,30 @@ image: "assets/images/IMG_20240811_155802_031.jpg"
 description: "Суджа. Курская область. Освобождение Курской области от российских оккупантов. Суджа - это Украина"
 ---
 
-<div class="video-container">
+<p align="center" class="video-container">
   <video controls>
     <source src="https://github.com/chervepedia/chervepedia.github.io/raw/main/assets/videos/VID_20240811_154322_983.mp4" type="video/mp4">
     Ваш браузер не поддерживает элемент <code>video</code>.
   </video>
-</div>
+</p>
 
-<div class="video-container">
+<p align="center" class="video-container">
   <video controls>
     <source src="https://github.com/chervepedia/chervepedia.github.io/raw/main/assets/videos/VID_20240811_154343_303.mp4" type="video/mp4">
     Ваш браузер не поддерживает элемент <code>video</code>.
   </video>
-</div>
+</p>
 
-<div class="video-container">
+<p align="center" class="video-container">
   <video controls>
     <source src="https://github.com/chervepedia/chervepedia.github.io/raw/main/assets/videos/VID_20240811_154404_487.mp4" type="video/mp4">
     Ваш браузер не поддерживает элемент <code>video</code>.
   </video>
-</div>
+</p>
 
-<div class="video-container">
+<p align="center" class="video-container">
   <video controls>
     <source src="https://github.com/chervepedia/chervepedia.github.io/raw/main/assets/videos/VID_20240811_154513_179.mp4" type="video/mp4">
     Ваш браузер не поддерживает элемент <code>video</code>.
   </video>
-</div>
+</p>
