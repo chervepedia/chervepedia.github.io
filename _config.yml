@@ -1,6 +1,13 @@
+# Основная информация о сайте
 title: ЧЕРВЕПЕДИЯ
-description: Червепедия – официальный вестник Черветреда на дваче. Тред посвящен риторике против России, анализу текущих событий и выражению антигосударственных и антипутинских настроений. Раздел /fag/
+description: >-
+  Червепедия – официальный вестник Черветреда на дваче. Тред посвящен риторике
+  против России, анализу текущих событий и выражению антигосударственных и
+  антипутинских настроений. Раздел /fag/
 
+# URL и базовая ссылка
+url: "https://chervepedia.github.io"
+baseurl: ""  # Поскольку сайт размещен на GitHub Pages, оставьте baseurl пустым
 
 # Настройки permalink
 permalink: /:categories/:year/:month/:day/:title/
@@ -8,17 +15,16 @@ permalink: /:categories/:year/:month/:day/:title/
 # Настройка меню
 menu:
   - title: Главная
-    url: /
+    url: "/"
     icon: fa-home
   - title: Меню
     icon: fa-bars
     sub_menu:
       - title: ОБР-тред
-        url: http://www1.2channel.moe/pol
-        target: _blank
+        url: "http://www1.2channel.moe/pol"
+        target: "_blank"
       - title: Черветред
-        url: /about
-      
+        url: "/about"
 
 # Социальные сети и контакты
 social:
@@ -46,7 +52,6 @@ plugins:
   - jekyll-admin
   - jekyll-paginate
   - jekyll-loading-lazy
-  
 
 # Настройки пагинации
 paginate: 5
