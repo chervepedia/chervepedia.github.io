@@ -1,7 +1,6 @@
 ---
 title: "Почему пидорахи такие?"
 layout: post
-date: 2023-07-02
 image: "assets/images/0764665c6e8f7f6bc46e2e2cbcfa251a-imagepng.png"
 description: "анализ тупости и нищеты"
 ---
