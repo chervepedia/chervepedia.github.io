@@ -79,21 +79,6 @@ body {
     border-radius: 10px; /* Закругление углов */
 }
 
-/* Скрыть содержимое поста, когда это встроенный Telegram пост */
-.telegram-post {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%; /* Для адаптации под размеры контейнера */
-    max-width: 500px; /* Максимальная ширина блока поста */
-    overflow: hidden; /* Прятать лишнее содержимое */
-}
-
-/* Прятать остальные элементы поста, кроме встроенного */
-.telegram-post ~ .post-content, 
-.telegram-post ~ .post-footer {
-    display: none; /* Скрыть содержимое поста и футер */
-}
 
 /* Название сайта */
 .site-name {
