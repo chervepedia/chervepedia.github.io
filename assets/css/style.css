@@ -49,6 +49,50 @@ body {
     height: 40px;
 }
 
+/* Стили для сайдбара */
+.sidebar {
+    background-color: #222;
+    text-align: center;
+    padding: 15px;
+    margin-bottom: 20px;
+    margin-top: 45px;
+    position: sticky;
+    top: 20px;
+    width: 100%;
+    max-width: 350px; /* Ширина сайдбара */
+    margin-right: 45px;
+    border-radius: 10px; /* Закругление углов */
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.5); /* Тень для сайдбара */
+}
+
+/* Стили для контейнеров логотипа, заголовка, описания и меню */
+.logo-container, .title-container, .description-container, .menu-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+/* Стили для заголовка */
+.title-container h1 {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--main-color);
+    text-align: left; /* Заголовок центрирован слева */
+    width: 100%; /* Полная ширина для корректного выравнивания */
+}
+
+/* Стили для описания */
+.description-container p {
+    font-size: 14px;
+    color: #888;
+    font-style: italic;
+    margin: 0;
+    padding: 0;
+    text-align: left; /* Описание центрировано слева, как текст постов */
+    width: 100%;
+}
+
 /* Стили для медиа в постах */
 .post-media-wrapper {
     width: 100%;
@@ -72,25 +116,18 @@ body {
     border-radius: 10px; /* Закругление углов */
 }
 
-/* Обёртка для встраиваемого контента */
-.embed-wrapper {
-    margin-top: 16px;
+/* Стили для изображений и оберток медиа */
+.post-image-wrapper {
+    position: relative;
+    max-width: 500px;
+    max-height: 600px;
     width: 100%;
-    border-radius: 10px; /* Закругление углов */
-}
-
-/* Иконки социальных сетей */
-.social-icons {
+    height: auto;
+    overflow: hidden;
     display: flex;
-    justify-content: space-around; /* или space-between */
-    width: 100%; /* Убедитесь, что контейнер занимает 100% ширины */
-}
-
-.social-icons a {
-    flex: 1; /* Заставьте иконки занимать равное пространство */
-    text-align: center; /* Центрирование иконок внутри ссылок */
-    color: var(--main-color);
-    transition: color 0.3s;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
 }
 
 /* Контактная информация */
@@ -120,8 +157,8 @@ body {
     align-items: center;
     cursor: pointer;
     background: #222;
-    border-radius: 8px; /* Закругление углов */
-    z-index: 10000; /* кнопка находится поверх всех элементов */
+    border-radius: 8px;
+    z-index: 10000;
 }
 
 .back-to-top i {
@@ -139,11 +176,11 @@ body {
     margin-top: 28px;
     margin-bottom: 40px;
     width: 100%;
-    max-width: 500px; /* Ширина пагинации */
+    max-width: 500px;
     margin-left: auto;
     margin-right: auto;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Тень */
-    border-radius: 10px; /* Закругление углов */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
 }
 
 .pagination a.fas {
@@ -151,29 +188,11 @@ body {
     color: var(--main-color);
     cursor: pointer;
     text-decoration: none;
-    transition: color 0.3s; /* Плавный переход для цвета */
+    transition: color 0.3s;
 }
 
 .pagination a.fas:hover {
     color: var(--main-color-dark);
-}
-
-.page-numbers {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-}
-
-.page-number {
-    font-size: 16px;
-    margin: 0 10px;
-    color: #888;
-    text-decoration: none;
-}
-
-.page-number.current {
-    color: #fff;
 }
 
 /* Стили для контента */
@@ -183,8 +202,8 @@ body {
     flex-direction: column;
     align-items: center;
     width: 100%;
-    max-width: 500px; /* Ширина контента */
-    padding-bottom: 50px; /* Уменьшен отступ снизу */
+    max-width: 500px;
+    padding-bottom: 50px;
     margin-top: 24px;
 }
 
@@ -196,8 +215,61 @@ body {
     width: 100%;
     position: relative;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
-    max-width: 500px; /* Ширина постов */
-    border-radius: 10px; /* Закругление углов */
+    max-width: 500px;
+    border-radius: 10px;
+}
+
+/* Остальные стили остаются прежними... */
+
+/* Медиа-запросы для адаптивности */
+@media (min-width: 768px) {
+    .container {
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-start;
+        max-width: 90%;
+    }
+
+    .sidebar {
+        margin-right: 60px;
+        margin-top: 45px;
+        top: 0;
+        width: 100%;
+        max-width: 350px;
+    }
+
+    .content {
+        max-width: 500px;
+        margin-top: 0;
+    }
+
+    .back-to-top {
+        bottom: 100px;
+        right: 40px;
+    }
+}
+
+@media (max-width: 767px) {
+    .sidebar {
+        width: 100%;
+        position: relative;
+        top: 0;
+        max-width: 300px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 4px;
+    }
+
+    .content {
+        width: 100%;
+        margin-top: 20px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .footer {
+        display: none;
+    }
 }
 
 /* Заголовок поста */
