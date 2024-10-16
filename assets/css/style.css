@@ -80,22 +80,22 @@ body {
 }
 
 
-/* Стили для встроенных Telegram постов */
+/* Скрыть заголовок и футер только у постов с встраиваемым контентом */
+.embed-wrapper .post-header,
+.embed-wrapper .post-footer {
+    display: none; /* Скрывает заголовок и футер */
+}
+
+/* Скрыть заголовок и футер только у постов с встраиваемым контентом */
 .embed-wrapper {
-    margin-top: 24px; /* Отступ сверху */
-    margin-bottom: 24px; /* Отступ снизу */
-    width: 100%; /* Полная ширина контейнера */
-    border-radius: 10px; /* Закругление углов */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-/* Убрать отображение заголовка и футера */
-.post-header, .post-footer {
-    display: none; /* Скрываем заголовок и футер поста */
-}
-
-/* Убираем отступы для .post, чтобы избежать лишних отступов */
-.post {
-    padding: 0; /* Убираем отступы */
+.embed-wrapper .post-header,
+.embed-wrapper .post-footer {
+    display: none; /* Скрывает заголовок и футер */
 }
 
 /* Название сайта */
