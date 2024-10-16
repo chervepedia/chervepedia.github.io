@@ -49,55 +49,7 @@ body {
     height: 40px;
 }
 
-/* Стили для сайдбара */
-.sidebar {
-    background-color: #222;
-    text-align: center;
-    padding: 15px;
-    margin-bottom: 20px;
-    margin-top: 45px;
-    position: sticky;
-    top: 20px;
-    width: 100%;
-    max-width: 350px; /* Ширина сайдбара */
-    margin-right: 45px;
-    border-radius: 10px; /* Закругление углов */
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.5); /* Тень для сайдбара */
-}
-
-/* Стили для контейнеров логотипа, заголовка, описания и меню */
-.logo-container, .title-container, .description-container, .menu-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 10px;
-}
-
-/* Стили для заголовка */
-.title-container h1 {
-    font-size: 24px;
-    font-weight: bold;
-    color: var(--main-color);
-    text-align: center; /* Центрирование заголовка */
-    width: 100%; /* Полная ширина для корректного выравнивания */
-}
-.title-container {
-    display: flex;
-    justify-content: center; /* Центрирование содержимого */
-}
-
-/* Стили для описания */
-.description-container p {
-    font-size: 14px;
-    color: #888;
-    font-style: italic;
-    margin: 0;
-    padding: 0;
-    text-align: left; /* Описание центрировано слева */
-    width: 100%;
-}
-
-/* Стили для медиа в постах */
+/* Стили для обёрток медиа в постах */
 .post-media-wrapper {
     width: 100%;
     margin-top: 16px;
@@ -120,26 +72,36 @@ body {
     border-radius: 10px; /* Закругление углов */
 }
 
-/* Стили для изображений и оберток медиа */
-.post-image-wrapper {
-    position: relative;
-    max-width: 500px;
-    max-height: 600px;
+/* Обёртка для встраиваемого контента */
+.embed-wrapper {
+    margin-top: 16px;
     width: 100%;
-    height: auto;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: transparent;
+    border-radius: 10px; /* Закругление углов */
 }
+
+
+/* Иконки социальных сетей */
+.social-icons {
+    display: flex;
+    justify-content: space-around; /* или space-between */
+    width: 100%; /* контейнер занимает 100% ширины */
+}
+
+.social-icons a {
+    flex: 1; /*  иконки занимают равное пространство */
+    text-align: center; /* Центрирование иконок внутри ссылок */
+    color: var(--main-color);
+    transition: color 0.3s;
+}
+
+
 
 /* Контактная информация */
 .contact-info {
     display: flex;
     align-items: center;
-    justify-content: center; /* Центрирование контактной информации */
-    width: 100%; /* Ширина контейнера должна быть полной */
+    justify-content: flex-end;
+    width: 50%;
 }
 
 .contact-info i {
@@ -161,8 +123,8 @@ body {
     align-items: center;
     cursor: pointer;
     background: #222;
-    border-radius: 8px;
-    z-index: 10000;
+    border-radius: 8px; /* Закругление углов */
+    z-index: 10000; /* кнопка находится поверх всех элементов */
 }
 
 .back-to-top i {
@@ -180,11 +142,11 @@ body {
     margin-top: 28px;
     margin-bottom: 40px;
     width: 100%;
-    max-width: 500px;
+    max-width: 500px; /* Ширина пагинации */
     margin-left: auto;
     margin-right: auto;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Тень */
+    border-radius: 10px; /* Закругление углов */
 }
 
 .pagination a.fas {
@@ -192,11 +154,29 @@ body {
     color: var(--main-color);
     cursor: pointer;
     text-decoration: none;
-    transition: color 0.3s;
+    transition: color 0.3s; /* Плавный переход для цвета */
 }
 
 .pagination a.fas:hover {
     color: var(--main-color-dark);
+}
+
+.page-numbers {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.page-number {
+    font-size: 16px;
+    margin: 0 10px;
+    color: #888;
+    text-decoration: none;
+}
+
+.page-number.current {
+    color: #fff;
 }
 
 /* Стили для контента */
@@ -206,8 +186,8 @@ body {
     flex-direction: column;
     align-items: center;
     width: 100%;
-    max-width: 500px;
-    padding-bottom: 50px;
+    max-width: 500px; /* Ширина контента */
+    padding-bottom: 50px; /* Уменьшен отступ снизу */
     margin-top: 24px;
 }
 
@@ -219,61 +199,8 @@ body {
     width: 100%;
     position: relative;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
-    max-width: 500px;
-    border-radius: 10px;
-}
-
-/* Остальные стили остаются прежними... */
-
-/* Медиа-запросы для адаптивности */
-@media (min-width: 768px) {
-    .container {
-        flex-direction: row;
-        justify-content: center;
-        align-items: flex-start;
-        max-width: 90%;
-    }
-
-    .sidebar {
-        margin-right: 60px;
-        margin-top: 45px;
-        top: 0;
-        width: 100%;
-        max-width: 350px;
-    }
-
-    .content {
-        max-width: 500px;
-        margin-top: 0;
-    }
-
-    .back-to-top {
-        bottom: 100px;
-        right: 40px;
-    }
-}
-
-@media (max-width: 767px) {
-    .sidebar {
-        width: 100%;
-        position: relative;
-        top: 0;
-        max-width: 300px;
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 4px;
-    }
-
-    .content {
-        width: 100%;
-        margin-top: 20px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .footer {
-        display: none;
-    }
+    max-width: 500px; /* Ширина постов */
+    border-radius: 10px; /* Закругление углов */
 }
 
 /* Заголовок поста */
@@ -304,6 +231,7 @@ body {
     background: transparent;
 }
 
+
 /* Стили для изображения поста */
 .post-image-wrapper img {
     max-width: 100%; /* Ограничивает ширину изображения размером контейнера */
@@ -311,8 +239,7 @@ body {
     width: auto; /* Автоматическая ширина, сохраняет пропорции */
     height: auto; /* Автоматическая высота, сохраняет пропорции */
     object-fit: contain; /* Сохраняет пропорции изображения и не обрезает его */
-}
-
+    
 /* Стили для обёртки видео */
 .video-container {
     width: 100%; /* Видео будет подстраиваться под ширину блока поста */
@@ -328,6 +255,9 @@ body {
     height: 500px; /* Фиксированная высота видео */
     object-fit: cover; /* Сохранение пропорций, обрезая изображение при необходимости */
     border-radius: 10px; /* Закругление углов */
+}
+
+
 }
 
 /* Содержимое поста */
@@ -644,20 +574,6 @@ border-radius: 10px;
         margin-left: auto;
         margin-right: auto;
     }
-
-/* Контактная информация */
-.contact-info {
-    display: flex;
-    align-items: center;
-    justify-content: center; /* Центрирование контактной информации */
-    width: 100%; /* Ширина контейнера должна быть полной */
-}
-
-.contact-info i {
-    font-size: 20px;
-    margin-right: 10px;
-    color: var(--main-color);
-}
 
     .footer {
         display: none; /* Прячем футер в мобильной версии */
