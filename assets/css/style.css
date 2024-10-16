@@ -80,24 +80,6 @@ body {
 }
 
 
-/* Скрыть заголовок и футер только у постов с встраиваемым контентом */
-.embed-wrapper .post-header,
-.embed-wrapper .post-footer {
-    display: none; /* Скрывает заголовок и футер */
-}
-
-/* Скрыть заголовок и футер только у постов с встраиваемым контентом */
-.embed-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.embed-wrapper .post-header,
-.embed-wrapper .post-footer {
-    display: none; /* Скрывает заголовок и футер */
-}
-
 /* Название сайта */
 .site-name {
     margin-left: 10px;
