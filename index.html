@@ -7,6 +7,13 @@ pagination:
 <div class="content">
     {% for post in paginator.posts %}
     <div class="post">
+        <div class="post-header">
+            {% unless post.telegram %}
+            <div class="post-title">
+                {{ post.title }}
+            </div>
+            {% endunless %}
+        </div>
         <div class="post-media-wrapper">
             {% if post.video %}
                 <div class="video-wrapper">
