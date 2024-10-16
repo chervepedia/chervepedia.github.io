@@ -81,10 +81,20 @@ body {
 
 
 /* Иконки социальных сетей */
-.social-icons a {
-    margin: 0 10px;
-    color: var(--main-color);
+.social-icons {
+    display: flex;
+    justify-content: space-around; /* или space-between */
+    width: 100%; /* Убедитесь, что контейнер занимает 100% ширины */
 }
+
+.social-icons a {
+    flex: 1; /* Заставьте иконки занимать равное пространство */
+    text-align: center; /* Центрирование иконок внутри ссылок */
+    color: var(--main-color);
+    transition: color 0.3s;
+}
+
+
 
 /* Контактная информация */
 .contact-info {
