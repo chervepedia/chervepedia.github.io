@@ -8,10 +8,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ site.title }}</title>
 
-<meta name="google-site-verification" content="tN96XB8m6AEHJmdO6LRk31okxS0qyha49iAW7u2G5-c" />
-
-<meta name="msvalidate.01" content="F66D32F3B0143ED19880B22155894864" />
-
+  <meta name="google-site-verification" content="tN96XB8m6AEHJmdO6LRk31okxS0qyha49iAW7u2G5-c" />
+  <meta name="msvalidate.01" content="F66D32F3B0143ED19880B22155894864" />
 
   {% if page.url == '/' %}
     <!-- Open Graph Meta Tags for the Home Page -->
@@ -45,9 +43,7 @@
   <!-- Additional Meta Tags -->
   <meta name="description" content="{{ site.description }}" />
 
- 
-
- <!-- Yandex.Metrika counter -->
+  <!-- Yandex.Metrika counter -->
   <script type="text/javascript">
     (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
     m[i].l=1*new Date();
@@ -110,8 +106,10 @@
                   {% if item.icon %}
                     <i class="fas {{ item.icon }}"></i>
                   {% endif %}
-                  {% if item.title != "Главная" and item.title != "Меню" %}
-                    {{ item.title }}
+                  {% if item.title != "Главная" %}
+                    {% if item.title != "Меню" %}
+                      {{ item.title }}
+                    {% endif %}
                   {% endif %}
                 </a>
               </div>
@@ -177,6 +175,7 @@
     </div>
     <div class="contact-info">
       {% if site.contact.phone != "" %}
+        <i class="fas fa-phone-alt"></i> {{ site.contact.phone }}
         <i class="fas fa-phone-alt"></i> {{ site.contact.phone }}
       {% endif %}
       {% if site.contact.address != "" %}
