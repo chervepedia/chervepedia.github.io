@@ -79,7 +79,6 @@ body {
     border-radius: 10px; /* Закругление углов */
 }
 
-
 /* Название сайта */
 .site-name {
     margin-left: 10px;
@@ -191,7 +190,7 @@ body {
 /* Стили для постов */
 .post {
     background-color: #222;
-    margin-bottom: 24px;
+    margin-bottom: 32px; /* Увеличен отступ между постами */
     padding: 0;
     width: 100%;
     position: relative;
@@ -203,7 +202,7 @@ body {
 /* Заголовок поста */
 .post-header {
     padding: 10px 15px;
-    border-radius: 10px, 10px, 0px, 0px;
+    border-radius: 10px 10px 0 0; /* Правильное закругление углов */
     border-bottom: 1px groove var(--main-color);
 }
 
@@ -228,7 +227,6 @@ body {
     background: transparent;
 }
 
-
 /* Стили для изображения поста */
 .post-image-wrapper img {
     max-width: 100%; /* Ограничивает ширину изображения размером контейнера */
@@ -236,7 +234,8 @@ body {
     width: auto; /* Автоматическая ширина, сохраняет пропорции */
     height: auto; /* Автоматическая высота, сохраняет пропорции */
     object-fit: contain; /* Сохраняет пропорции изображения и не обрезает его */
-    
+}
+
 /* Стили для обёртки видео */
 .video-container {
     width: 100%; /* Видео будет подстраиваться под ширину блока поста */
@@ -252,9 +251,6 @@ body {
     height: 500px; /* Фиксированная высота видео */
     object-fit: cover; /* Сохранение пропорций, обрезая изображение при необходимости */
     border-radius: 10px; /* Закругление углов */
-}
-
-
 }
 
 /* Содержимое поста */
@@ -279,297 +275,7 @@ body {
     border-top: 1px solid var(--main-color);
     position: relative;
     overflow: hidden;
-    border-radius: 0px 0px 10px 10px; /* Закругление углов */
+    border-radius: 0 0 10px 10px; /* Закругление углов */
 }
 
-/* Псевдоэлемент для градиента */
-.post-footer::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, rgba(255, 176, 226, 0.3), rgba(255, 176, 226, 0) 100%);
-    transition: transform 1s ease-in-out; /* Плавный переход */
-    z-index: 0; /* Псевдоэлемент находится под содержимым футера */
-    transform: translateX(-100%);
-    border-radius: 0px 0px 10px 10px; /* Закругление углов */
-}
-
-/* Анимация при наведении */
-.post-footer:hover::before {
-    transform: translateX(100%);
-}
-
-/* Содержание футера выше псевдоэлемента */
-.post-footer > * {
-    position: relative;
-    z-index: 0; /* Содержание футера находится над псевдоэлементом */
-}
-
-.read-more {
-    color: var(--main-color);
-    font-size: 14px;
-    text-decoration: none;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-}
-
-.read-more::after {
-    content: 'КОММЕНТИРОВАТЬ';
-    color: var(--main-color);
-    font-size: 14px;
-    font-weight: bold;
-    margin-left: 8px;
-}
-
-.post-date {
-    color: #888;
-    font-size: 14px;
-}
-
-/* Стили для сайдбара */
-.sidebar {
-    background-color: #222;
-    text-align: center;
-    padding: 15px;
-    margin-bottom: 20px;
-    margin-top: 45px;
-    position: sticky;
-    top: 20px;
-    width: 100%;
-    max-width: 350px; /* Ширина сайдбара */
-    margin-right: 45px;
-    border-radius: 10px; /* Закругление углов */
-}
-
-/* Стили для контейнеров логотипа, заголовка, описания и меню */
-.logo-container, .title-container, .description-container, .menu-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 10px;
-}
-
-/* Стили для логотипа */
-.logo-container img {
-    width: 128px;
-    height: 128px;
-    display: block;
-    margin: 0 auto;
-    border-radius: 10px; /* Закругление углов логотипа */
-}
-
-/* Стили для заголовка */
-.title-container h1 {
-    font-size: 24px;
-    font-weight: bold;
-    color: var(--main-color);
-    text-align: left; /* Текст в заголовке поста центрируется слева */
-}
-
-/* Стили для описания */
-.description-container p {
-    font-size: 14px;
-    color: #888;
-    font-style: italic;
-    margin: 0; /* Удаление внешних отступов у абзаца */
-    padding: 0; /* Удаление внутренних отступов у абзаца */
-}
-
-/* Стили для меню */
-.menu-container {
-    width: 100%;
-    max-width: 300px; /* Ширина меню */
-    border-image: linear-gradient(to right, var(--main-color), var(--main-color-dark)) 1;
-    display: flex; /* Используем flexbox */
-    justify-content: center; /* Выравнивание по горизонтали */
-}
-
-/* Сетка для меню */
-.menu-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
-    padding-top: 8px;
-    justify-content: center; /* Выравнивание элементов внутри grid по горизонтали */
-}
-
-.menu-item {
-    position: relative; /* Родительское позиционирование */
-}
-
-/* Ссылки меню */
-.menu-link {
-    display: block;
-    color: var(--main-color);
-    text-decoration: none;
-    padding: 10px;
-    text-align: center;
-    position: relative; /* Для позиционирования псевдо-элемента */
-    overflow: hidden; /* Скрываем градиент за пределами ссылки */
-    transition: color 0.3s;
-    border-radius: 10px; /* Закругление углов */
-}
-
-/* Скрыть текст для пункта меню с иконкой */
-.menu-link.menu-only-icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.menu-link.menu-only-icon span {
-    display: none;
-}
-
-
-/* Эффект нажатия */
-.menu-link:active {
-    transform: translateY(2px);
-    box-shadow: inset 0 4px 6px rgba(0, 0, 0, 0.3);
-border-radius: 10px;
-}
-
-/* Подменю */
-.sub-menu {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: #222;
-    width: auto; /* Автоматическая ширина подменю под содержимое */
-    min-width: 150px; /* Минимальная ширина, чтобы избежать слишком узкого подменю */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Тень для подменю */
-    padding: 0; /* Убираем отступы по умолчанию */
-    z-index: 1000; /* Устанавливаем z-index, чтобы подменю было поверх других элементов */
-    border-radius: 10px; /* Закругление углов подменю */
-}
-
-/* Подменю ссылки */
-.sub-menu a {
-    display: block;
-    color: #888;
-    text-decoration: none;
-    padding: 10px;
-    position: relative; /* Для позиционирования псевдо-элемента */
-    overflow: hidden; /* Скрываем градиент за пределами ссылки */
-    transition: color 0.3s;
-}
-
-/* Псевдоэлемент для градиента в подменю */
-.sub-menu a::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, rgba(255, 176, 226, 0.3), rgba(255, 176, 226, 0) 100%);
-    transition: transform 1s ease-in-out; /* Плавный переход */
-    z-index: 0; /* Псевдоэлемент находится под содержимым ссылки */
-    transform: translateX(-100%);
-}
-
-/* Анимация при наведении на ссылки подменю */
-.sub-menu a:hover::before {
-    transform: translateX(100%);
-}
-
-.sub-menu a:hover {
-    background-color: #222;
-    color: var(--main-color-dark);
-}
-
-/* Стили для линии-разделителя */
-.separator {
-    width: 100%;
-    height: 1px; /* Толщина линии */
-    background-color: #ffb0e2; /* Цвет линии */
-    margin: 0; /* Убираем отступы */
-}
-
-/* Иконки социальных сетей в сайдбаре */
-.social-icons-sidebar {
-    display: flex;
-    justify-content: center; /* Центрирование всех элементов по горизонтали */
-    gap: 16px;
-    margin-top: 8px;
-}
-
-.social-icons-sidebar a {
-    display: flex;
-    justify-content: center;  /* Центрирование контента внутри ссылки по горизонтали */
-    align-items: center;
-    font-size: 1.2rem;
-    color: #ffb0e2;
-    text-decoration: none; 
-    transition: color 0.3s;
-}
-
-.social-icons-sidebar a:hover {
-    color: #e699c7;
-}
-
-/* Медиа-запрос для устройств с шириной экрана 768px и более */
-@media (min-width: 768px) {
-    .container {
-        flex-direction: row;
-        justify-content: center;
-        align-items: flex-start;
-        max-width: 90%;
-    }
-
-    .sidebar {
-        margin-right: 60px; 
-        margin-top: 45px;
-        top: 0;
-        width: 100%;
-        max-width: 350px; /* Ширина сайдбара */
-    }
-
-    .content {
-        max-width: 500px; /* Ширина контента */
-        margin-top: 0;
-    }
-
-    .back-to-top {
-        bottom: 100px;
-        right: 40px;
-    }
-}
-
-/* Медиа-запрос для устройств с шириной экрана до 767px */
-@media (max-width: 767px) {
-    /* Стили для изображения */
-    .post-image-wrapper img {
-        max-width: 100%; 
-        max-height: 100%;
-        width: auto;  
-        height: auto; 
-        object-fit: contain; 
-    }
-
-    .sidebar {
-        width: 100%;
-        position: relative;
-        top: 0;
-        max-width: 300px;
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 4px;
-    }
-
-    .content {
-        width: 100%;
-        margin-top: 20px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .footer {
-        display: none; /* Прячем футер в мобильной версии */
-    }
-}
+/* П
