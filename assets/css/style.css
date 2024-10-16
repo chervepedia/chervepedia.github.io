@@ -278,4 +278,120 @@ body {
     border-radius: 0 0 10px 10px; /* Закругление углов */
 }
 
-/* П
+/* Подвал поста */
+.post-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    border-top: 1px solid var(--main-color);
+    position: relative;
+    overflow: hidden;
+    border-radius: 0 0 10px 10px; /* Закругление углов */
+}
+
+/* Стили для текста в футере поста */
+.post-footer-text {
+    font-size: 12px;
+    color: #ccc;
+}
+
+/* Стили для кнопок в футере поста */
+.post-footer-buttons {
+    display: flex;
+    gap: 10px; /* Расстояние между кнопками */
+}
+
+/* Стили для ссылок на кнопки */
+.post-footer-button {
+    background-color: var(--main-color);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.post-footer-button:hover {
+    background-color: var(--main-color-dark);
+}
+
+/* Стили для заголовков поста */
+.post-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--main-color);
+    margin: 0;
+}
+
+/* Стили для текста поста */
+.post-text {
+    font-size: 16px;
+    color: #eee;
+    line-height: 1.6;
+}
+
+/* Стили для изображений в постах */
+.post-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px; /* Закругление углов */
+}
+
+/* Отступы для блоков с медиа-контентом */
+.media-block {
+    margin: 20px 0; /* Отступ сверху и снизу */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Стили для заголовков разделов */
+.section-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--main-color);
+    margin: 20px 0; /* Отступы сверху и снизу */
+}
+
+/* Анимация для плавного появления постов */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.post {
+    animation: fadeIn 0.5s ease-in; /* Применяем анимацию к посту */
+}
+
+/* Адаптивные стили для мобильных устройств */
+@media (max-width: 600px) {
+    .container {
+        padding: 0 10px;
+    }
+
+    .post {
+        margin-bottom: 20px; /* Меньший отступ между постами на мобильных */
+    }
+
+    .footer {
+        flex-direction: column; /* Переключаемся на вертикальное расположение */
+        align-items: flex-start; /* Выравнивание по левому краю */
+    }
+
+    .contact-info {
+        width: 100%;
+        justify-content: space-between; /* Пространство между контактами */
+    }
+
+    .back-to-top {
+        bottom: 20px; /* Меньший отступ снизу */
+        right: 10px; /* Меньший отступ справа */
+    }
+}
