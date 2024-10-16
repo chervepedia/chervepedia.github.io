@@ -6,46 +6,46 @@ pagination:
 
 <div class="content">
     {% for post in paginator.posts %}
-    <div class="post">
-        <div class="post-header">
-            <div class="post-title">
-                {{ post.title }}
+    {% if post.telegram %}
+        <div class="post-telegram-wrapper">
+            <script async src="https://telegram.org/js/telegram-widget.js?22" 
+                    data-telegram-post="{{ post.telegram | replace: 'https://t.me/', '' }}" 
+                    data-width="100%" 
+                    data-userpic="false" 
+                    data-color="FFB0E2" 
+                    data-dark="1"></script>
+        </div>
+    {% else %}
+        <div class="post">
+            <div class="post-header">
+                <div class="post-title">
+                    {{ post.title }}
+                </div>
+            </div>
+            <div class="post-media-wrapper">
+                {% if post.video %}
+                    <div class="video-wrapper">
+                        <iframe src="{{ post.video }}" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                {% else %}
+                    <div class="post-image-wrapper">
+                        <img src="{{ post.image | absolute_url }}" alt="{{ post.title }}">
+                    </div>
+                {% endif %}
+            </div>
+            
+            <div class="post-content">
+                {{ post.content }}
+            </div>
+            
+            <div class="post-footer">
+                <div class="read-more" data-url="{{ post.url | absolute_url }}">
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+                <div class="post-date">{{ post.date | date: "%d.%m.%Y" }}</div>
             </div>
         </div>
-        <div class="post-media-wrapper">
-            {% if post.telegram %}
-                <div class="post-telegram-wrapper">
-                    <script async src="https://telegram.org/js/telegram-widget.js?22" 
-                            data-telegram-post="{{ post.telegram | replace: 'https://t.me/', '' }}" 
-                            data-width="100%" 
-                            data-userpic="false" 
-                            data-color="FFB0E2" 
-                            data-dark="1"></script>
-                </div>
-            {% elsif post.video %}
-                <div class="video-wrapper">
-                    <iframe src="{{ post.video }}" frameborder="0" allowfullscreen></iframe>
-                </div>
-            {% else %}
-                <div class="post-image-wrapper">
-                    <img src="{{ post.image | absolute_url }}" alt="{{ post.title }}">
-                </div>
-            {% endif %}
-        </div>
-        
-        {% unless post.telegram %}
-        <div class="post-content">
-            {{ post.content }}
-        </div>
-        {% endunless %}
-        
-        <div class="post-footer">
-            <div class="read-more" data-url="{{ post.url | absolute_url }}">
-                <i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="post-date">{{ post.date | date: "%d.%m.%Y" }}</div>
-        </div>
-    </div>
+    {% endif %}
     {% endfor %}
 </div>
 
