@@ -80,18 +80,6 @@ body {
 }
 
 
-/* Стили для встроенных постов Telegram */
-.post-telegram-wrapper {
-    margin-bottom: 20px; /* Отступ снизу на 20 пикселей */
-}
-
-/* Название сайта */
-.site-name {
-    margin-left: 10px;
-    color: var(--main-color);
-    font-size: 18px;
-}
-
 /* Иконки социальных сетей */
 .social-icons a {
     margin: 0 10px;
