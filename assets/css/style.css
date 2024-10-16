@@ -642,6 +642,20 @@ border-radius: 10px;
         margin-right: auto;
     }
 
+/* Контактная информация */
+.contact-info {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Центрирование контактной информации */
+    width: 100%; /* Ширина контейнера должна быть полной */
+}
+
+.contact-info i {
+    font-size: 20px;
+    margin-right: 10px;
+    color: var(--main-color);
+}
+
     .footer {
         display: none; /* Прячем футер в мобильной версии */
     }
