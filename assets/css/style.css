@@ -452,26 +452,29 @@ body {
     padding: 0; /* Удаление внутренних отступов у абзаца */
 }
 
-/* Стили для меню */
+/* Стили для контейнера меню */
 .menu-container {
     width: 100%;
     max-width: 300px; /* Ширина меню */
+    margin: 0 auto; /* Центрирование контейнера по горизонтали */
     border-image: linear-gradient(to right, var(--main-color), var(--main-color-dark)) 1;
-    display: flex; /* Используем flexbox */
-    justify-content: center; /* Выравнивание по горизонтали */
+    display: flex;
+    justify-content: center; /* Центрирование содержимого контейнера */
 }
 
 /* Сетка для меню */
 .menu-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr); /* Две колонки */
     gap: 10px;
     padding-top: 8px;
-    justify-content: center; /* Выравнивание элементов внутри grid по горизонтали */
+    justify-items: center; /* Центрирование каждого элемента по горизонтали внутри grid */
 }
 
+/* Элементы меню */
 .menu-item {
-    position: relative; /* Родительское позиционирование */
+    position: relative;
+    text-align: center; /* Текст внутри элементов меню также будет центрирован */
 }
 
 /* Ссылки меню */
