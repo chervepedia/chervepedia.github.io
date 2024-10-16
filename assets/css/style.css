@@ -78,7 +78,7 @@ body {
     font-size: 24px;
     font-weight: bold;
     color: var(--main-color);
-    text-align: left; /* Заголовок центрирован слева */
+    text-align: center; /* Заголовок центрирован */
     width: 100%; /* Полная ширина для корректного выравнивания */
 }
 
