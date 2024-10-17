@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-
-{% seo %}
+  {% seo %}
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -69,7 +68,6 @@
   {% if page.css %}
     <link rel="stylesheet" href="{{ base_url }}/assets/css/{{ page.css }}">
   {% endif %}
-
 </head>
 <body>
   <div class="container">
@@ -101,12 +99,13 @@
                 </div>
               </div>
             {% else %}
-              <a href="{{ item.url }}" class="menu-link">
-  {% if item.icon %}
-    <i class="fas {{ item.icon }}"></i>
-  {% endif %}
-  {{ item.title }}
-</a>
+              <div class="menu-item">
+                <a href="{{ item.url }}" class="menu-link">
+                  {% if item.icon %}
+                    <i class="fas {{ item.icon }}"></i>
+                  {% endif %}
+                  {{ item.title }}
+                </a>
               </div>
             {% endif %}
           {% endfor %}
@@ -170,15 +169,15 @@
     </div>
     <div class="contact-info">
       {% if site.contact.phone != "" %}
-<i class="fas fa-phone-alt"></i> {{ site.contact.phone }}
+        <i class="fas fa-phone-alt"></i> {{ site.contact.phone }}
       {% endif %}
       {% if site.contact.address != "" %}
         <i class="fas fa-map-marker-alt" style="margin-left: 20px;"></i> {{ site.contact.address }}
       {% endif %}
     </div>
   </div>
-
   <div class="back-to-top">
+    <
     <i class="fas fa-chevron-up"></i>
   </div>
 
