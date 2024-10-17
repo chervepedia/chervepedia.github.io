@@ -101,15 +101,12 @@
                 </div>
               </div>
             {% else %}
-              <div class="menu-item">
-                <a href="{{ item.url }}" class="menu-link {{ 'menu-only-icon' if item.title == 'Главная' or item.title == 'Меню' }}">
-                  {% if item.icon %}
-                    <i class="fas {{ item.icon }}"></i>
-                  {% endif %}
-                  {% if item.title != "Главная" and item.title != "Меню" %}
-                    {{ item.title }}
-                  {% endif %}
-                </a>
+              <a href="{{ item.url }}" class="menu-link">
+  {% if item.icon %}
+    <i class="fas {{ item.icon }}"></i>
+  {% endif %}
+  {{ item.title }}
+</a>
               </div>
             {% endif %}
           {% endfor %}
