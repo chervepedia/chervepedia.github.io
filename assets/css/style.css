@@ -391,6 +391,7 @@ body {
     border-image: linear-gradient(to right, var(--main-color), var(--main-color-dark)) 1;
     display: flex;
     justify-content: center; /* Центрирование содержимого контейнера */
+    background-color: #ffc0cb; /* Розовый цвет контейнера */
 }
 
 /* Сетка для меню */
