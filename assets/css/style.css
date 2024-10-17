@@ -555,6 +555,20 @@ border-radius: 10px;
         bottom: 100px;
         right: 40px;
     }
+
+
+/* Стили для контента */
+.content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 500px; /* Ширина контента */
+    padding-bottom: 50px; /* Уменьшен отступ снизу */
+    margin-top: 45px;
+}
+
 }
 
 /* Медиа-запрос для устройств с шириной экрана до 767px */
