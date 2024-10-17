@@ -81,29 +81,25 @@ body {
 
 
 
-/* Контейнер с закруглением */
-.container {
-    background-color: var(--main-color); /* применяем цвет */
-    border-radius: 10px; /* закругляем углы */
-    padding: 20px; /* добавляем отступы для контента */
-}
-
 /* Иконки социальных сетей */
 .social-icons {
     display: flex;
     justify-content: space-around; /* или space-between */
     width: 100%; /* контейнер занимает 100% ширины */
+    background-color: var(--main-color); /* Добавлен задний фон */
+    border-radius: 10px; /* Закругленные углы */
+    padding: 10px; /* Внутренние отступы для красоты */
 }
 
 .social-icons a {
-    flex: 1; /* иконки занимают равное пространство */
+    flex: 1; /* Иконки занимают равное пространство */
     text-align: center; /* Центрирование иконок внутри ссылок */
-    color: #222; /* цвет иконок */
+    color: #222; /* Цвет иконок */
     transition: color 0.3s;
 }
 
 .social-icons a:hover {
-    color: var(--main-color); /* цвет иконок при наведении */
+    color: #ffb0e2; /* Добавляем эффект изменения цвета при наведении */
 }
 
 
