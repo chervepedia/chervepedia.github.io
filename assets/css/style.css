@@ -80,6 +80,14 @@ body {
 }
 
 
+
+/* Контейнер с закруглением */
+.container {
+    background-color: var(--main-color); /* применяем цвет */
+    border-radius: 10px; /* закругляем углы */
+    padding: 20px; /* добавляем отступы для контента */
+}
+
 /* Иконки социальных сетей */
 .social-icons {
     display: flex;
@@ -88,10 +96,14 @@ body {
 }
 
 .social-icons a {
-    flex: 1; /*  иконки занимают равное пространство */
+    flex: 1; /* иконки занимают равное пространство */
     text-align: center; /* Центрирование иконок внутри ссылок */
-    color: var(--main-color);
+    color: #222; /* цвет иконок */
     transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: var(--main-color); /* цвет иконок при наведении */
 }
 
 
@@ -383,16 +395,15 @@ body {
     text-align: left; /* Выровнять текст по левому краю */
 }
 
-/* Стили для контейнера меню */
-.menu-container {
-    width: 100%;
-    max-width: 300px; /* Ширина меню */
-    margin: 0 auto; /* Центрирование контейнера по горизонтали */
-    border-image: linear-gradient(to right, var(--main-color), var(--main-color-dark)) 1;
-    display: flex;
-    justify-content: center; /* Центрирование содержимого контейнера */
-    background-color: #ffc0cb; /* Розовый цвет контейнера */
+/* Стили для описания */
+.description-container p {
+    font-size: 14px;
+    color: #888;
+    font-style: italic;
+    margin: 0; /* Удаление внешних отступов у абзаца */
+    padding: 0; /* Удаление внутренних отступов у абзаца */
 }
+
 
 /* Сетка для меню */
 .menu-grid {
