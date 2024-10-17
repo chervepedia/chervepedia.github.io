@@ -195,7 +195,7 @@ body {
     align-items: center;
     width: 100%;
     max-width: 500px; /* Ширина контента */
-    padding-bottom: 50px; /* Уменьшен отступ снизу */
+    padding-bottom: 0px; /* Уменьшен отступ снизу */
     
 }
 
