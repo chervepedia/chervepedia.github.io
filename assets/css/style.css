@@ -196,13 +196,13 @@ body {
     width: 100%;
     max-width: 500px; /* Ширина контента */
     padding-bottom: 50px; /* Уменьшен отступ снизу */
-margin-top: 45px;
-    
+    margin-top: 24px;
 }
 
 /* Стили для постов */
 .post {
     background-color: #222;
+    margin-top: 45px;
     margin-bottom: 24px;
     padding: 0;
     width: 100%;
@@ -348,14 +348,14 @@ margin-top: 45px;
     text-align: center;
     padding: 15px;
     margin-bottom: 20px;
-    margin-top: 45px;
+margin-top: 45px;
     position: sticky;
     top: 20px;
     width: 100%;
-    max-width: 350px; /* Ширина сайдбара */
+    max-width: 300px; /* Ширина сайдбара */
     margin-right: 45px;
-    border-radius: 10px; /* Закругление углов */
-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Тень для сайдбара */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 15px; /* Закругление краёв */
 }
 
 /* Стили для контейнеров логотипа, заголовка, описания и меню */
@@ -537,44 +537,25 @@ border-radius: 10px;
         justify-content: center;
         align-items: flex-start;
         max-width: 90%;
-margin-top: 45px;
     }
 
-  /* Стили для сайдбара */
-.sidebar {
-    background-color: #222;
-    text-align: center;
-    padding: 15px;
-    margin-bottom: 20px;
-    margin-top: 45px;
-    position: sticky;
-    top: 20px;
-    width: 100%;
-    max-width: 350px; /* Ширина сайдбара */
-    margin-right: 45px;
-    border-radius: 10px; /* Закругление углов */
-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Тень для сайдбара */
-}
+    .sidebar {
+        margin-right: 45px; 
+margin-top: 45px;
+        top: 0;
+        width: 100%;
+        max-width: 250px; /* Ширина сайдбара */
+    }
 
-
-    /* Стили для контента */
-.content {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    max-width: 500px; /* Ширина контента */
-    padding-bottom: 50px; /* Уменьшен отступ снизу */
-margin-top: 27px;
-    
-}
+    .content {
+        max-width: 500px; /* Ширина контента */
+        margin-top: 0;
+    }
 
     .back-to-top {
         bottom: 100px;
         right: 40px;
     }
-
 }
 
 
