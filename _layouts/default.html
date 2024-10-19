@@ -1,14 +1,12 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  {% seo %}
+
+{% seo %}
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ site.title }}</title>
-
-  <meta name="google-site-verification" content="tN96XB8m6AEHJmdO6LRk31okxS0qyha49iAW7u2G5-c" />
-  <meta name="msvalidate.01" content="F66D32F3B0143ED19880B22155894864" />
 
   {% if page.url == '/' %}
     <!-- Open Graph Meta Tags for the Home Page -->
@@ -42,23 +40,23 @@
   <!-- Additional Meta Tags -->
   <meta name="description" content="{{ site.description }}" />
 
-  <!-- Yandex.Metrika counter -->
-  <script type="text/javascript">
-    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-    m[i].l=1*new Date();
-    for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
-    k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
-    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();
+   for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+   k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
 
-    ym(97915168, "init", {
-      clickmap:true,
-      trackLinks:true,
-      accurateTrackBounce:true,
-      webvisor:true
-    });
-  </script>
-  <noscript><div><img src="https://mc.yandex.ru/watch/97915168" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-  <!-- /Yandex.Metrika counter -->
+   ym(97915168, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true,
+        webvisor:true
+   });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/97915168" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
@@ -66,8 +64,9 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.2/css/hover-min.css" rel="stylesheet">
   <link rel="stylesheet" href="{{ base_url }}/assets/css/style.css">
   {% if page.css %}
-    <link rel="stylesheet" href="{{ base_url }}/assets/css/{{ page.css }}">
+      <link rel="stylesheet" href="{{ base_url }}/assets/css/{{ page.css }}">
   {% endif %}
+  
 </head>
 <body>
   <div class="container">
@@ -99,14 +98,20 @@
                 </div>
               </div>
             {% else %}
-              <div class="menu-item">
+              {% if item.title == "Главная" or item.title == "Меню" %}
+                <a href="{{ item.url }}" class="menu-link">
+                  {% if item.icon %}
+                    <i class="fas {{ item.icon }}"></i>
+                  {% endif %}
+                </a>
+              {% else %}
                 <a href="{{ item.url }}" class="menu-link">
                   {% if item.icon %}
                     <i class="fas {{ item.icon }}"></i>
                   {% endif %}
                   {{ item.title }}
                 </a>
-              </div>
+              {% endif %}
             {% endif %}
           {% endfor %}
         </div>
@@ -176,8 +181,8 @@
       {% endif %}
     </div>
   </div>
+
   <div class="back-to-top">
-    <
     <i class="fas fa-chevron-up"></i>
   </div>
 
@@ -185,4 +190,4 @@
   <script src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.6/dist/medium-zoom.min.js"></script>
   <script src="{{ '/assets/js/script.js' | absolute_url }}"></script>
 </body>
-</html>
+      </html>
