@@ -6,7 +6,7 @@
 
 /* Общие стили для страницы */
 body {
-    background-color: #222;
+    background-color: #000000;
     color: #aaa;
     font-family: 'Roboto', sans-serif;
     margin: 0;
@@ -145,7 +145,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #222;
+    background-color: #000000;
     padding: 14px;
     margin-top: 28px;
     margin-bottom: 40px;
@@ -201,7 +201,7 @@ body {
 
 /* Стили для постов */
 .post {
-    background-color: #222;
+    background-color: #000000;
     margin-bottom: 24px;
     margin-top: 45px;
     padding: 0;
