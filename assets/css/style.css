@@ -6,7 +6,7 @@
 
 /* Общие стили для страницы */
 body {
-    background-color: #000000;
+    background-color: #111111;
     color: #aaa;
     font-family: 'Roboto', sans-serif;
     margin: 0;
@@ -130,7 +130,7 @@ body {
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    background: #222;
+    background: #000000;
     border-radius: 8px; /* Закругление углов */
     z-index: 10000; /* кнопка находится поверх всех элементов */
 }
@@ -330,7 +330,7 @@ body {
 }
 
 .read-more::after {
-    content: 'КОММЕНТИРОВАТЬ';
+    content: 'Комментарии';
     color: var(--main-color);
     font-size: 14px;
     font-weight: bold;
