@@ -202,7 +202,7 @@ body {
 /* Стили для постов */
 .post {
     background-color: #222;
-    margin-top: 45px;
+    margin-top: 24px;
     margin-bottom: 24px;
     padding: 0;
     width: 100%;
@@ -348,11 +348,11 @@ body {
     text-align: center;
     padding: 15px;
     margin-bottom: 20px;
-margin-top: 45px;
+margin-top: 24px;
     position: sticky;
     top: 20px;
     width: 100%;
-    max-width: 300px; /* Ширина сайдбара */
+    max-width: 500px; /* Ширина сайдбара */
     margin-right: 45px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
     border-radius: 15px; /* Закругление краёв */
@@ -541,7 +541,7 @@ border-radius: 10px;
 
     .sidebar {
         margin-right: 45px; 
-margin-top: 45px;
+margin-top: 24px;
         top: 0;
         width: 100%;
         max-width: 250px; /* Ширина сайдбара */
