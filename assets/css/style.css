@@ -195,7 +195,7 @@ body {
     align-items: center;
     width: 100%;
     max-width: 500px; /* Ширина контента */
-    padding-bottom: 50px; /* Уменьшен отступ снизу */
+    padding-bottom: 24px; /* Уменьшен отступ снизу */
     
 }
 
@@ -203,6 +203,7 @@ body {
 .post {
     background-color: #222;
     margin-bottom: 24px;
+    margin-top: 45px;
     padding: 0;
     width: 100%;
     position: relative;
@@ -548,7 +549,6 @@ border-radius: 10px;
 
     .content {
         max-width: 500px; /* Ширина контента */
-        margin-top: 28px;
     }
 
     .back-to-top {
