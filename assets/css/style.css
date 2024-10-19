@@ -203,7 +203,6 @@ body {
 .post {
     background-color: #222;
     margin-bottom: 24px;
-    margin-top: 45px;
     padding: 0;
     width: 100%;
     position: relative;
@@ -330,7 +329,7 @@ body {
 }
 
 .read-more::after {
-    content: 'Комментарии';
+    content: 'КОММЕНТИРОВАТЬ';
     color: var(--main-color);
     font-size: 14px;
     font-weight: bold;
@@ -544,12 +543,12 @@ border-radius: 10px;
         margin-top: 45px;
         top: 0;
         width: 100%;
-        max-width: 500px; /* Ширина сайдбара */
+        max-width: 350px; /* Ширина сайдбара */
     }
 
     .content {
         max-width: 500px; /* Ширина контента */
-        margin-top: 24px;
+        margin-top: 28px;
     }
 
     .back-to-top {
