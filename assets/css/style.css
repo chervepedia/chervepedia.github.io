@@ -1,5 +1,5 @@
 :root {
-    --main-color: #ffb0e2; /* Светло-розовый цвет */
+    --main-color: #EBEBEB; /* Светло-розовый цвет */
     --main-color-rgb: 255, 105, 180;
     --main-color-dark: #e699c7; /* Более темный розовый цвет */
 }
@@ -94,7 +94,7 @@ body {
 .social-icons a {
     flex: 1; /* Иконки занимают равное пространство */
     text-align: center; /* Центрирование иконок внутри ссылок */
-    color: #222; /* Цвет иконок */
+    color: #EBEBEB; /* Цвет иконок */
     transition: color 0.3s;
 }
 
@@ -184,7 +184,7 @@ body {
 }
 
 .page-number.current {
-    color: #fff;
+    color: #EBEBEB;
 }
 
 /* Стили для контента */
@@ -273,7 +273,7 @@ body {
 .post-content {
     padding: 8px;
     font-size: 14px;
-    color: #fff;
+    color: #888;
     text-align: left;
     word-break: break-word;
     overflow-wrap: break-word;
@@ -456,7 +456,7 @@ border-radius: 10px;
     position: absolute;
     top: 100%;
     left: 0;
-    background-color: #222;
+    background-color: #888;
     width: auto; /* Автоматическая ширина подменю под содержимое */
     min-width: 150px; /* Минимальная ширина, чтобы избежать слишком узкого подменю */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Тень для подменю */
@@ -496,7 +496,7 @@ border-radius: 10px;
 }
 
 .sub-menu a:hover {
-    background-color: #222;
+    background-color: #888;
     color: var(--main-color-dark);
 }
 
@@ -504,7 +504,7 @@ border-radius: 10px;
 .separator {
     width: 100%;
     height: 1px; /* Толщина линии */
-    background-color: #ffb0e2; /* Цвет линии */
+    background-color: #EBEBEB; /* Цвет линии */
     margin: 0; /* Убираем отступы */
 }
 
@@ -521,7 +521,7 @@ border-radius: 10px;
     justify-content: center;  /* Центрирование контента внутри ссылки по горизонтали */
     align-items: center;
     font-size: 1.2rem;
-    color: #ffb0e2;
+    color: #EBEBEB;
     text-decoration: none; 
     transition: color 0.3s;
 }
