@@ -1,6 +1,7 @@
 ---
 layout: post
-title: "Уничтожение российских боевиков в Курске"
-video: "https://www.youtube.com/watch?v=5y6k4lTITFQ"
-description: "Червепедия - Удары по российским колоннам и пехоте, Курская область."
+title: "Пример поста с видео"
+date: 2024-10-20
+video: "https://www.youtube.com/embed/2jVoFdjn5_c"
 ---
+Это пример поста, который содержит встроенное видео с YouTube.
