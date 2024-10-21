@@ -281,7 +281,6 @@ body {
     word-break: break-word;
     overflow-wrap: break-word;
     hyphens: auto;
-    margin: 0 auto;
     max-width: 100%;
 }
 
