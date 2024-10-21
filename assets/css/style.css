@@ -247,7 +247,7 @@ body {
     width: auto; /* Автоматическая ширина, сохраняет пропорции */
     height: auto; /* Автоматическая высота, сохраняет пропорции */
     object-fit: contain; /* Сохраняет пропорции изображения и не обрезает его */
-    border-radius: 15px; /* Закругление углов изображения */
+    border-radius: 8px; /* Закругление углов изображения */
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Неоновое свечение */
 }
     
@@ -273,8 +273,9 @@ body {
 
 /* Содержимое поста */
 .post-content {
+    margin-top: 8px;
     padding: 8px;
-    font-size: 14px;
+    font-size: 16px;
     color: #888;
     text-align: left;
     word-break: break-word;
