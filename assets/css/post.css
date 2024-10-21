@@ -18,14 +18,14 @@
 }
 
 .post-title {
-    font-size: 18px;
+    font-size: 16px;
     font-weight: bold;
     color: var(--main-color);
     margin: 0;
 }
 
 .post-image-wrapper {
-    margin-top: 16px;
+    margin-top: 12px;
 }
 
 .post-image-wrapper img {
@@ -37,7 +37,7 @@
 .post-content {
     padding: 15px;
     font-size: 14px;
-    color: #fff;
+    color: #888;
     text-align: left;
     word-break: break-word;
     overflow-wrap: break-word;
