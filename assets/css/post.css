@@ -1,19 +1,20 @@
-/* post */
-
+/* Стили для постов */
 .post {
-    /* Стили из глобального CSS */
     background-color: #000000;
     margin-bottom: 24px;
+    margin-top: 45px;
     padding: 0;
     width: 100%;
     position: relative;
-    border-radius: 15px; /* Закругление краёв постов */
-    /* Убираем тени */
-    box-shadow: none;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    max-width: 500px; /* Ширина постов */
+    border-radius: 10px; /* Закругление углов */
 }
 
+/* Заголовок поста */
 .post-header {
     padding: 10px 15px;
+    border-radius: 10px, 10px, 0px, 0px;
     border-bottom: 1px groove var(--main-color);
 }
 
@@ -24,15 +25,31 @@
     margin: 0;
 }
 
+/* Основные стили для изображения в посте */
 .post-image-wrapper {
+    position: relative;
+    max-width: 500px; /* Максимальная ширина контейнера */
+    max-height: 600px; /* Максимальная высота контейнера */
+    width: 100%; /* Ширина контейнера заполняет доступное пространство */
+    height: auto; /* Высота контейнера будет зависеть от содержимого */
+    overflow: hidden; /* Прячем выходящее за границы содержимое */
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Центрирование изображения по вертикали */
+    background: transparent;
     margin-bottom: 12px;
     margin-top: 12px;
 }
 
+/* Стили для изображения поста */
 .post-image-wrapper img {
-    width: 100%;
-    display: block;
-    border-radius: 0; /* Если нужнв закругления */
+    max-width: 100%; /* Ограничивает ширину изображения размером контейнера */
+    max-height: 100%; /* Ограничивает высоту изображения размером контейнера */
+    width: auto; /* Автоматическая ширина, сохраняет пропорции */
+    height: auto; /* Автоматическая высота, сохраняет пропорции */
+    object-fit: contain; /* Сохраняет пропорции изображения и не обрезает его */
+    border-radius: 4px; /* Закругление углов изображения */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Неоновое свечение */
 }
 
 .post-content {
