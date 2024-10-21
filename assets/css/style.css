@@ -240,6 +240,7 @@ body {
     align-items: center; /* Центрирование изображения по вертикали */
     background: transparent;
     margin-bottom: 12px;
+    margin-top: 12px;
 }
 
 /* Стили для изображения поста */
