@@ -289,6 +289,7 @@ body {
 
 /* Основные стили футера поста */
 .post-footer {
+    background-color: #292626;
     display: flex;
     justify-content: space-between;
     align-items: center;
