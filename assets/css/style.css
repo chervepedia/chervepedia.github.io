@@ -426,7 +426,6 @@ box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Тень для сайдбара *
     position: relative;
     text-align: center; /* Текст внутри элементов меню также будет центрирован */
     margin-bottom: 10px;
-    border-bottom: 1px groove var(--main-color);
 }
 
 /* Ссылки меню */
@@ -526,6 +525,8 @@ border-radius: 10px;
     justify-content: center; /* Центрирование всех элементов по горизонтали */
     gap: 16px;
     margin-top: 8px;
+    padding: 10px 15px;
+    border-top: 1px solid var(--main-color);
 }
 
 .social-icons-sidebar a { 
