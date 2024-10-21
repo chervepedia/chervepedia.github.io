@@ -84,11 +84,12 @@ body {
 
 /* Иконки социальных сетей */
 .social-icons {
+    background-color: #090A09;
     display: flex;
     justify-content: space-around; /* или space-between */
     width: 100%; /* контейнер занимает 100% ширины */
     background-color: var(--main-color); /* Добавлен задний фон */
-    border-radius: 10px; /* Закругленные углы */
+    border-radius: 15px; /* Закругленные углы */
     padding: 10px; /* Внутренние отступы для красоты */
 }
 
@@ -100,7 +101,7 @@ body {
 }
 
 .social-icons a:hover {
-    color: #ffb0e2; /* Добавляем эффект изменения цвета при наведении */
+    color: #090A09; /* Добавляем эффект изменения цвета при наведении */
 }
 
 
@@ -289,7 +290,7 @@ body {
 
 /* Основные стили футера поста */
 .post-footer {
-    background-color: #141313;
+    background-color: #090A09;
     display: flex;
     justify-content: space-between;
     align-items: center;
