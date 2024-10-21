@@ -84,7 +84,6 @@ body {
 
 /* Иконки социальных сетей */
 .social-icons {
-    background-color: #090A09;
     display: flex;
     justify-content: space-around; /* или space-between */
     width: 100%; /* контейнер занимает 100% ширины */
@@ -217,7 +216,7 @@ body {
 /* Заголовок поста */
 .post-header {
     padding: 10px 15px;
-    border-radius: 10px, 10px, 0px, 0px;
+    border-radius: 10px 10px 0px 0px; /* Исправление синтаксиса */
     border-bottom: 1px groove var(--main-color);
 }
 
@@ -226,6 +225,7 @@ body {
     font-weight: bold;
     color: var(--main-color);
     margin: 0;
+    text-align: left; /* Выровнять текст заголовка по левому краю */
 }
 
 /* Основные стили для изображения в посте */
@@ -426,6 +426,7 @@ box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Тень для сайдбара *
     position: relative;
     text-align: center; /* Текст внутри элементов меню также будет центрирован */
     margin-bottom: 10px;
+    border-bottom: 1px groove var(--main-color);
 }
 
 /* Ссылки меню */
@@ -520,13 +521,15 @@ border-radius: 10px;
 
 /* Иконки социальных сетей в сайдбаре */
 .social-icons-sidebar {
+    background-color: #090A09;
     display: flex;
     justify-content: center; /* Центрирование всех элементов по горизонтали */
     gap: 16px;
     margin-top: 8px;
 }
 
-.social-icons-sidebar a {
+.social-icons-sidebar a { 
+    
     display: flex;
     justify-content: center;  /* Центрирование контента внутри ссылки по горизонтали */
     align-items: center;
