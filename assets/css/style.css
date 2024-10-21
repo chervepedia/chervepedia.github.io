@@ -302,7 +302,7 @@ body {
     left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, rgba(255, 176, 226, 0.3), rgba(255, 176, 226, 0) 100%);
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0) 100%);
     transition: transform 1s ease-in-out; /* Плавный переход */
     z-index: 0; /* Псевдоэлемент находится под содержимым футера */
     transform: translateX(-100%);
@@ -313,6 +313,8 @@ body {
 .post-footer:hover::before {
     transform: translateX(100%);
 }
+
+
 
 /* Содержание футера выше псевдоэлемента */
 .post-footer > * {
