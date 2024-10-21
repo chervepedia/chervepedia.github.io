@@ -422,6 +422,7 @@ box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Тень для сайдбара *
 .menu-item {
     position: relative;
     text-align: center; /* Текст внутри элементов меню также будет центрирован */
+    margin-bottom: 10px;
 }
 
 /* Ссылки меню */
