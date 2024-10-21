@@ -1,3 +1,6 @@
+Что нужно сделать чтобы блок с текстом поста отступал сверху от картинки на 8 пикселей
+
+
 :root {
     --main-color: #EBEBEB; /* Светло-розовый цвет */
     --main-color-rgb: 255, 105, 180;
@@ -238,6 +241,7 @@ body {
     justify-content: center;
     align-items: center; /* Центрирование изображения по вертикали */
     background: transparent;
+    margin-bottom: 8px;
 }
 
 /* Стили для изображения поста */
@@ -273,7 +277,6 @@ body {
 
 /* Содержимое поста */
 .post-content {
-    margin-top: 8px;
     padding: 8px;
     font-size: 16px;
     color: #888;
@@ -281,6 +284,7 @@ body {
     word-break: break-word;
     overflow-wrap: break-word;
     hyphens: auto;
+    margin: 0 auto;
     max-width: 100%;
 }
 
